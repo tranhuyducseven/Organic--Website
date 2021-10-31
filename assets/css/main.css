@@ -164,3 +164,30 @@
   background-color: #82b440;
   transform: translateY(2px);
 }
+
+.fruit-image__img {
+  animation: MoveLeftRight 1s linear infinite;
+  max-width: 95%;
+}
+
+.fruit-slogan h1 {
+  font-size: 9em;
+}
+
+.fruit-slogan span{
+  color: #ff7e00;
+}
+
+.fruit-slogan p {
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+@keyframes MoveLeftRight {
+  0%, 100% {
+    transform: translateX(30px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+}
