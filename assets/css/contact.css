@@ -1,0 +1,65 @@
+.contact-item {
+  display: flex;
+  align-items: center;
+}
+.contact-icon-group {
+  position: relative;
+  padding-right: 25px;
+}
+.contact-icon-group:hover .contact-icon-bg {
+  fill: black;
+}
+.contact-icon-bg {
+  overflow: hidden;
+  position: relative;
+  height: 100px;
+  width: 100px;
+  -webkit-transition: 400ms all linear 0ms;
+  -khtml-transition: 400ms all linear 0ms;
+  -moz-transition: 400ms all linear 0ms;
+  -ms-transition: 400ms all linear 0ms;
+  -o-transition: 400ms all linear 0ms;
+  transition: 400ms all linear 0ms;
+}
+.contact-icon-group:hover .contact-icon {
+  transform: translateY(-55%);
+}
+
+.contact-icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  padding: 32px;
+  transform: translateY(-50%);
+  font-size: 3.6rem;
+  color: #fff;
+  -webkit-transition:5ms all linear 0ms;
+  -khtml-transition:5ms all linear 0ms;
+  -moz-transition:5ms all linear 0ms;
+  -ms-transition:5ms all linear 0ms;
+  -o-transition:5ms all linear 0ms;
+  transition:5ms all linear 0ms;
+}
+
+.contact-content {
+}
+.contact-content h1 {
+  font-size: 2.8rem;
+  color: var(--black-text-color);
+  font-weight: 500;
+  padding-bottom: 5px;
+  margin: 0;
+}
+.contact-content p {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin: 10px 0;
+}
+#map{
+    height: 1000px;
+    width: 100%;
+}
