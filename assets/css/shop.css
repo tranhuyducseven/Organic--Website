@@ -261,12 +261,14 @@ p.organic-sort-bar_note {
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
+  border-radius:50px;
 }
 
 .organic-item-front, .organic-item-back {
   position: absolute;
   width: 100%;
   height: 100%;
+  border-radius:inherit;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
@@ -305,6 +307,7 @@ p.organic-sort-bar_note {
   height: 100%;
   background-color: rgb(0,0,0);
   background-color: rgba(255, 126, 0, 0.8);
+  border-radius:inherit;
   float: left;
   position: absolute;
 }
@@ -645,33 +648,6 @@ a, a:hover, a:focus, a:before, a:after {
   border-radius: 1px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .organic-pagination {
   display: block;
   margin-left: auto;
@@ -719,23 +695,6 @@ a, a:hover, a:focus, a:before, a:after {
   color: #fff;  
   background-color: linear-gradient(to right, #ff7e00, #ffb63a, #ff7e00);background-image: linear-gradient(to right, rgb(255, 126, 0), rgb(255, 182, 58), rgb(255, 126, 0));
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .organic-item-modal-col_1 {
   background-color: #f4f4f4;
   margin: 0 !important;
