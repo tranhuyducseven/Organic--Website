@@ -8,7 +8,7 @@ body {
   line-height: 1.5;
   color: #7a7a7a;
   -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
+  font-smooth: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   font-weight: normal;
@@ -805,41 +805,3 @@ a, a:hover, a:focus, a:before, a:after {
   -webkit-font-smoothing: antialiased;
   font-weight: 700;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
