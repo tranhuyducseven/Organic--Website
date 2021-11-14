@@ -470,7 +470,7 @@ html {
   height: 484px;
   padding: 45px 40px 55px 40px;
   background-color: var(--white-color);
-  border-radius: 50px;
+  border-radius: 4px;
   z-index: 2;
 }
 
@@ -481,7 +481,7 @@ html {
   top: 0;
   height: 100%;
   width: 0%;
-  border-radius: 50px;
+  border-radius: 4px;
   box-sizing: border-box;
   background: linear-gradient(to right, #ff7e00 0%, #ffb63a 100%);
   -webkit-transition: 400ms all linear 0ms;
@@ -611,7 +611,7 @@ html {
   height: 484px;
   padding: 45px 0 40px;
   background-color: var(--background-color);
-  border-radius: 50px;
+  border-radius: 4px;
   position: relative;
   z-index: 2;
 }
@@ -623,7 +623,7 @@ html {
   top: 0;
   height: 100%;
   width: 0%;
-  border-radius: 50px;
+  border-radius: inherit;
   box-sizing: border-box;
   background: linear-gradient(to right, #ff7e00 0%, #ffb63a 100%);
   -webkit-transition: 400ms all linear 0ms;
@@ -692,7 +692,7 @@ html {
   height: 382px;
   padding: 40px 0 50px;
   background-color: var(--white-color);
-  border-radius: 50px;
+  border-radius:4px;
   position: relative;
   transition: 400ms all linear 0ms;
   transform-style: preserve-3d;
@@ -823,7 +823,7 @@ html {
   height: fit-content;
   max-height: 750px;
   background-color: var(--background-color);
-  border-radius: 50px;
+  border-radius:4px;
   box-sizing: border-box;
   transition: all linear 0.5s;
 }
