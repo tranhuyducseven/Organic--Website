@@ -72,10 +72,13 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .navbar-branch {
   height: 60px;
+  position: absolute;
+  left: -300px;
 }
 .navbar .nav-link {
   color: var(--black-text-color) !important;
@@ -345,7 +348,7 @@ html {
   display: flex;
   align-items: center;
 }
-.page-title__dir-item{
+.page-title__dir-item {
   color: var(--primary-text-color);
   font-size: 1.7rem;
   font-weight: 500;
