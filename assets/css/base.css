@@ -73,10 +73,8 @@ html {
   align-items: center;
   justify-content: center;
 }
-
 .navbar-branch {
   height: 60px;
-
 }
 .navbar .nav-link {
   color: var(--black-text-color) !important;
