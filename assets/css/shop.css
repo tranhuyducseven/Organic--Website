@@ -261,7 +261,7 @@ p.organic-sort-bar_note {
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  border-radius:50px;
+  border-radius: 4px;
 }
 
 .organic-item-front, .organic-item-back {
