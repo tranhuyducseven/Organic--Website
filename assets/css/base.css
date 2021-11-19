@@ -210,6 +210,10 @@ html {
   }
 }
 
+.organic-footer-col ul {
+  padding-left: 35px;
+}
+
 .organic-footer-paragraph {
   margin-top: 50px;
   padding-right: 30px;
@@ -287,7 +291,7 @@ html {
   position: relative;
   left: -35px;
   color: #ff7e00;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
 }
 
 .organic-footer-further {

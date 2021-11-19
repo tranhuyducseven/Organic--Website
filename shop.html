@@ -113,12 +113,16 @@
             </div>
           </div>
           <div class="organic-items row">
+
+            <!-------------------------------------- BEGIN 1 PRODUCT (CARD + MODAL) --------------------------------->
+
             <div
               class="
                 col-xl-4 col-sm-6 col-xl-offset-1 col-sm-offset-1 col-12
                 organic-item-col
               "
             >
+              <!-- BEGIN 1 PRODUCT CARD -->
               <div class="organic-card">
                 <div class="organic-item">
                   <div class="organic-item-front">
@@ -165,19 +169,27 @@
                         <div class="organic-item-button">
                           <button><i class="far fa-heart"></i></button>
                         </div>
-                        <div class="organic-item-button">
-                          <button><i class="fas fa-sync"></i></button>
-                        </div>
                       </div>
                       <div
                         class="organic-item-add_to_cart justify-content-center"
                       >
-                        <a href="#">Add To Cart</a>
+                        <button
+                          type="button"
+                          data-bs-toggle="offcanvas"
+                          data-bs-target="#offcanvas"
+                        >
+                          Add To Cart
+                        </button>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+
+              <!------------------------------------------- END 1 PRODUCT CARD ---------------------------------------->
+
+              <!------------------------------------------ BEGIN 1 PRODUCT MODAL -------------------------------------->
+
               <div class="modal fade" id="QuickView">
                 <div
                   class="
@@ -252,7 +264,12 @@
                   </div>
                 </div>
               </div>
+
+              <!------------------------------------------- END 1 PRODUCT MODAL --------------------------------------->
             </div>
+
+            <!------------------------------------------------ END 1 PRODUCT ------------------------------------------>
+
             <div
               class="
                 col-xl-4 col-sm-6 col-xl-offset-1 col-sm-offset-1 col-12
@@ -297,14 +314,11 @@
                         <div class="organic-item-button">
                           <button><i class="far fa-heart"></i></button>
                         </div>
-                        <div class="organic-item-button">
-                          <button><i class="fas fa-sync"></i></button>
-                        </div>
                       </div>
                       <div
                         class="organic-item-add_to_cart justify-content-center"
                       >
-                        <a href="#">Add To Cart</a>
+                        <button type="button">Add To Cart</button>
                       </div>
                     </div>
                   </div>
@@ -353,14 +367,11 @@
                         <div class="organic-item-button">
                           <button><i class="far fa-heart"></i></button>
                         </div>
-                        <div class="organic-item-button">
-                          <button><i class="fas fa-sync"></i></button>
-                        </div>
                       </div>
                       <div
                         class="organic-item-add_to_cart justify-content-center"
                       >
-                        <a href="#">Add To Cart</a>
+                      <button type="button">Add To Cart</button>
                       </div>
                     </div>
                   </div>
@@ -413,14 +424,11 @@
                         <div class="organic-item-button">
                           <button><i class="far fa-heart"></i></button>
                         </div>
-                        <div class="organic-item-button">
-                          <button><i class="fas fa-sync"></i></button>
-                        </div>
                       </div>
                       <div
                         class="organic-item-add_to_cart justify-content-center"
                       >
-                        <a href="#">Add To Cart</a>
+                      <button type="button">Add To Cart</button>
                       </div>
                     </div>
                   </div>
@@ -471,14 +479,11 @@
                         <div class="organic-item-button">
                           <button><i class="far fa-heart"></i></button>
                         </div>
-                        <div class="organic-item-button">
-                          <button><i class="fas fa-sync"></i></button>
-                        </div>
                       </div>
                       <div
                         class="organic-item-add_to_cart justify-content-center"
                       >
-                        <a href="#">Add To Cart</a>
+                      <button type="button">Add To Cart</button>
                       </div>
                     </div>
                   </div>
@@ -529,14 +534,11 @@
                         <div class="organic-item-button">
                           <button><i class="far fa-heart"></i></button>
                         </div>
-                        <div class="organic-item-button">
-                          <button><i class="fas fa-sync"></i></button>
-                        </div>
                       </div>
                       <div
                         class="organic-item-add_to_cart justify-content-center"
                       >
-                        <a href="#">Add To Cart</a>
+                      <button type="button">Add To Cart</button>
                       </div>
                     </div>
                   </div>
@@ -587,14 +589,11 @@
                         <div class="organic-item-button">
                           <button><i class="far fa-heart"></i></button>
                         </div>
-                        <div class="organic-item-button">
-                          <button><i class="fas fa-sync"></i></button>
-                        </div>
                       </div>
                       <div
                         class="organic-item-add_to_cart justify-content-center"
                       >
-                        <a href="#">Add To Cart</a>
+                      <button type="button">Add To Cart</button>
                       </div>
                     </div>
                   </div>
@@ -643,14 +642,11 @@
                         <div class="organic-item-button">
                           <button><i class="far fa-heart"></i></button>
                         </div>
-                        <div class="organic-item-button">
-                          <button><i class="fas fa-sync"></i></button>
-                        </div>
                       </div>
                       <div
                         class="organic-item-add_to_cart justify-content-center"
                       >
-                        <a href="#">Add To Cart</a>
+                      <button type="button">Add To Cart</button>
                       </div>
                     </div>
                   </div>
@@ -701,14 +697,11 @@
                         <div class="organic-item-button">
                           <button><i class="far fa-heart"></i></button>
                         </div>
-                        <div class="organic-item-button">
-                          <button><i class="fas fa-sync"></i></button>
-                        </div>
                       </div>
                       <div
                         class="organic-item-add_to_cart justify-content-center"
                       >
-                        <a href="#">Add To Cart</a>
+                      <button type="button">Add To Cart</button>
                       </div>
                     </div>
                   </div>
@@ -913,6 +906,69 @@
         </div>
       </div>
     </footer>
+
+
+    <!------------------------------------------ BEGIN OFFCANVAS CART ------------------------------------------------>
+
+    <div class="offcanvas offcanvas-end organic-offcanvas" id="offcanvas">
+      <button
+        type="button"
+        class="organic-offcanvas-close"
+        data-bs-dismiss="offcanvas"
+      >
+        &#10006;
+      </button>
+      <div class="offcanvas-body organic-shopping">
+        <div class="organic-shopping-title">
+          Shopping Cart <span>(1 item)</span>
+        </div>
+        <div class="organic-shopping-content">
+          <ul class="organic-shopping-content_list">
+            <li class="d-flex">
+              <div class="organic-shopping-product_img">
+                <img src="assets/img/shop/Pomegranate.png" />
+              </div>
+              <div class="organic-shopping-product_text">
+                <h3>Pomegranate</h3>
+                <span>1 &#215; $98.57 Kg</span>
+              </div>
+              <div class="organic-shopping-product_remove">
+                <button type="button">
+                  <i class="material-icons">highlight_off</i>
+                </button>
+              </div>
+            </li>
+
+            <li class="d-flex">
+              <div class="organic-shopping-product_img">
+                <img src="assets/img/shop/Banana.png" />
+              </div>
+              <div class="organic-shopping-product_text">
+                <h3>Banana</h3>
+                <span>1 &#215; $98.57 Kg</span>
+              </div>
+              <div class="organic-shopping-product_remove">
+                <button type="button">
+                  <i class="material-icons">highlight_off</i>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="organic-offcanvas-footer">
+        <p class="organic-subtotal">
+          <strong>Subtotal: $197.14</strong>
+        </p>
+        <p class="organic-btn-group d-flex">
+          <a href="#">VIEW CART</a>
+          <a href="#">CHECKOUT</a>
+        </p>
+      </div>
+    </div>
+
+    <!------------------------------------------ END OFFCANVAS CART ------------------------------------------------>    
+
     <script src="assets/js/select.js"></script>
   </body>
 </html>
