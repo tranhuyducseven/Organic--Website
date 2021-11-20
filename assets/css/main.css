@@ -233,6 +233,17 @@
     }
 }
 
+
+/*RESPONSIVE------------------------*/
+
+@media (min-width:1200px) {
+    .c-20 {
+        flex: 0 0 auto;
+        width: 20%!important;
+    }
+    /*about*/
+}
+
 @media (max-width: 1200px) {
     /*page slogan*/
     .page-slogan .container-fluid {
