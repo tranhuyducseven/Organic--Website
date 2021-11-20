@@ -1,1335 +1,1085 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
     <link rel="stylesheet" href="./assets/css/base.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/responsive-base.css" />
+    <link rel="stylesheet" href="./assets/css/responsive-main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
-      rel="stylesheet"
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="./assets/img/vegetables.png" />
     <title>Organic</title>
-  </head>
-  <body>
-        <!-- #############HEADER######### -->
-      <header class="sticky-top">
-        <div class=" container-fluid subnav">
-         <a href="#" class="buy-now-btn">Buy Now</a>
-        </div>          
-       <nav class="navbar navbar-expand-md navbar-light "> 
-        <div class="row container-fluid">
-          <a class="navbar-branch" href="#">
-            <img src="./assets/img/header-logo.png" height="60" />
-          </a>           
-          <div class="main-nav">          
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarResponsive"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-             <div
-                  class="collapse navbar-collapse row gx-5"
-                  id="navbarResponsive"
-                >
-                  <ul class="navbar-nav ml-auto">
-                    <li class="nav-item col-3">
-                      <a class="nav-link" href="./index.html">Home</a>
-                    </li>
-                    <li class="nav-item col-3">
-                      <a class="nav-link" href="./shop.html">Shop</a>
-                    </li>
-                    <li class="nav-item col-3">
-                      <a class="nav-link" href="./contact.html">Contact </a>
-                    </li>
-                    <li class="nav-item col-3">
-                      <a class="nav-link" href="./blog.html">Blog</a>
-                    </li>
-                  </ul>
-                </div>         
-            </div>         
-          <div class="rightnav">
-            <div class="rightnav-login">
-                <a  class="rightnav__login-btn" href="#">
-                  <i class="fa fa-user"></i>
-                </a>
-            </div>
-            <div class="rightnav-cart">
-              <i class="fas fa-shopping-cart rightnav-cart__icon"></i>
-              <span class="rightnav-cart__counter">0</span>
-            </div>
-          </div>
-        </div>
-          
-         
-       </nav>
-      </header>
+</head>
 
-        <!-- #############MAIN######### -->
+<body>
+    <!-- #############HEADER######### -->
+    <header class="sticky-top">
+        <div class="container-fluid subnav">
+            <a href="#" class="buy-now-btn">Buy Now </a>
+        </div>
+        <div id="site-header-wrapper">
+            <div class="grid wide-m">
+                <div class="header container-fluid">
+                    <div class="site-branch">
+                        <a href="#">
+                            <img src="./assets/img/header-logo.png" />
+                        </a>
+                    </div>
+                    <div class="site-nav">
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                            <div class="container-fluid">
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+                                    <span class="navbar-toggler-icon">
+                                        <i class="fas fa-bars"></i>
+                                    </span>
+                                </button>
+                                <div class="collapse navbar-collapse row gx-5" id="navbarResponsive">
+                                    <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item col-3">
+                                            <a class="nav-link" href="./index.html">Home</a>
+                                        </li>
+                                        <li class="nav-item col-3">
+                                            <a class="nav-link" href="./shop.html">Shop</a>
+                                        </li>
+                                        <li class="nav-item col-3">
+                                            <a class="nav-link" href="./contact.html">Contact </a>
+                                        </li>
+                                        <li class="nav-item col-3">
+                                            <a class="nav-link" href="./blog.html">Blog</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="rightnav">
+                            <div class="rightnav-login">
+                                <a class="rightnav__login-btn" href="#">
+                                    <i class="fa fa-user"></i>
+                                </a>
+                            </div>
+                            <div class="rightnav-cart">
+                                <i class="fas fa-shopping-cart rightnav-cart__icon"></i>
+                                <span class="rightnav-cart__counter">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- #############MAIN######### -->
     <div class="main">
-      <!--slogan-->
-        <div class="page-slogan pd-150-0" style="background-color: #f4f4f4;
-        background-image: url('./assets/img/home/background-slogan.jpg');">
-          <div class="grid wide-m">
-            <div class="container-fluid row gx-5">
-              <div class="col">
-                <div class="page-slogan__content">
-                  <h1 class="page-slogan__heading">Fresh food</h1>
-                  <h1 class="page-slogan__heading">
-                    healthy
-                    <span style="color: var(--primary-text-color)">life.</span>
-                  </h1>
-                  <p class="page-slogan__paragraph">
-                    Nor again is there anyone who loves pursues desires obtain
-                    because occasionally circumstances.
-                  </p>
+        <!--slogan-->
+        <div class="page-slogan pd-150-0" style="
+          background-color: #f4f4f4;
+          background-image: url('./assets/img/home/background-slogan.jpg');
+        ">
+            <div class="grid wide-m">
+                <div class="container-fluid row gx-5">
+                    <div class="
+                col-ssm-12 col-sm-10 col-md-10 col-lg-10 col-xl-6
+                page-slogan__content
+              ">
+                        <h1 class="page-slogan__heading">Fresh food</h1>
+                        <h1 class="page-slogan__heading">
+                            healthy
+                            <span style="color: var(--primary-text-color)">life.</span>
+                        </h1>
+                        <p class="page-slogan__paragraph">
+                            Nor again is there anyone who loves pursues desires obtain because occasionally circumstances.
+                        </p>
+                        <div class="page-slogan__btn">
+                            <a class="page-slogan__btn-link" href="">Contact me
+                                <i class="fas fa-angle-double-right page-slogan__btn-link-icon"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-ssm-6 col-sm-6 col-md-8 col-lg-8 col-xl-6 page-slogan__img">
+                        <img src="./assets/img/home/fruit-image.png" alt="fruit image" class="fruit-image__img" />
+                    </div>
                 </div>
-                <div class="page-slogan__btn">
-                  <a class="page-slogan__btn-link" href="">Contact me
-                    <i class="fas fa-angle-double-right page-slogan__btn-link-icon"></i></a>
-                </div>
-              </div>
-              <div class="col">
-                <div class="page-slogan__img">
-                  <img
-                    src="./assets/img/home/fruit-image.png"
-                    alt="fruit image"
-                    class="fruit-image__img"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-<!--ABOUT-->
-        <div class="container-fluid about pd-150-0" style="background-color: var(--white-color);">
-          <div class="grid wide-m row gx-5">
-            <div class="col-5">
-              <img src="./assets/img/home/about-home.png" alt="" class="about__img">
-            </div>
-            <div class="col-7">
-              <div class="row">
-                <div class="col about-description">
-                  <h4 class="about-description__subheading">Welcome to organic food company.
-                  </h4>
-                  <h1 class="about-description__heading">Orgus give premium quality healthy and <span> natural food.</span> </h1>
-                  <p class="about-description__paragraph">
-                    Nor again is there anyone who loves or pursues orems desires to obtain pain ofe itself because pain, but because occasionally circumstances occur in and which toil and pain can procure him some great pleasure. To take a trivial example.
-                  </p>
-                </div>        
-              </div>
-             
-              
-              <div class="about-item">
-                <div class="about-item__icon-wrapper"> 
-                  <div class="overlay">
-                    <i  class="fab fa-pagelines about-item__icon"></i>
-                  </div>
-                </div>
-                <div class="about-item__content">
-                  <h1 class="about-item__title">Our Mission</h1>
-                  <p class="about-item__paragraph">Nor again is there anyone who loves or pursues desires to obtain paino pain, but because occasionally circumstances occur in which toil andp pleasure except to obtain some advantage from.</p>
-                </div>
-          </div>
-          <div class= "about-item">
-              <div class="about-item__icon-wrapper"> 
-                <div class="overlay">
-                    <i class="far fa-lemon about-item__icon"></i>
-                </div>
-              </div>
-            
-            <div class=" about-item__content">
-              <h1 class="about-item__title">Our Vision</h1>
-              <p class="about-item__paragraph">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>
-            </div>
-      </div>
-       
             </div>
         </div>
+        <!--ABOUT-->
+        <div class="container-fluid about pd-150-0" style="background-color: var(--white-color)">
+            <div class="grid wide-m row gx-5">
+                <div class="col-ssm-12 col-sm-12 col-xl-5 about__img">
+                    <img src="./assets/img/home/about-home.png" alt="" />
+                </div>
+                <div class="col-ssm-12  col-sm-12 col-xl-7">
+                    <div class="row">
+                        <div class="col about-description">
+                            <h4 class="about-description__subheading">
+                                Welcome to organic food company.
+                            </h4>
+                            <h1 class="about-description__heading">
+                                Orgus give premium quality healthy and
+                                <span> natural food.</span>
+                            </h1>
+                            <p class="about-description__paragraph">
+                                Nor again is there anyone who loves or pursues orems desires to obtain pain ofe itself because pain, but because occasionally circumstances occur in and which toil and pain can procure him some great pleasure. To take a trivial example.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about-item">
+                        <div class="about-item__icon-wrapper">
+                            <div class="overlay">
+                                <i class="fab fa-pagelines about-item__icon"></i>
+                            </div>
+                        </div>
+                        <div class="about-item__content">
+                            <h1 class="about-item__title">Our Mission</h1>
+                            <p class="about-item__paragraph">
+                                Nor again is there anyone who loves or pursues desires to obtain paino pain, but because occasionally circumstances occur in which toil andp pleasure except to obtain some advantage from.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about-item">
+                        <div class="about-item__icon-wrapper">
+                            <div class="overlay">
+                                <i class="far fa-lemon about-item__icon"></i>
+                            </div>
+                        </div>
+                        <div class="about-item__content">
+                            <h1 class="about-item__title">Our Vision</h1>
+                            <p class="about-item__paragraph">
+                                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-      <!--
+        <!--
         WHAT WE DO
         -->
         <div class="container-fluid p-cpn pd-150-0" style="background-image: url('./assets/img/home/p-cpn-1.png')">
-          <div class="grid wide-m row gx-5">
-            <div class="col">
-              <div class="p-cpn-subheading">
-                <div class="p-cpn-subheading__icon">
-                  <img src="./assets/img/wheat.png" alt="">
-                </div>
-                <div class="p-cpn-subheading__text"><h4>
-                  Our Services</h>
-                </h4></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="container-fluid row gx-5">
-            <div class="col">
-              <div class="p-cpn-heading">
-                <h1>
-                  What we do?
-                </h1>
-              </div>
-            </div>
-          </div>
-          <div class="container-fluid row gx-5">
-            <div class="col">
-              <div class="p-cpn-image">
-                <img src="./assets/img/home/img-ud-hd.png" alt="">
-              </div>
-            </div>
-          </div>
-          <div class="grid wide-m row">
-            <div class="col">
-                <div class="p-cpn-item-1st">                
-                  <div class="p-cpn-item-1st__icon">
-                    <img src="./assets/img/home/leaf.png" alt="" />
-                  </div>
-                  <div class="p-cpn-item-1st__content">
-                    <h5 class="p-cpn-item-1st__title">
-                      <a href="#"> Agriculture Product</a>
-                    </h5>
-                    <span class="p-cpn-item__break">
-                      <span></span>
-                    </span>                  
-                      <p class="p-cpn-item-1st__paragraph">
-                        Turnip greens yarrow ricebean rutabaga endive cauliflower sea
-                        lettuce kohlrabi amaranth.
-                      </p>         
-                  </div>     
-                  <!--
-                    <div class="p-cpn-item-1st__overlay">
-                    <a href="#" class="p-cpn-item-1st__overlay-btn">
-                      <i class="fas fa-angle-double-right"></i>
-                    </a>
-                  </div>
-                  -->        
-                 
-                </div>            
-            </div>
-            <div class="col">
-              <div class="p-cpn-item-1st">                
-                <div class="p-cpn-item-1st__icon">
-                  <img src="./assets/img/home/leaf.png" alt="" />
-                </div>
-                <div class="p-cpn-item-1st__content">
-                  <h5 class="p-cpn-item-1st__title">
-                    <a href="#"> Agriculture Product</a>
-                  </h5>
-                  <span class="p-cpn-item__break">
-                    <span></span>
-                  </span>
-                    <p class="p-cpn-item-1st__paragraph">
-                      Turnip greens yarrow ricebean rutabaga endive cauliflower sea
-                      lettuce kohlrabi amaranth.
-                    </p>                 
-                  
-                </div>
-              
-                
-                <!-- <div class="p-cpn-item-1st__overlay">
-                  <a href="#" class="p-cpn-item-1st__overlay-btn">
-                    <i class="fas fa-angle-double-right"></i>
-                  </a>
-                </div> -->
-              </div>            
-          </div>
-          <div class="col">
-            <div class="p-cpn-item-1st">                
-              <div class="p-cpn-item-1st__icon">
-                <img src="./assets/img/home/leaf.png" alt="" />
-              </div>
-              <div class="p-cpn-item-1st__content">
-                <h5 class="p-cpn-item-1st__title">
-                  <a href="#"> Agriculture Product</a>
-                </h5>
-                <span class="p-cpn-item__break">
-                  <span></span>
-                </span>
-                
-                  <p class="p-cpn-item-1st__paragraph">
-                    Turnip greens yarrow ricebean rutabaga endive cauliflower sea
-                    lettuce kohlrabi amaranth.
-                  </p>                 
-              
-              </div>
-            
-              
-              <!-- <div class="p-cpn-item-1st__overlay">
-                <a href="#" class="p-cpn-item-1st__overlay-btn">
-                  <i class="fas fa-angle-double-right"></i>
-                </a>
-              </div> -->
-            </div>            
-        </div>
-            
-          </div>
-        
-        </div>
-    <!--BREAK-->
-    
-    <div
-    class="page-break pd-150-0"
-    style="background-image: url('./assets/img/bgr-client-h1.jpg')"
-  >
-    <ul class="row page-break-list">
-      <li class="col page-break-item-1">
-        <div class="page-break-item-1__icon">
-          <div class="page-break-item-1__icon-group">
-            <img
-              src="./assets/img/img-fc-car1.png"
-              alt=""
-              class="page-break-item-1__icon-img1"
-            />
-            <img
-              src="./assets/img/img-fc-gr-car1.png"
-              alt=""
-              class="page-break-item-1__icon-img2"
-            />
-          </div>
-        </div>
-        <div class="page-break-item-1__content">
-          <h1 class="page-break-item-1__content-heading">
-            High Quality Food
-          </h1>
-          <p class="page-break-item-1__content-paragraph">
-            Combine old fashioned oats and wheat germ in a large bowl
-          </p>
-        </div>
-      </li>
-      <li class="col page-break-item-1">
-        <div class="page-break-item-1__icon">
-          <div class="page-break-item-1__icon-group">
-            <img
-              src="./assets/img/img-fc-car1.png"
-              alt=""
-              class="page-break-item-1__icon-img1"
-            />
-            <img
-              src="./assets/img/img-fc-gr-car1.png"
-              alt=""
-              class="page-break-item-1__icon-img2"
-            />
-          </div>
-        </div>
-        <div class="page-break-item-1__content">
-          <h1 class="page-break-item-1__content-heading">
-            High Quality Food
-          </h1>
-          <p class="page-break-item-1__content-paragraph">
-            Combine old fashioned oats and wheat germ in a large bowl
-          </p>
-        </div>
-      </li>
-      <li class="col page-break-item-1">
-        <div class="page-break-item-1__icon">
-          <div class="page-break-item-1__icon-group">
-            <img
-              src="./assets/img/img-fc-car1.png"
-              alt=""
-              class="page-break-item-1__icon-img1"
-            />
-            <img
-              src="./assets/img/img-fc-gr-car1.png"
-              alt=""
-              class="page-break-item-1__icon-img2"
-            />
-          </div>
-        </div>
-        <div class="page-break-item-1__content">
-          <h1 class="page-break-item-1__content-heading">
-            High Quality Food
-          </h1>
-          <p class="page-break-item-1__content-paragraph">
-            Combine old fashioned oats and wheat germ in a large bowl
-          </p>
-        </div>
-      </li>
-      <li class=" col page-break-item-1">
-        <div class="page-break-item-1__icon">
-          <div class="page-break-item-1__icon-group">
-            <img
-              src="./assets/img/img-fc-car1.png"
-              alt=""
-              class="page-break-item-1__icon-img1"
-            />
-            <img
-              src="./assets/img/img-fc-gr-car1.png"
-              alt=""
-              class="page-break-item-1__icon-img2"
-            />
-          </div>
-        </div>
-        <div class="page-break-item-1__content">
-          <h1 class="page-break-item-1__content-heading">
-            High Quality Food
-          </h1>
-          <p class="page-break-item-1__content-paragraph">
-            Combine old fashioned oats and wheat germ in a large
-            bowl
-          </p>
-        </div>
-      </li>
-    </ul>
-  </div>
-      <!-- Expert Farmers-->
-
-        <div class="container-fluid p-cpn pd-150-0" style="background-color: var(--white-color);">
-          <div class="grid wide-m row gx-5">
-            <div class="col">
-              <div class="p-cpn-subheading">
-                <div class="p-cpn-subheading__icon">
-                  <img src="./assets/img/wheat.png" alt="">
-                
-                </div>
-                <div class="p-cpn-subheading__text" style="background-color: var(--background-color)"><h4>
-                  Team Members</h>
-                </h4></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="container-fluid row gx-5">
-            <div class="col">
-              <div class="p-cpn-heading">
-                <h1>
-                  Expert Farmers
-                </h1>
-              </div>
-            </div>
-          </div>
-          <div class="container-fluid row gx-5">
-            <div class="col">
-              <div class="p-cpn-image">
-                <img src="./assets/img/home/img-ud-hd.png" alt="">
-              </div>
-            </div>
-          </div>
-          <div class="grid wide-m row">
-            <div class="col">
-                <div class="p-cpn-item-2nd">       
-                  <img class="p-cpn-item-2nd__ava" src="./assets/img/home/testava.jpg" alt="" />
-                  <span class="p-cpn-item__break">
-                    <span></span>
-                  </span>
-                    <h1 class="p-cpn-item-2nd__name">
-                      Trần Huy Đức
-                    </h1>
-                  
-                    <h3 class="p-cpn-item-2nd__career">
-                                    Student
-                    </h3>
-                </div>            
-            </div>
-            <div class="col">
-              <div class="p-cpn-item-2nd">       
-                <img class="p-cpn-item-2nd__ava" src="./assets/img/home/testava.jpg" alt="" />
-                <span class="p-cpn-item__break"><span></span></span>
-                  <h1 class="p-cpn-item-2nd__name">
-                    Trần Huy Đức
-                  </h1>
-                
-                  <h3 class="p-cpn-item-2nd__career">
-                                  Student
-                  </h3>
-              </div>            
-          </div>
-          <div class="col">
-            <div class="p-cpn-item-2nd">       
-              <img class="p-cpn-item-2nd__ava" src="./assets/img/home/testava.jpg" alt="" />
-              <span class="p-cpn-item__break">
-                <span></span>
-              </span>
-                <h1 class="p-cpn-item-2nd__name">
-                  Trần Huy Đức
-                </h1>
-              
-                <h3 class="p-cpn-item-2nd__career">
-                                Student
-                </h3>
-            </div>            
-        </div>
-          
-          </div>
-        
-        </div>
-
-      <!--Organic Product-->
-   
-        <div class="container-fluid p-cpn pd-150-0" style="background-color: var(--background-color);">
-          <div class="grid wide-m row gx-5">
-            <div class="col">
-              <div class="p-cpn-subheading">
-                <div class="p-cpn-subheading__icon">
-                  <img src="./assets/img/wheat.png" alt="">
-                
-                </div>
-                <div class="p-cpn-subheading__text"><h4>
-                  Some Products</h>
-                </h4></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="container-fluid row gx-5">
-            <div class="col">
-              <div class="p-cpn-heading">
-                <h1>
-                  Organic Products
-                </h1>
-              </div>
-            </div>
-          </div>
-          <div class="container-fluid row gx-5">
-            <div class="col">
-              <div class="p-cpn-image">
-                <img src="./assets/img/home/img-ud-hd.png" alt="">
-              </div>
-            </div>
-          </div>
-           <!--Carousel ITEM-->
-           <div
-           id="carousel-p-cpn-3rd"
-           class="carousel carousel-dark slide"
-           data-bs-ride="carousel"
-         >
-           <div class="carousel-indicators">
-             <button
-               type="button"
-               data-bs-target="#carousel-p-cpn-3rd"
-               data-bs-slide-to="0"
-               class="active"
-               aria-current="true"
-               aria-label="Slide 1"
-             ></button>
-             <button
-               type="button"
-               data-bs-target="#carousel-p-cpn-3rd"
-               data-bs-slide-to="1"
-               aria-label="Slide 2"
-             ></button>
-             <button
-               type="button"
-               data-bs-target="#carousel-p-cpn-3rd"
-               data-bs-slide-to="2"
-               aria-label="Slide 3"
-             ></button>
-           </div>
-           <div class="carousel-inner">
-             <!--item-->
-             <div class="carousel-item active">
-               <div class="grid wide-m row">
-                 <div class="col m-3  p-cpn-item-3rd">    
-                   <div class="p-cpn-item-3rd-front">
-                     <img class="p-cpn-item-3rd-front__img" src="./assets/img/shop/Pomegranate.png " alt="" />
-                     <span class="p-cpn-item__break">
-                      <span></span>               
-                    </span>
-                      <h1 class="p-cpn-item-3rd-front__name">
-                      Pomegranate
-                      </h1>             
-                      <h3 class="p-cpn-item-3rd-front__price">
-                              $98.57
-                      </h3>
-                   </div>     
-                   <div class="p-cpn-item-3rd-back" style="background-image: url('./assets/img/shop/Pomegranate.png');">    
-                         
-                     <div class="p-cpn-item-3rd-back__overlay">
-                       <div class="p-cpn-item-3rd__buttons-group">
-                         
-                           <a class="p-cpn-item-3rd__button"><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></a>
-                           <a class="p-cpn-item-3rd__button"><i class="far fa-heart p-cpn-item-3rd__button-icon "></i></a>                    
-                         
-                       </div>
-                         
-                       <h1 class="p-cpn-item-3rd-back__name">
-                         Pomegranate
-                         </h1>             
-                         <h3 class="p-cpn-item-3rd-back__price">
-                                 $98.57
-                         </h3>
-                         <a class="add-to-cart-btn" href="#">Add To Cart</a>
-                      
-                     </div>
-                   </div>    
-       
-                 </div>    
-                 <div class="col m-3  p-cpn-item-3rd">    
-                   <div class="p-cpn-item-3rd-front">
-                     <img class="p-cpn-item-3rd-front__img" src="./assets/img/shop/Pomegranate.png " alt="" />
-                     <span class="p-cpn-item__break">
-                      <span></span>               
-                    </span>
-                      <h1 class="p-cpn-item-3rd-front__name">
-                      Pomegranate
-                      </h1>             
-                      <h3 class="p-cpn-item-3rd-front__price">
-                              $98.57
-                      </h3>
-                   </div>     
-                   <div class="p-cpn-item-3rd-back" style="background-image: url('./assets/img/shop/Pomegranate.png');">    
-                         
-                     <div class="p-cpn-item-3rd-back__overlay">
-                       <div class="p-cpn-item-3rd__buttons-group">
-                         
-                           <a class="p-cpn-item-3rd__button"><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></a>
-                           <a class="p-cpn-item-3rd__button"><i class="far fa-heart p-cpn-item-3rd__button-icon "></i></a>                    
-                         
-                       </div>
-                         
-                       <h1 class="p-cpn-item-3rd-back__name">
-                         Pomegranate
-                         </h1>             
-                         <h3 class="p-cpn-item-3rd-back__price">
-                                 $98.57
-                         </h3>
-                         <a class="add-to-cart-btn" href="#">Add To Cart</a>
-                      
-                     </div>
-                   </div>    
-       
-                 </div>
-                 <div class="col m-3  p-cpn-item-3rd">    
-                   <div class="p-cpn-item-3rd-front">
-                     <img class="p-cpn-item-3rd-front__img" src="./assets/img/shop/Pomegranate.png " alt="" />
-                     <span class="p-cpn-item__break">
-                      <span></span>               
-                    </span>
-                      <h1 class="p-cpn-item-3rd-front__name">
-                      Pomegranate
-                      </h1>             
-                      <h3 class="p-cpn-item-3rd-front__price">
-                              $98.57
-                      </h3>
-                   </div>     
-                   <div class="p-cpn-item-3rd-back" style="background-image: url('./assets/img/shop/Pomegranate.png');">    
-                         
-                     <div class="p-cpn-item-3rd-back__overlay">
-                       <div class="p-cpn-item-3rd__buttons-group">
-                         
-                           <a class="p-cpn-item-3rd__button"><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></a>
-                           <a class="p-cpn-item-3rd__button"><i class="far fa-heart p-cpn-item-3rd__button-icon "></i></a>                    
-                         
-                       </div>
-                         
-                       <h1 class="p-cpn-item-3rd-back__name">
-                         Pomegranate
-                         </h1>             
-                         <h3 class="p-cpn-item-3rd-back__price">
-                                 $98.57
-                         </h3>
-                         <a class="add-to-cart-btn" href="#">Add To Cart</a>
-                      
-                     </div>
-                   </div>    
-       
-                 </div>
-                 <div class="col m-3  p-cpn-item-3rd">    
-                   <div class="p-cpn-item-3rd-front">
-                     <img class="p-cpn-item-3rd-front__img" src="./assets/img/shop/Pomegranate.png " alt="" />
-                     <span class="p-cpn-item__break">
-                      <span></span>               
-                    </span>
-                      <h1 class="p-cpn-item-3rd-front__name">
-                      Pomegranate
-                      </h1>             
-                      <h3 class="p-cpn-item-3rd-front__price">
-                              $98.57
-                      </h3>
-                   </div>     
-                   <div class="p-cpn-item-3rd-back" style="background-image: url('./assets/img/shop/Pomegranate.png');">    
-                         
-                     <div class="p-cpn-item-3rd-back__overlay">
-                       <div class="p-cpn-item-3rd__buttons-group">
-                         
-                           <a class="p-cpn-item-3rd__button"><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></a>
-                           <a class="p-cpn-item-3rd__button"><i class="far fa-heart p-cpn-item-3rd__button-icon "></i></a>                    
-                         
-                       </div>
-                         
-                       <h1 class="p-cpn-item-3rd-back__name">
-                         Pomegranate
-                         </h1>             
-                         <h3 class="p-cpn-item-3rd-back__price">
-                                 $98.57
-                         </h3>
-                         <a class="add-to-cart-btn" href="#">Add To Cart</a>
-                      
-                     </div>
-                   </div>    
-       
-                 </div>
-               </div>
-             </div>    
-             <!--item-->  
-             <div class="carousel-item ">
-              <div class="grid wide-m row">
-                <div class="col m-3  p-cpn-item-3rd">    
-                  <div class="p-cpn-item-3rd-front">
-                    <img class="p-cpn-item-3rd-front__img" src="./assets/img/shop/Orange.png" alt="" />
-                    <span class="p-cpn-item__break">
-                     <span></span>               
-                   </span>
-                     <h1 class="p-cpn-item-3rd-front__name">
-                     Pomegranate
-                     </h1>             
-                     <h3 class="p-cpn-item-3rd-front__price">
-                             $98.57
-                     </h3>
-                  </div>     
-                  <div class="p-cpn-item-3rd-back" style="background-image: url('./assets/img/shop/Pomegranate.png');">    
-                        
-                    <div class="p-cpn-item-3rd-back__overlay">
-                      <div class="p-cpn-item-3rd__buttons-group">
-                        
-                          <a class="p-cpn-item-3rd__button"><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></a>
-                          <a class="p-cpn-item-3rd__button"><i class="far fa-heart p-cpn-item-3rd__button-icon "></i></a>                    
-                        
-                      </div>
-                        
-                      <h1 class="p-cpn-item-3rd-back__name">
-                        Pomegranate
-                        </h1>             
-                        <h3 class="p-cpn-item-3rd-back__price">
-                                $98.57
-                        </h3>
-                        <a class="add-to-cart-btn" href="#">Add To Cart</a>
-                     
+            <div class="grid wide-m row gx-5">
+                <div class="col">
+                    <div class="p-cpn-subheading">
+                        <div class="p-cpn-subheading__icon">
+                            <img src="./assets/img/wheat.png" alt="">
+                        </div>
+                        <div class="p-cpn-subheading__text">
+                            <h4>
+                                Our Services</h>
+                            </h4>
+                        </div>
                     </div>
-                  </div>    
-      
-                </div>    
-                <div class="col m-3  p-cpn-item-3rd">    
-                  <div class="p-cpn-item-3rd-front">
-                    <img class="p-cpn-item-3rd-front__img" src="./assets/img/shop/Orange.png" alt="" />
-                    <span class="p-cpn-item__break">
-                     <span></span>               
-                   </span>
-                     <h1 class="p-cpn-item-3rd-front__name">
-                     Pomegranate
-                     </h1>             
-                     <h3 class="p-cpn-item-3rd-front__price">
-                             $98.57
-                     </h3>
-                  </div>     
-                  <div class="p-cpn-item-3rd-back" style="background-image: url('./assets/img/shop/Pomegranate.png');">    
-                        
-                    <div class="p-cpn-item-3rd-back__overlay">
-                      <div class="p-cpn-item-3rd__buttons-group">
-                        
-                          <a class="p-cpn-item-3rd__button"><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></a>
-                          <a class="p-cpn-item-3rd__button"><i class="far fa-heart p-cpn-item-3rd__button-icon "></i></a>                    
-                        
-                      </div>
-                        
-                      <h1 class="p-cpn-item-3rd-back__name">
-                        Pomegranate
-                        </h1>             
-                        <h3 class="p-cpn-item-3rd-back__price">
-                                $98.57
-                        </h3>
-                        <a class="add-to-cart-btn" href="#">Add To Cart</a>
-                     
-                    </div>
-                  </div>    
-      
                 </div>
-                <div class="col m-3  p-cpn-item-3rd">    
-                  <div class="p-cpn-item-3rd-front">
-                    <img class="p-cpn-item-3rd-front__img" src="./assets/img/shop/Orange.png" alt="" />
-                    <span class="p-cpn-item__break">
-                     <span></span>               
-                   </span>
-                     <h1 class="p-cpn-item-3rd-front__name">
-                     Pomegranate
-                     </h1>             
-                     <h3 class="p-cpn-item-3rd-front__price">
-                             $98.57
-                     </h3>
-                  </div>     
-                  <div class="p-cpn-item-3rd-back" style="background-image: url('./assets/img/shop/Pomegranate.png');">    
-                        
-                    <div class="p-cpn-item-3rd-back__overlay">
-                      <div class="p-cpn-item-3rd__buttons-group">
-                        
-                          <a class="p-cpn-item-3rd__button"><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></a>
-                          <a class="p-cpn-item-3rd__button"><i class="far fa-heart p-cpn-item-3rd__button-icon "></i></a>                    
-                        
-                      </div>
-                        
-                      <h1 class="p-cpn-item-3rd-back__name">
-                        Pomegranate
-                        </h1>             
-                        <h3 class="p-cpn-item-3rd-back__price">
-                                $98.57
-                        </h3>
-                        <a class="add-to-cart-btn" href="#">Add To Cart</a>
-                     
+            </div>
+            <div class="container-fluid row gx-5">
+                <div class="col">
+                    <div class="p-cpn-heading">
+                        <h1>
+                            What we do?
+                        </h1>
                     </div>
-                  </div>    
-      
                 </div>
-                <div class="col m-3  p-cpn-item-3rd">    
-                  <div class="p-cpn-item-3rd-front">
-                    <img class="p-cpn-item-3rd-front__img" src="./assets/img/shop/Orange.png" alt="" />
-                    <span class="p-cpn-item__break">
-                     <span></span>               
-                   </span>
-                     <h1 class="p-cpn-item-3rd-front__name">
-                     Pomegranate
-                     </h1>             
-                     <h3 class="p-cpn-item-3rd-front__price">
-                             $98.57
-                     </h3>
-                  </div>     
-                  <div class="p-cpn-item-3rd-back" style="background-image: url('./assets/img/shop/Pomegranate.png');">    
-                        
-                    <div class="p-cpn-item-3rd-back__overlay">
-                      <div class="p-cpn-item-3rd__buttons-group">
-                        
-                          <a class="p-cpn-item-3rd__button"><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></a>
-                          <a class="p-cpn-item-3rd__button"><i class="far fa-heart p-cpn-item-3rd__button-icon "></i></a>                    
-                        
-                      </div>
-                        
-                      <h1 class="p-cpn-item-3rd-back__name">
-                        Pomegranate
-                        </h1>             
-                        <h3 class="p-cpn-item-3rd-back__price">
-                                $98.57
-                        </h3>
-                        <a class="add-to-cart-btn" href="#">Add To Cart</a>
-                     
+            </div>
+            <div class="container-fluid row gx-5">
+                <div class="col">
+                    <div class="p-cpn-image">
+                        <img src="./assets/img/home/img-ud-hd.png" alt="">
                     </div>
-                  </div>    
-      
                 </div>
-              </div>
-            </div>  
-               <!--item-->  
-             <div class="carousel-item ">
-              <div class="grid wide-m row">
-                <div class="col m-3  p-cpn-item-3rd">    
-                  <div class="p-cpn-item-3rd-front">
-                    <img class="p-cpn-item-3rd-front__img" src="./assets/img/shop/Apple.png" alt="" />
-                    <span class="p-cpn-item__break">
-                     <span></span>               
-                   </span>
-                     <h1 class="p-cpn-item-3rd-front__name">
-                     Pomegranate
-                     </h1>             
-                     <h3 class="p-cpn-item-3rd-front__price">
-                             $98.57
-                     </h3>
-                  </div>     
-                  <div class="p-cpn-item-3rd-back" style="background-image: url('./assets/img/shop/Pomegranate.png');">    
-                        
-                    <div class="p-cpn-item-3rd-back__overlay">
-                      <div class="p-cpn-item-3rd__buttons-group">
-                        
-                          <a class="p-cpn-item-3rd__button"><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></a>
-                          <a class="p-cpn-item-3rd__button"><i class="far fa-heart p-cpn-item-3rd__button-icon "></i></a>                    
-                        
-                      </div>
-                        
-                      <h1 class="p-cpn-item-3rd-back__name">
-                        Pomegranate
-                        </h1>             
-                        <h3 class="p-cpn-item-3rd-back__price">
-                                $98.57
-                        </h3>
-                        <a class="add-to-cart-btn" href="#">Add To Cart</a>
-                     
-                    </div>
-                  </div>    
-      
-                </div>    
-                <div class="col m-3  p-cpn-item-3rd">    
-                  <div class="p-cpn-item-3rd-front">
-                    <img class="p-cpn-item-3rd-front__img" src="./assets/img/shop/Apple.png" alt="" />
-                    <span class="p-cpn-item__break">
-                     <span></span>               
-                   </span>
-                     <h1 class="p-cpn-item-3rd-front__name">
-                     Pomegranate
-                     </h1>             
-                     <h3 class="p-cpn-item-3rd-front__price">
-                             $98.57
-                     </h3>
-                  </div>     
-                  <div class="p-cpn-item-3rd-back" style="background-image: url('./assets/img/shop/Pomegranate.png');">    
-                        
-                    <div class="p-cpn-item-3rd-back__overlay">
-                      <div class="p-cpn-item-3rd__buttons-group">
-                        
-                          <a class="p-cpn-item-3rd__button"><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></a>
-                          <a class="p-cpn-item-3rd__button"><i class="far fa-heart p-cpn-item-3rd__button-icon "></i></a>                    
-                        
-                      </div>
-                        
-                      <h1 class="p-cpn-item-3rd-back__name">
-                        Pomegranate
-                        </h1>             
-                        <h3 class="p-cpn-item-3rd-back__price">
-                                $98.57
-                        </h3>
-                        <a class="add-to-cart-btn" href="#">Add To Cart</a>
-                     
-                    </div>
-                  </div>    
-      
-                </div>
-                <div class="col m-3  p-cpn-item-3rd">    
-                  <div class="p-cpn-item-3rd-front">
-                    <img class="p-cpn-item-3rd-front__img" src="./assets/img/shop/Apple.png" alt="" />
-                    <span class="p-cpn-item__break">
-                     <span></span>               
-                   </span>
-                     <h1 class="p-cpn-item-3rd-front__name">
-                     Pomegranate
-                     </h1>             
-                     <h3 class="p-cpn-item-3rd-front__price">
-                             $98.57
-                     </h3>
-                  </div>     
-                  <div class="p-cpn-item-3rd-back" style="background-image: url('./assets/img/shop/Pomegranate.png');">    
-                        
-                    <div class="p-cpn-item-3rd-back__overlay">
-                      <div class="p-cpn-item-3rd__buttons-group">
-                        
-                          <a class="p-cpn-item-3rd__button"><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></a>
-                          <a class="p-cpn-item-3rd__button"><i class="far fa-heart p-cpn-item-3rd__button-icon "></i></a>                    
-                        
-                      </div>
-                        
-                      <h1 class="p-cpn-item-3rd-back__name">
-                        Pomegranate
-                        </h1>             
-                        <h3 class="p-cpn-item-3rd-back__price">
-                                $98.57
-                        </h3>
-                        <a class="add-to-cart-btn" href="#">Add To Cart</a>
-                     
-                    </div>
-                  </div>    
-      
-                </div>
-                <div class="col m-3  p-cpn-item-3rd">    
-                  <div class="p-cpn-item-3rd-front">
-                    <img class="p-cpn-item-3rd-front__img" src="./assets/img/shop/Apple.png" alt="" />
-                    <span class="p-cpn-item__break">
-                     <span></span>               
-                   </span>
-                     <h1 class="p-cpn-item-3rd-front__name">
-                     Pomegranate
-                     </h1>             
-                     <h3 class="p-cpn-item-3rd-front__price">
-                             $98.57
-                     </h3>
-                  </div>     
-                  <div class="p-cpn-item-3rd-back" style="background-image: url('./assets/img/shop/Pomegranate.png');">    
-                        
-                    <div class="p-cpn-item-3rd-back__overlay">
-                      <div class="p-cpn-item-3rd__buttons-group">
-                        
-                          <a class="p-cpn-item-3rd__button"><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></a>
-                          <a class="p-cpn-item-3rd__button"><i class="far fa-heart p-cpn-item-3rd__button-icon "></i></a>                    
-                        
-                      </div>
-                        
-                      <h1 class="p-cpn-item-3rd-back__name">
-                        Pomegranate
-                        </h1>             
-                        <h3 class="p-cpn-item-3rd-back__price">
-                                $98.57
-                        </h3>
-                        <a class="add-to-cart-btn" href="#">Add To Cart</a>
-                     
-                    </div>
-                  </div>    
-      
-                </div>
-              </div>
-            </div> 
-           </div>
-           <button
-             class="carousel-control-prev"
-             type="button"
-             data-bs-target="#carousel-p-cpn-3rd"
-             data-bs-slide="prev"
-           >
-             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-             <span class="visually-hidden">Previous</span>
-           </button>
-           <button
-             class="carousel-control-next"
-             type="button"
-             data-bs-target="#carousel-p-cpn-3rd"
-             data-bs-slide="next"
-           >
-             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-             <span class="visually-hidden">Next</span>
-           </button>
-         </div>
+            </div>
+            <div class="grid wide-m row carousel owl-carousel">
+                <div class="col">
+                    <div class="p-cpn-item-1st">
+                        <div class="p-cpn-item-1st__icon">
+                            <img src="./assets/img/home/leaf.png" alt="" />
+                        </div>
+                        <div class="p-cpn-item-1st__content">
+                            <h5 class="p-cpn-item-1st__title">
+                                <a href="#"> Agriculture Product</a>
+                            </h5>
+                            <span class="p-cpn-item__break">
+                                <span></span>
+                            </span>
+                            <p class="p-cpn-item-1st__paragraph">
+                                Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth.
+                            </p>
+                        </div>
 
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-cpn-item-1st">
+                        <div class="p-cpn-item-1st__icon">
+                            <img src="./assets/img/home/leaf.png" alt="" />
+                        </div>
+                        <div class="p-cpn-item-1st__content">
+                            <h5 class="p-cpn-item-1st__title">
+                                <a href="#"> Agriculture Product</a>
+                            </h5>
+                            <span class="p-cpn-item__break">
+                                <span></span>
+                            </span>
+                            <p class="p-cpn-item-1st__paragraph">
+                                Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth.
+                            </p>
+                        </div>
 
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-cpn-item-1st">
+                        <div class="p-cpn-item-1st__icon">
+                            <img src="./assets/img/home/leaf.png" alt="" />
+                        </div>
+                        <div class="p-cpn-item-1st__content">
+                            <h5 class="p-cpn-item-1st__title">
+                                <a href="#"> Agriculture Product</a>
+                            </h5>
+                            <span class="p-cpn-item__break">
+                                <span></span>
+                            </span>
+                            <p class="p-cpn-item-1st__paragraph">
+                                Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth.
+                            </p>
+                        </div>
 
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-cpn-item-1st">
+                        <div class="p-cpn-item-1st__icon">
+                            <img src="./assets/img/home/leaf.png" alt="" />
+                        </div>
+                        <div class="p-cpn-item-1st__content">
+                            <h5 class="p-cpn-item-1st__title">
+                                <a href="#"> Agriculture Product</a>
+                            </h5>
+                            <span class="p-cpn-item__break">
+                                <span></span>
+                            </span>
+                            <p class="p-cpn-item-1st__paragraph">
+                                Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth.
+                            </p>
+                        </div>
 
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-cpn-item-1st">
+                        <div class="p-cpn-item-1st__icon">
+                            <img src="./assets/img/home/leaf.png" alt="" />
+                        </div>
+                        <div class="p-cpn-item-1st__content">
+                            <h5 class="p-cpn-item-1st__title">
+                                <a href="#"> Agriculture Product</a>
+                            </h5>
+                            <span class="p-cpn-item__break">
+                                <span></span>
+                            </span>
+                            <p class="p-cpn-item-1st__paragraph">
+                                Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth.
+                            </p>
+                        </div>
 
+                    </div>
+                </div>
+            </div>
         </div>
         <!--BREAK-->
-        <div
-        class="page-break pd-150-0"
-        style="background-image: url('./assets/img/bgr-client-h1.jpg')"
-      >
-        <ul class="grid wide-l row page-break-list">
-          <li class="col page-break-item-2">
-            <div class="page-break-item-2__icon">
-              <img
-                src="./assets/img/cucumber.png"
-                alt=""
-                
-              />
+        <div class="page-break pd-150-0 row" style="background-image: url('./assets/img/bgr-client-h1.jpg')">
+            <ul class=" page-break-list">
+
+                <li class=" col-ssm-12 col-sm-12 col-md-12 col-lg-3 col-xl-6 page-break-item-1 ">
+                    <div class="page-break-item-1__icon ">
+                        <div class="page-break-item-1__icon-group ">
+                            <img src="./assets/img/img-fc-car1.png " alt=" " class="page-break-item-1__icon-img1 " />
+                            <img src="./assets/img/img-fc-gr-car1.png " alt=" " class="page-break-item-1__icon-img2 " />
+                        </div>
+                    </div>
+                    <div class="page-break-item-1__content ">
+                        <h1 class="page-break-item-1__content-heading ">
+                            High Quality Food
+                        </h1>
+                        <p class="page-break-item-1__content-paragraph ">
+                            Combine old fashioned oats and wheat germ in a large bowl
+                        </p>
+                    </div>
+                </li>
+
+                <li class="col-ssm-12 col-sm-12 col-md-12 col-lg-3 col-xl-6 page-break-item-1 ">
+                    <div class="page-break-item-1__icon ">
+                        <div class="page-break-item-1__icon-group ">
+                            <img src="./assets/img/img-fc-car1.png " alt=" " class="page-break-item-1__icon-img1 " />
+                            <img src="./assets/img/img-fc-gr-car1.png " alt=" " class="page-break-item-1__icon-img2 " />
+                        </div>
+                    </div>
+                    <div class="page-break-item-1__content ">
+                        <h1 class="page-break-item-1__content-heading ">
+                            High Quality Food
+                        </h1>
+                        <p class="page-break-item-1__content-paragraph ">
+                            Combine old fashioned oats and wheat germ in a large bowl
+                        </p>
+                    </div>
+                </li>
+                <li class="col-ssm-12 col-sm-12 col-md-12 col-lg-3 col-xl-6 page-break-item-1 ">
+                    <div class="page-break-item-1__icon ">
+                        <div class="page-break-item-1__icon-group ">
+                            <img src="./assets/img/img-fc-car1.png " alt=" " class="page-break-item-1__icon-img1 " />
+                            <img src="./assets/img/img-fc-gr-car1.png " alt=" " class="page-break-item-1__icon-img2 " />
+                        </div>
+                    </div>
+                    <div class="page-break-item-1__content ">
+                        <h1 class="page-break-item-1__content-heading ">
+                            High Quality Food
+                        </h1>
+                        <p class="page-break-item-1__content-paragraph ">
+                            Combine old fashioned oats and wheat germ in a large bowl
+                        </p>
+                    </div>
+                </li>
+                <li class="col-ssm-12 col-sm-12 col-md-12 col-lg-3 col-xl-6  page-break-item-1 ">
+                    <div class="page-break-item-1__icon ">
+                        <div class="page-break-item-1__icon-group ">
+                            <img src="./assets/img/img-fc-car1.png " alt=" " class="page-break-item-1__icon-img1 " />
+                            <img src="./assets/img/img-fc-gr-car1.png " alt=" " class="page-break-item-1__icon-img2 " />
+                        </div>
+                    </div>
+                    <div class="page-break-item-1__content ">
+                        <h1 class="page-break-item-1__content-heading ">
+                            High Quality Food
+                        </h1>
+                        <p class="page-break-item-1__content-paragraph ">
+                            Combine old fashioned oats and wheat germ in a large bowl
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- Expert Farmers-->
+        <div class="container-fluid p-cpn pd-150-0 " style="background-color: var(--white-color); ">
+            <div class="grid wide-m row gx-5 ">
+                <div class="col ">
+                    <div class="p-cpn-subheading ">
+                        <div class="p-cpn-subheading__icon ">
+                            <img src="./assets/img/wheat.png " alt=" ">
+                        </div>
+                        <div class="p-cpn-subheading__text " style="background-color: var(--background-color) ">
+                            <h4>
+                                Team Members</h>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="page-break-item-2__content">
-              <h1 class="page-break-item-2__content-counter">
-                895 <span>+</span>
-              </h1>
-              <h2 class="page-break-item-2__content-subheading">
-                Combine old 
-              </h2>
+            <div class="container-fluid row gx-5 ">
+                <div class="col ">
+                    <div class="p-cpn-heading ">
+                        <h1>
+                            Expert Farmers
+                        </h1>
+                    </div>
+                </div>
             </div>
-          </li>
-          <li class="col page-break-item-2">
-            <div class="page-break-item-2__icon">
-              <img
-                src="./assets/img/cucumber.png"
-                alt=""
-                
-              />
+            <div class="container-fluid row gx-5 ">
+                <div class="col ">
+                    <div class="p-cpn-image ">
+                        <img src="./assets/img/home/img-ud-hd.png " alt=" ">
+                    </div>
+                </div>
             </div>
-            <div class="page-break-item-2__content">
-              <h1 class="page-break-item-2__content-counter">
-                895 <span>+</span>
-              </h1>
-              <h2 class="page-break-item-2__content-subheading">
-                Combine old 
-              </h2>
+            <div class="grid wide-m row carousel owl-carousel ">
+                <div class="col ">
+                    <div class="p-cpn-item-2nd ">
+                        <img class="p-cpn-item-2nd__ava " src="./assets/img/home/testava.jpg " alt=" " />
+                        <span class="p-cpn-item__break ">
+                            <span></span>
+                        </span>
+                        <h1 class="p-cpn-item-2nd__name ">
+                            Trần Huy Đức
+                        </h1>
+                        <h3 class="p-cpn-item-2nd__career ">
+                            Student
+                        </h3>
+                    </div>
+                </div>
+                <div class="col ">
+                    <div class="p-cpn-item-2nd ">
+                        <img class="p-cpn-item-2nd__ava " src="./assets/img/home/testava.jpg " alt=" " />
+                        <span class="p-cpn-item__break "><span></span></span>
+                        <h1 class="p-cpn-item-2nd__name ">
+                            Trần Huy Đức
+                        </h1>
+                        <h3 class="p-cpn-item-2nd__career ">
+                            Student
+                        </h3>
+                    </div>
+                </div>
+                <div class="col ">
+                    <div class="p-cpn-item-2nd ">
+                        <img class="p-cpn-item-2nd__ava " src="./assets/img/home/testava.jpg " alt=" " />
+                        <span class="p-cpn-item__break ">
+                            <span></span>
+                        </span>
+                        <h1 class="p-cpn-item-2nd__name ">
+                            Trần Huy Đức
+                        </h1>
+                        <h3 class="p-cpn-item-2nd__career ">
+                            Student
+                        </h3>
+                    </div>
+                </div>
             </div>
-          </li>
-          <li class="col page-break-item-2">
-            <div class="page-break-item-2__icon">
-              <img
-                src="./assets/img/cucumber.png"
-                alt=""
-                
-              />
+        </div>
+        <!--Organic Product-->
+        <div class="container-fluid p-cpn pd-150-0 " style="background-color: var(--background-color); ">
+            <div class="grid wide-m row gx-5 ">
+                <div class="col ">
+                    <div class="p-cpn-subheading ">
+                        <div class="p-cpn-subheading__icon ">
+                            <img src="./assets/img/wheat.png " alt=" ">
+                        </div>
+                        <div class="p-cpn-subheading__text ">
+                            <h4>
+                                Some Products</h>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="page-break-item-2__content">
-              <h1 class="page-break-item-2__content-counter">
-                895 <span>+</span>
-              </h1>
-              <h2 class="page-break-item-2__content-subheading">
-                Combine old 
-              </h2>
+            <div class="container-fluid row gx-5 ">
+                <div class="col ">
+                    <div class="p-cpn-heading ">
+                        <h1>
+                            Organic Products
+                        </h1>
+                    </div>
+                </div>
             </div>
-          </li>
-          <li class="col page-break-item-2">
-            <div class="page-break-item-2__icon">
-              <img
-                src="./assets/img/cucumber.png"
-                alt=""
-                
-              />
+            <div class="container-fluid row gx-5 ">
+                <div class="col ">
+                    <div class="p-cpn-image ">
+                        <img src="./assets/img/home/img-ud-hd.png " alt=" ">
+                    </div>
+                </div>
             </div>
-            <div class="page-break-item-2__content">
-              <h1 class="page-break-item-2__content-counter">
-                895 <span>+</span>
-              </h1>
-              <h2 class="page-break-item-2__content-subheading">
-                Combine old 
-              </h2>
+            <!--Carousel ITEM-->
+            <div id="carousel-p-cpn-3rd ">
+                <div class="grid wide-m row carousel owl-carousel ">
+                    <div class="col m-3 p-cpn-item-3rd ">
+                        <div class="p-cpn-item-3rd-front ">
+                            <img class="p-cpn-item-3rd-front__img " src="./assets/img/shop/Pomegranate.png " alt=" " />
+                            <span class="p-cpn-item__break ">
+                                        <span></span>
+                            </span>
+                            <h1 class="p-cpn-item-3rd-front__name ">
+                                Pomegranate
+                            </h1>
+                            <h3 class="p-cpn-item-3rd-front__price ">
+                                $98.57
+                            </h3>
+                        </div>
+                        <div class="p-cpn-item-3rd-back " style="background-image: url( './assets/img/shop/Pomegranate.png'); ">
+                            <div class="p-cpn-item-3rd-back__overlay ">
+                                <div class="p-cpn-item-3rd__buttons-group ">
+                                    <a class="p-cpn-item-3rd__button "><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></a>
+                                    <a class="p-cpn-item-3rd__button "><i class="far fa-heart p-cpn-item-3rd__button-icon "></i></a>
+                                </div>
+                                <h1 class="p-cpn-item-3rd-back__name ">
+                                    Pomegranate
+                                </h1>
+                                <h3 class="p-cpn-item-3rd-back__price ">
+                                    $98.57
+                                </h3>
+                                <a class="add-to-cart-btn " href="# ">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col m-3 p-cpn-item-3rd ">
+                        <div class="p-cpn-item-3rd-front ">
+                            <img class="p-cpn-item-3rd-front__img " src="./assets/img/shop/Pomegranate.png " alt=" " />
+                            <span class="p-cpn-item__break ">
+                                        <span></span>
+                            </span>
+                            <h1 class="p-cpn-item-3rd-front__name ">
+                                Pomegranate
+                            </h1>
+                            <h3 class="p-cpn-item-3rd-front__price ">
+                                $98.57
+                            </h3>
+                        </div>
+                        <div class="p-cpn-item-3rd-back " style="background-image: url( './assets/img/shop/Pomegranate.png'); ">
+                            <div class="p-cpn-item-3rd-back__overlay ">
+                                <div class="p-cpn-item-3rd__buttons-group ">
+                                    <a class="p-cpn-item-3rd__button "><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></a>
+                                    <a class="p-cpn-item-3rd__button "><i class="far fa-heart p-cpn-item-3rd__button-icon "></i></a>
+                                </div>
+                                <h1 class="p-cpn-item-3rd-back__name ">
+                                    Pomegranate
+                                </h1>
+                                <h3 class="p-cpn-item-3rd-back__price ">
+                                    $98.57
+                                </h3>
+                                <a class="add-to-cart-btn " href="# ">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col m-3 p-cpn-item-3rd ">
+                        <div class="p-cpn-item-3rd-front ">
+                            <img class="p-cpn-item-3rd-front__img " src="./assets/img/shop/Pomegranate.png " alt=" " />
+                            <span class="p-cpn-item__break ">
+                                        <span></span>
+                            </span>
+                            <h1 class="p-cpn-item-3rd-front__name ">
+                                Pomegranate
+                            </h1>
+                            <h3 class="p-cpn-item-3rd-front__price ">
+                                $98.57
+                            </h3>
+                        </div>
+                        <div class="p-cpn-item-3rd-back " style="background-image: url( './assets/img/shop/Pomegranate.png'); ">
+                            <div class="p-cpn-item-3rd-back__overlay ">
+                                <div class="p-cpn-item-3rd__buttons-group ">
+                                    <a class="p-cpn-item-3rd__button "><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></a>
+                                    <a class="p-cpn-item-3rd__button "><i class="far fa-heart p-cpn-item-3rd__button-icon "></i></a>
+                                </div>
+                                <h1 class="p-cpn-item-3rd-back__name ">
+                                    Pomegranate
+                                </h1>
+                                <h3 class="p-cpn-item-3rd-back__price ">
+                                    $98.57
+                                </h3>
+                                <a class="add-to-cart-btn " href="# ">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col m-3 p-cpn-item-3rd ">
+                        <div class="p-cpn-item-3rd-front ">
+                            <img class="p-cpn-item-3rd-front__img " src="./assets/img/shop/Pomegranate.png " alt=" " />
+                            <span class="p-cpn-item__break ">
+                                        <span></span>
+                            </span>
+                            <h1 class="p-cpn-item-3rd-front__name ">
+                                Pomegranate
+                            </h1>
+                            <h3 class="p-cpn-item-3rd-front__price ">
+                                $98.57
+                            </h3>
+                        </div>
+                        <div class="p-cpn-item-3rd-back " style="background-image: url( './assets/img/shop/Pomegranate.png'); ">
+                            <div class="p-cpn-item-3rd-back__overlay ">
+                                <div class="p-cpn-item-3rd__buttons-group ">
+                                    <a class="p-cpn-item-3rd__button "><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></a>
+                                    <a class="p-cpn-item-3rd__button "><i class="far fa-heart p-cpn-item-3rd__button-icon "></i></a>
+                                </div>
+                                <h1 class="p-cpn-item-3rd-back__name ">
+                                    Pomegranate
+                                </h1>
+                                <h3 class="p-cpn-item-3rd-back__price ">
+                                    $98.57
+                                </h3>
+                                <a class="add-to-cart-btn " href="# ">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col m-3 p-cpn-item-3rd ">
+                        <div class="p-cpn-item-3rd-front ">
+                            <img class="p-cpn-item-3rd-front__img " src="./assets/img/shop/Pomegranate.png " alt=" " />
+                            <span class="p-cpn-item__break ">
+                                        <span></span>
+                            </span>
+                            <h1 class="p-cpn-item-3rd-front__name ">
+                                Pomegranate
+                            </h1>
+                            <h3 class="p-cpn-item-3rd-front__price ">
+                                $98.57
+                            </h3>
+                        </div>
+                        <div class="p-cpn-item-3rd-back " style="background-image: url( './assets/img/shop/Pomegranate.png'); ">
+                            <div class="p-cpn-item-3rd-back__overlay ">
+                                <div class="p-cpn-item-3rd__buttons-group ">
+                                    <a class="p-cpn-item-3rd__button "><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></a>
+                                    <a class="p-cpn-item-3rd__button "><i class="far fa-heart p-cpn-item-3rd__button-icon "></i></a>
+                                </div>
+                                <h1 class="p-cpn-item-3rd-back__name ">
+                                    Pomegranate
+                                </h1>
+                                <h3 class="p-cpn-item-3rd-back__price ">
+                                    $98.57
+                                </h3>
+                                <a class="add-to-cart-btn " href="# ">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col m-3 p-cpn-item-3rd ">
+                        <div class="p-cpn-item-3rd-front ">
+                            <img class="p-cpn-item-3rd-front__img " src="./assets/img/shop/Pomegranate.png " alt=" " />
+                            <span class="p-cpn-item__break ">
+                                        <span></span>
+                            </span>
+                            <h1 class="p-cpn-item-3rd-front__name ">
+                                Pomegranate
+                            </h1>
+                            <h3 class="p-cpn-item-3rd-front__price ">
+                                $98.57
+                            </h3>
+                        </div>
+                        <div class="p-cpn-item-3rd-back " style="background-image: url( './assets/img/shop/Pomegranate.png'); ">
+                            <div class="p-cpn-item-3rd-back__overlay ">
+                                <div class="p-cpn-item-3rd__buttons-group ">
+                                    <a class="p-cpn-item-3rd__button "><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></a>
+                                    <a class="p-cpn-item-3rd__button "><i class="far fa-heart p-cpn-item-3rd__button-icon "></i></a>
+                                </div>
+                                <h1 class="p-cpn-item-3rd-back__name ">
+                                    Pomegranate
+                                </h1>
+                                <h3 class="p-cpn-item-3rd-back__price ">
+                                    $98.57
+                                </h3>
+                                <a class="add-to-cart-btn " href="# ">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col m-3 p-cpn-item-3rd ">
+                        <div class="p-cpn-item-3rd-front ">
+                            <img class="p-cpn-item-3rd-front__img " src="./assets/img/shop/Pomegranate.png " alt=" " />
+                            <span class="p-cpn-item__break ">
+                                        <span></span>
+                            </span>
+                            <h1 class="p-cpn-item-3rd-front__name ">
+                                Pomegranate
+                            </h1>
+                            <h3 class="p-cpn-item-3rd-front__price ">
+                                $98.57
+                            </h3>
+                        </div>
+                        <div class="p-cpn-item-3rd-back " style="background-image: url( './assets/img/shop/Pomegranate.png'); ">
+                            <div class="p-cpn-item-3rd-back__overlay ">
+                                <div class="p-cpn-item-3rd__buttons-group ">
+                                    <a class="p-cpn-item-3rd__button "><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></a>
+                                    <a class="p-cpn-item-3rd__button "><i class="far fa-heart p-cpn-item-3rd__button-icon "></i></a>
+                                </div>
+                                <h1 class="p-cpn-item-3rd-back__name ">
+                                    Pomegranate
+                                </h1>
+                                <h3 class="p-cpn-item-3rd-back__price ">
+                                    $98.57
+                                </h3>
+                                <a class="add-to-cart-btn " href="# ">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col m-3 p-cpn-item-3rd ">
+                        <div class="p-cpn-item-3rd-front ">
+                            <img class="p-cpn-item-3rd-front__img " src="./assets/img/shop/Pomegranate.png " alt=" " />
+                            <span class="p-cpn-item__break ">
+                                        <span></span>
+                            </span>
+                            <h1 class="p-cpn-item-3rd-front__name ">
+                                Pomegranate
+                            </h1>
+                            <h3 class="p-cpn-item-3rd-front__price ">
+                                $98.57
+                            </h3>
+                        </div>
+                        <div class="p-cpn-item-3rd-back " style="background-image: url( './assets/img/shop/Pomegranate.png'); ">
+                            <div class="p-cpn-item-3rd-back__overlay ">
+                                <div class="p-cpn-item-3rd__buttons-group ">
+                                    <a class="p-cpn-item-3rd__button "><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></a>
+                                    <a class="p-cpn-item-3rd__button "><i class="far fa-heart p-cpn-item-3rd__button-icon "></i></a>
+                                </div>
+                                <h1 class="p-cpn-item-3rd-back__name ">
+                                    Pomegranate
+                                </h1>
+                                <h3 class="p-cpn-item-3rd-back__price ">
+                                    $98.57
+                                </h3>
+                                <a class="add-to-cart-btn " href="# ">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </li>
+
+        </div>
+    </div>
+    <!--BREAK-->
+    <div class="page-break pd-150-0 " style="background-image: url( './assets/img/bgr-client-h1.jpg') ">
+        <ul class="grid wide-l row page-break-list ">
+            <li class="col page-break-item-2 ">
+                <div class="page-break-item-2__icon ">
+                    <img src="./assets/img/cucumber.png " alt=" " />
+                </div>
+                <div class="page-break-item-2__content ">
+                    <h1 class="page-break-item-2__content-counter ">
+                        895 <span>+</span>
+                    </h1>
+                    <h2 class="page-break-item-2__content-subheading ">
+                        Combine old
+                    </h2>
+                </div>
+            </li>
+            <li class="col page-break-item-2 ">
+                <div class="page-break-item-2__icon ">
+                    <img src="./assets/img/cucumber.png " alt=" " />
+                </div>
+                <div class="page-break-item-2__content ">
+                    <h1 class="page-break-item-2__content-counter ">
+                        895 <span>+</span>
+                    </h1>
+                    <h2 class="page-break-item-2__content-subheading ">
+                        Combine old
+                    </h2>
+                </div>
+            </li>
+            <li class="col page-break-item-2 ">
+                <div class="page-break-item-2__icon ">
+                    <img src="./assets/img/cucumber.png " alt=" " />
+                </div>
+                <div class="page-break-item-2__content ">
+                    <h1 class="page-break-item-2__content-counter ">
+                        895 <span>+</span>
+                    </h1>
+                    <h2 class="page-break-item-2__content-subheading ">
+                        Combine old
+                    </h2>
+                </div>
+            </li>
+            <li class="col page-break-item-2 ">
+                <div class="page-break-item-2__icon ">
+                    <img src="./assets/img/cucumber.png " alt=" " />
+                </div>
+                <div class="page-break-item-2__content ">
+                    <h1 class="page-break-item-2__content-counter ">
+                        895 <span>+</span>
+                    </h1>
+                    <h2 class="page-break-item-2__content-subheading ">
+                        Combine old
+                    </h2>
+                </div>
+            </li>
         </ul>
-      </div>
-      <!--Update of Organic-->
-        <div class="container-fluid p-cpn pd-150-0" style="background-color: var(--white-color);">
-          <div class="grid wide-m row gx-5">
-            <div class="col">
-              <div class="p-cpn-subheading">
-                <div class="p-cpn-subheading__icon">
-                  <img src="./assets/img/wheat.png" alt="">              
+    </div>
+    <!--Update of Organic-->
+    <div class="container-fluid p-cpn pd-150-0 " style="background-color: var(--white-color); ">
+        <div class="grid wide-m row gx-5 ">
+            <div class="col ">
+                <div class="p-cpn-subheading ">
+                    <div class="p-cpn-subheading__icon ">
+                        <img src="./assets/img/wheat.png " alt=" ">
+                    </div>
+                    <div class="p-cpn-subheading__text " style="background-color: var(--background-color) ">
+                        <h4>
+                            Latest New</h>
+                        </h4>
+                    </div>
                 </div>
-                <div class="p-cpn-subheading__text" style="background-color: var(--background-color)"><h4>
-                  Latest New</h>
-                </h4></div>
-              </div>
             </div>
-          </div>
-
-          <div class="container-fluid row gx-5">
-            <div class="col">
-              <div class="p-cpn-heading">
-                <h1>
-                  Update of Organic
-                </h1>
-              </div>
-            </div>
-          </div>
-          <div class="container-fluid row gx-5">
-            <div class="col">
-              <div class="p-cpn-image">
-                <img src="./assets/img/home/img-ud-hd.png" alt="">
-              </div>
-            </div>
-          </div>
-          <div class=" grid wide-m row">
-          
-            <div class="col">
-              <div class="p-cpn-item-4th">       
-                <img class="p-cpn-item-4th__img" src="./assets/img/home/blog2-370x435.jpg" alt="" />
-              <div class="p-cpn-item-4th__wrapper">
-                <div class="overlay">                  
-                </div>
-                <div class="p-cpn-item-4th__info">
-                  <span class="p-cpn-item-4th__info-time">
-                    <i class="far fa-calendar-alt"></i>
-                    21 May, 2021
-                  </span>
-                  <span class="p-cpn-item-4th__info-react">
-                    <i class="fas fa-heart"></i>
-                    0
-                  </span>
-                </div>
-              <div class="p-cpn-item-4th__content">
-                
-                  <a class="p-cpn-item-4th__title" href="#"> Warm and humid, a sticky day health.</a>
-                <span class="p-cpn-item__break"><span></span></span>
-                
-                  <p class="p-cpn-item-4th__paragraph">
-                    Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed.
-                  </p>    
-              </div>
-              </div>
-              </div>            
-          </div>
-          <div class="col">
-            <div class="p-cpn-item-4th">       
-              <img class="p-cpn-item-4th__img" src="./assets/img/home/blog2-370x435.jpg" alt="" />
-            <div class="p-cpn-item-4th__wrapper">
-              <div class="overlay">                  
-              </div>
-              <div class="p-cpn-item-4th__info">
-                <span class="p-cpn-item-4th__info-time">
-                  <i class="far fa-calendar-alt"></i>
-                  21 May, 2021
-                </span>
-                <span class="p-cpn-item-4th__info-react">
-                  <i class="fas fa-heart"></i>
-                  0
-                </span>
-              </div>
-            <div class="p-cpn-item-4th__content">
-              
-                <a class="p-cpn-item-4th__title" href="#"> Warm and humid, a sticky day health.</a>
-              <span class="p-cpn-item__break"><span></span></span>
-              
-                <p class="p-cpn-item-4th__paragraph">
-                  Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed.
-                </p>    
-            </div>
-            </div>
-            </div>            
         </div>
-        <div class="col">
-          <div class="p-cpn-item-4th">       
-            <img class="p-cpn-item-4th__img" src="./assets/img/home/blog2-370x435.jpg" alt="" />
-          <div class="p-cpn-item-4th__wrapper">
-            <div class="overlay">                  
+        <div class="container-fluid row gx-5 ">
+            <div class="col ">
+                <div class="p-cpn-heading ">
+                    <h1>
+                        Update of Organic
+                    </h1>
+                </div>
             </div>
-            <div class="p-cpn-item-4th__info">
-              <span class="p-cpn-item-4th__info-time">
-                <i class="far fa-calendar-alt"></i>
-                21 May, 2021
-              </span>
-              <span class="p-cpn-item-4th__info-react">
-                <i class="fas fa-heart"></i>
-                0
-              </span>
-            </div>
-          <div class="p-cpn-item-4th__content">
-            
-              <a class="p-cpn-item-4th__title" href="#"> Warm and humid, a sticky day health.</a>
-            <span class="p-cpn-item__break"><span></span></span>
-            
-              <p class="p-cpn-item-4th__paragraph">
-                Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed.
-              </p>    
-          </div>
-          </div>
-          </div>            
-      </div>
-            
-
-          
-          
-          </div>
-        
         </div>
-
-      
+        <div class="container-fluid row gx-5 ">
+            <div class="col ">
+                <div class="p-cpn-image ">
+                    <img src="./assets/img/home/img-ud-hd.png " alt=" ">
+                </div>
+            </div>
+        </div>
+        <div class=" grid wide-m row carousel owl-carousel ">
+            <div class="col ">
+                <div class="p-cpn-item-4th ">
+                    <img class="p-cpn-item-4th__img " src="./assets/img/home/blog2-370x435.jpg " alt=" " />
+                    <div class="p-cpn-item-4th__wrapper ">
+                        <div class="overlay ">
+                        </div>
+                        <div class="p-cpn-item-4th__info ">
+                            <span class="p-cpn-item-4th__info-time ">
+                                    <i class="far fa-calendar-alt "></i>
+                                    21 May, 2021
+                                </span>
+                            <span class="p-cpn-item-4th__info-react ">
+                                    <i class="fas fa-heart "></i>
+                                    0
+                                </span>
+                        </div>
+                        <div class="p-cpn-item-4th__content ">
+                            <a class="p-cpn-item-4th__title " href="# "> Warm and humid, a sticky day health.</a>
+                            <span class="p-cpn-item__break "><span></span></span>
+                            <p class="p-cpn-item-4th__paragraph ">
+                                Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col ">
+                <div class="p-cpn-item-4th ">
+                    <img class="p-cpn-item-4th__img " src="./assets/img/home/blog2-370x435.jpg " alt=" " />
+                    <div class="p-cpn-item-4th__wrapper ">
+                        <div class="overlay ">
+                        </div>
+                        <div class="p-cpn-item-4th__info ">
+                            <span class="p-cpn-item-4th__info-time ">
+                                    <i class="far fa-calendar-alt "></i>
+                                    21 May, 2021
+                                </span>
+                            <span class="p-cpn-item-4th__info-react ">
+                                    <i class="fas fa-heart "></i>
+                                    0
+                                </span>
+                        </div>
+                        <div class="p-cpn-item-4th__content ">
+                            <a class="p-cpn-item-4th__title " href="# "> Warm and humid, a sticky day health.</a>
+                            <span class="p-cpn-item__break "><span></span></span>
+                            <p class="p-cpn-item-4th__paragraph ">
+                                Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col ">
+                <div class="p-cpn-item-4th ">
+                    <img class="p-cpn-item-4th__img " src="./assets/img/home/blog2-370x435.jpg " alt=" " />
+                    <div class="p-cpn-item-4th__wrapper ">
+                        <div class="overlay ">
+                        </div>
+                        <div class="p-cpn-item-4th__info ">
+                            <span class="p-cpn-item-4th__info-time ">
+                                    <i class="far fa-calendar-alt "></i>
+                                    21 May, 2021
+                                </span>
+                            <span class="p-cpn-item-4th__info-react ">
+                                    <i class="fas fa-heart "></i>
+                                    0
+                                </span>
+                        </div>
+                        <div class="p-cpn-item-4th__content ">
+                            <a class="p-cpn-item-4th__title " href="# "> Warm and humid, a sticky day health.</a>
+                            <span class="p-cpn-item__break "><span></span></span>
+                            <p class="p-cpn-item-4th__paragraph ">
+                                Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col ">
+                <div class="p-cpn-item-4th ">
+                    <img class="p-cpn-item-4th__img " src="./assets/img/home/blog2-370x435.jpg " alt=" " />
+                    <div class="p-cpn-item-4th__wrapper ">
+                        <div class="overlay ">
+                        </div>
+                        <div class="p-cpn-item-4th__info ">
+                            <span class="p-cpn-item-4th__info-time ">
+                                    <i class="far fa-calendar-alt "></i>
+                                    21 May, 2021
+                                </span>
+                            <span class="p-cpn-item-4th__info-react ">
+                                    <i class="fas fa-heart "></i>
+                                    0
+                                </span>
+                        </div>
+                        <div class="p-cpn-item-4th__content ">
+                            <a class="p-cpn-item-4th__title " href="# "> Warm and humid, a sticky day health.</a>
+                            <span class="p-cpn-item__break "><span></span></span>
+                            <p class="p-cpn-item-4th__paragraph ">
+                                Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col ">
+                <div class="p-cpn-item-4th ">
+                    <img class="p-cpn-item-4th__img " src="./assets/img/home/blog2-370x435.jpg " alt=" " />
+                    <div class="p-cpn-item-4th__wrapper ">
+                        <div class="overlay ">
+                        </div>
+                        <div class="p-cpn-item-4th__info ">
+                            <span class="p-cpn-item-4th__info-time ">
+                                    <i class="far fa-calendar-alt "></i>
+                                    21 May, 2021
+                                </span>
+                            <span class="p-cpn-item-4th__info-react ">
+                                    <i class="fas fa-heart "></i>
+                                    0
+                                </span>
+                        </div>
+                        <div class="p-cpn-item-4th__content ">
+                            <a class="p-cpn-item-4th__title " href="# "> Warm and humid, a sticky day health.</a>
+                            <span class="p-cpn-item__break "><span></span></span>
+                            <p class="p-cpn-item-4th__paragraph ">
+                                Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
     <!-- #############FOOTER######### -->
-    <footer class="container-fluid">
-      <div class="organic-footer-content row">
-        <div class="col-xl-4 col-md-6 col-12">
-          <div class="organic-footer-col">
-            <div class="organic-footer-logo">
-              <a href="#"><img src="./assets/img/logo.png" /></a>
+    <footer class="container-fluid ">
+        <div class="organic-footer-content row ">
+            <div class="col-xl-4 col-md-6 col-12 ">
+                <div class="organic-footer-col ">
+                    <div class="organic-footer-logo ">
+                        <a href="# "><img src="./assets/img/logo.png " /></a>
+                    </div>
+                    <p class="organic-footer-paragraph ">
+                        Take a moment to enjoy in our all time favorite and the bestseller in its inche Craft Beer, a WordPress theme for you<br /><br /> Orgus is a clean and modern WordPress theme designed specifically for industry
+                    </p>
+                </div>
             </div>
-            <p class="organic-footer-paragraph">
-              Take a moment to enjoy in our all time favorite and the bestseller
-              in its inche Craft Beer, a WordPress theme for you<br /><br />
-              Orgus is a clean and modern WordPress theme designed specifically
-              for industry
-            </p>
-          </div>
-        </div>
-        <div class="col-xl-3 col-md-6 col-12">
-          <div class="organic-footer-col">
-            <div class="organic-footer-heading">
-              <h3 class="organic-footer-heading_text">Quick Links</h3>
-              <span class="organic-footer-heading_icon">
-                <span></span>
-              </span>
+            <div class="col-xl-3 col-md-6 col-12 ">
+                <div class="organic-footer-col ">
+                    <div class="organic-footer-heading ">
+                        <h3 class="organic-footer-heading_text ">Quick Links</h3>
+                        <span class="organic-footer-heading_icon ">
+                            <span></span>
+                        </span>
+                    </div>
+                    <ul class="organic-footer-list_quick ">
+                        <li>
+                            <a href="# ">Our Projects</a>
+                        </li>
+                        <li>
+                            <a href="# ">Orgus Farmers</a>
+                        </li>
+                        <li>
+                            <a href="# ">About Us</a>
+                        </li>
+                        <li>
+                            <a href="# ">Upcoming Events</a>
+                        </li>
+                        <li>
+                            <a href="# ">Our Services</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <ul class="organic-footer-list_quick">
-              <li>
-                <a href="#">Our Projects</a>
-              </li>
-              <li>
-                <a href="#">Orgus Farmers</a>
-              </li>
-              <li>
-                <a href="#">About Us</a>
-              </li>
-              <li>
-                <a href="#">Upcoming Events</a>
-              </li>
-              <li>
-                <a href="#">Our Services</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-xl-3 col-md-6 col-12">
-          <div class="organic-footer-col">
-            <div class="organic-footer-heading">
-              <h3 class="organic-footer-heading_text">Products</h3>
-              <span class="organic-footer-heading_icon">
-                <span></span>
-              </span>
+            <div class="col-xl-3 col-md-6 col-12 ">
+                <div class="organic-footer-col ">
+                    <div class="organic-footer-heading ">
+                        <h3 class="organic-footer-heading_text ">Products</h3>
+                        <span class="organic-footer-heading_icon ">
+                            <span></span>
+                        </span>
+                    </div>
+                    <ul class="organic-footer-list_product ">
+                        <li>
+                            <a href="# ">Organic Fruits</a>
+                        </li>
+                        <li>
+                            <a href="# ">Fresh Vegetables</a>
+                        </li>
+                        <li>
+                            <a href="# ">Fresh Meats</a>
+                        </li>
+                        <li>
+                            <a href="# ">Other Products</a>
+                        </li>
+                        <li>
+                            <a href="# ">Organic Foods</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <ul class="organic-footer-list_product">
-              <li>
-                <a href="#">Organic Fruits</a>
-              </li>
-              <li>
-                <a href="#">Fresh Vegetables</a>
-              </li>
-              <li>
-                <a href="#">Fresh Meats</a>
-              </li>
-              <li>
-                <a href="#">Other Products</a>
-              </li>
-              <li>
-                <a href="#">Organic Foods</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-6 col-12">
-          <div class="organic-footer-col">
-            <div class="organic-footer-heading">
-              <h3 class="organic-footer-heading_text">Contact</h3>
-              <span class="organic-footer-heading_icon">
-                <span></span>
-              </span>
+            <div class="col-xl-2 col-md-6 col-12 ">
+                <div class="organic-footer-col ">
+                    <div class="organic-footer-heading ">
+                        <h3 class="organic-footer-heading_text ">Contact</h3>
+                        <span class="organic-footer-heading_icon ">
+                            <span></span>
+                        </span>
+                    </div>
+                    <ul class="organic-footer-list_contact ">
+                        <li>
+                            <p class="contact_info ">Phone:</p>
+                            <a href="# ">+ 00 568 945 679</a>
+                        </li>
+                        <li>
+                            <p class="contact_info ">Email:</p>
+                            <a href="# ">orgus@gmail.com</a>
+                        </li>
+                        <li>
+                            <p class="contact_info ">Website:</p>
+                            <a href="# ">www.orgusinfo.com</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <ul class="organic-footer-list_contact">
-              <li>
-                <p class="contact_info">Phone:</p>
-                <a href="#">+ 00 568 945 679</a>
-              </li>
-              <li>
-                <p class="contact_info">Email:</p>
-                <a href="#">orgus@gmail.com</a>
-              </li>
-              <li>
-                <p class="contact_info">Website:</p>
-                <a href="#">www.orgusinfo.com</a>
-              </li>
-            </ul>
-          </div>
         </div>
-      </div>
-      <div class="organic-footer-further row">
-        <div class="col-xl-6 col-md-6 col-12">
-          <div class="organic-footer-col_bottom">
-            <p>
-              <span>Orgus</span> - Copyright 2021. With love by
-              <span>CMSSuperHeros</span>
-            </p>
-          </div>
+        <div class="organic-footer-further row ">
+            <div class="col-xl-6 col-md-6 col-12 ">
+                <div class="organic-footer-col_bottom ">
+                    <p>
+                        <span>Orgus</span> - Copyright 2021. With love by
+                        <span>CMSSuperHeros</span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-xl-6 col-md-6 col-12 ">
+                <div class="organic-footer-col_bottom ">
+                    <ul>
+                        <li>
+                            <a href="# ">Terms & Conditions</a>
+                        </li>
+                        <li>
+                            <a href="# ">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="# ">Setting & Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="col-xl-6 col-md-6 col-12">
-          <div class="organic-footer-col_bottom">
-            <ul>
-              <li>
-                <a href="#">Terms & Conditions</a>
-              </li>
-              <li>
-                <a href="#">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="#">Setting & Privacy</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js "></script>
+    <script>
+        $(".carousel ").owlCarousel({
+            margin: 20,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false
+                },
+                600: {
+                    items: 2,
+                    nav: false
+                },
+                1000: {
+                    items: 3,
+                    nav: false
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>ript> $(".carousel ").owlCarousel({ margin: 20, loop: true, autoplay: true, autoplayTimeout: 2000, autoplayHoverPause: true, responsive: { 0: { items: 1, nav: false }, 600: { items: 2, nav: false }, 1000: { items: 3, nav: false } } });
+</script>
+</body>
+
 </html>
-
-
-
-
