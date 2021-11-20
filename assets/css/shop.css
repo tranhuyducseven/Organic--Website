@@ -208,6 +208,19 @@ p.organic-sort-bar_note {
 }
 
 
+@media screen and (max-width: 768px){
+  .organic-sort-bar_select {
+    min-width: 250px;
+  }
+  .organic-footer-further p {
+    text-align: center;
+  }
+  .organic-footer-col_bottom {
+    text-align: center;
+  }
+}
+
+
 
 @media screen and (max-width: 576px) and (min-width: 425px) {
   .organic-card {
