@@ -22,25 +22,7 @@ footer li {
     list-style-type: none;
 }
 
-.organic ul li,
-footer ul li {
-    list-style-position: inside;
-}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: #ffb63a;
-    clear: both;
-    line-height: 1.5;
-    margin: 0 0 15px;
-    font-weight: 400;
-    font-family: 'Montserrat', sans-serif;
-    font-family: Montserrat;
-}
 
 .content-container {
     margin-top: 60px;

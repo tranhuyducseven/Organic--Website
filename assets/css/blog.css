@@ -1,13 +1,13 @@
 .main-blog {
-    margin-top: 20px!important;
+    margin-top: 50px !important;
 }
 
 .organic-blog__wrapper {
-    margin-bottom: 50px!important;
+    margin-bottom: 50px !important;
 }
 
 .organic-blog__item {
-    padding-bottom: 40px ;
+    padding-bottom: 40px;
 }
 
 .organic-blog__image {
@@ -71,7 +71,7 @@
 
 .organic-blog__comment-counter {
     margin: 0 5px;
-    color: var(--primary-color)!important;
+    color: var(--primary-color) !important;
     font-weight: 500;
 }
 
@@ -148,4 +148,207 @@
 
 .organic-blog__btn:hover .organic-blog__btn-link-icon {
     transform: translateX(10px);
+}
+
+
+
+.organic-details {
+    padding: 100px 20px;
+    height: contain;
+}
+
+.details-title {
+    font-size: 4rem;
+    line-height: 150%;
+    font-family: "Merriweather", serif;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.details-description {
+    font-size: 1.6rem;
+    line-height: 160%;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.details-images {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.details-images img {
+    width: 80%;
+}
+
+.details-article {
+    width: 100%;
+    float: left;
+    position: relative;
+    font: 400 1.6rem arial;
+    line-height: 160%;
+    padding: 0;
+    color: #222;
+}
+
+.details-content {
+    margin: 20px 5px;
+    line-height: 160%;
+    text-rendering: optimizeSpeed;
+}
+
+.details-author {
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    position: relative;
+}
+
+.details-author-ava {
+    min-height: 40px;
+    max-height: 40px;
+    padding-bottom: 3px;
+    margin-right: 11px;
+    border-radius: 50%;
+}
+
+.details-author-name {
+    margin-left: 10px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--primary-text-color);
+}
+
+.details-date {
+    position: absolute;
+    right: 15px;
+    bottom: 28px;
+    font-size: 1.6rem;
+}
+
+/*blog-item*/
+
+.organic-comment-block {
+    background-image: url("https://www.bootdey.com/img/overlay.svg");
+    background-color: var(--background-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 100px 50px;
+}
+
+.organic-comment {
+    padding: 80px !important;
+    border: 1px solid var(--white-color);
+    background-color: var(--white-color);
+    position: relative;
+}
+
+.comments-title {
+    font-size: 3rem;
+    color: #262626;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-family: 'Conv_helveticaneuecyr-bold';
+
+}
+
+.organic-comment__item {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+
+}
+
+.organic-comment__ava img {
+    min-height: 60px;
+    max-height: 60px;
+    padding-bottom: 3px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+
+.organic-comment__content {
+    flex: 1;
+}
+
+.organic-comment__name {
+    display: inline-block;
+    width: 49%;
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: 'Conv_helveticaneuecyr-bold';
+}
+
+.organic-comment__time {
+    display: inline-block;
+    width: 49%;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #b4b7c1;
+    text-align: right;
+}
+
+.organic-comment__time i {
+    margin-right: 5px;
+}
+
+.organic-comment__text {
+    font-size: 1.4rem;
+    line-height: 18px;
+    color: #7a8192;
+    display: block;
+    background: #f6f6f7;
+    border: 1px solid #edeff2;
+    padding: 15px 20px 20px 20px;
+    word-break: break-all;
+    white-space: normal;
+}
+
+.organic-comment__input {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.organic-comment__input-user img {
+    height: 60px;
+    width: 60px;
+    padding-bottom: 3px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+
+.organic-comment__input-text {
+    padding: 20px !important;
+    border-radius: 20px !important;
+    flex: 1;
+    font-size: 1.4rem !important;
+    resize: none;
+}
+
+.organic-comment__input-text:focus {
+    border-color: var(--primary-text-color) !important;
+    box-shadow: 0 0 0 0.25rem rgb(253 160 13 / 25%) !important;
+}
+
+.organic-comment .organic-blog__btn {
+    position: absolute;
+    right: 100px;
+}
+
+@media (max-width: 768px) {
+    .details-title{
+        font-size: 3rem;
+    }
+    .organic-comment {
+        padding: 80px 20px !important;
+    }
+
+
+    .comments-title {
+        font-size: 2.4rem;
+    }
 }
