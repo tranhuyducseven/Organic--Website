@@ -20,7 +20,15 @@ html {
     font-family: "Roboto", sans-serif;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
+.organic ul li,
+footer ul li {
+    list-style-position: inside;
+}
+
+
 
 
 /*responsive */
@@ -228,6 +236,7 @@ html {
     .organic-footer-content {
         padding: 150px 40px;
     }
+
     .organic-footer-paragraph {
         padding-right: 0 !important;
     }
@@ -371,40 +380,42 @@ html {
 /*------------------------------------------------ page tittle--===========> */
 
 .page-title {
+
+    background-color: var(--background-color);
+    background-size: cover;
     background-repeat: no-repeat;
-    background-size: auto;
-    background-color: var(--white-color);
+    background-position: center center;
 }
 
 .page-title__name {
-    font-size: 6rem!important;
-    font-weight: 700!important;
-    color: var(--black-text-color)!important;
+    font-size: 6rem !important;
+    font-weight: 700 !important;
+    color: var(--black-text-color) !important;
 }
 
 .page-title__dir-list {
     list-style: none;
-    padding: 12px 5px!important;
+    padding: 12px 5px !important;
     display: flex;
     align-items: center;
 }
 
 .page-title__dir-item {
     color: var(--primary-text-color);
-    font-size: 1.7rem!important;
-    font-weight: 500!important;
+    font-size: 1.7rem !important;
+    font-weight: 500 !important;
 }
 
 .page-title__dir-item:first-child .page-title__dir-link {
-    color: var(--black-text-color)!important;
+    color: var(--black-text-color) !important;
     text-decoration: none;
-    font-weight: 500!important;
+    font-weight: 500 !important;
 }
 
 .page-title__dir-item:first-child .page-title__dir-link:hover {
-    color: var(--primary-text-color)!important;
+    color: var(--primary-text-color) !important;
     text-decoration: none;
-    font-weight: 500!important;
+    font-weight: 500 !important;
 }
 
 .page-title__dir-list span {
@@ -447,12 +458,13 @@ html {
 @-webkit-keyframes rotating
 /* Safari and Chrome */
 
-{
+    {
     from {
         -webkit-transform: rotate(0deg);
         -o-transform: rotate(0deg);
         transform: rotate(0deg);
     }
+
     to {
         -webkit-transform: rotate(360deg);
         -o-transform: rotate(360deg);
@@ -468,6 +480,7 @@ html {
         -o-transform: rotateY(0deg);
         transform: rotateY(0deg);
     }
+
     to {
         -ms-transform: rotateY(360deg);
         -moz-transform: rotateY(360deg);
@@ -528,7 +541,7 @@ html {
 
 .owl-dots {
     text-align: center;
-    margin-top: 40px!important;
+    margin-top: 40px !important;
 }
 
 .owl-dot {
@@ -537,14 +550,14 @@ html {
     margin: 0 5px;
     outline: none;
     border-radius: 14px;
-    border: 2px solid #ff7e00!important;
+    border: 2px solid #ff7e00 !important;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }
 
 .owl-dot.active,
 .owl-dot:hover {
-    background: #ff7e00!important;
+    background: #ff7e00 !important;
 }
 
 
@@ -737,7 +750,7 @@ html {
 }
 
 .p-cpn-item-2nd__ava {
-    width: 190px!important;
+    width: 190px !important;
     height: 190px;
     border-radius: 50%;
     margin: 0 auto;
@@ -815,8 +828,8 @@ html {
 }
 
 .p-cpn-item-3rd-front__img {
-    width: 70%!important;
-    display: block!important;
+    width: 70% !important;
+    display: block !important;
     margin: 0 auto 40px;
 }
 
@@ -1052,7 +1065,7 @@ html {
     align-items: center;
     padding: 30px 20px;
     justify-content: center;
-    margin: 0!important;
+    margin: 0 !important;
 }
 
 .page-break-item-1__icon {
@@ -1469,7 +1482,7 @@ a:after {
 .organic-page-numbers li:first-child,
 .organic-page-numbers li:last-child {
     display: flex;
-    margin: 0 15px!important;
+    margin: 0 15px !important;
 }
 
 .organic-page-numbers li a {
@@ -1515,31 +1528,38 @@ a:after {
     .subnav {
         height: 40px;
     }
+
     .buy-now-btn {
         padding: 1px 2px;
         font-size: 1rem;
         width: 80px;
     }
+
     .site-branch img {
         height: 50px !important;
     }
+
     .navbar {
         position: absolute !important;
         right: 0;
     }
+
     .navbar button {
         border-color: var(--primary-color) !important;
         opacity: 0.8;
     }
+
     .navbar .navbar-toggler-icon {
         background-image: var(--white-color) !important;
         display: flex;
         align-items: center;
         justify-content: center;
     }
+
     .navbar .navbar-toggler-icon i {
         color: var(--primary-text-color);
     }
+
     .navbar-collapse {
         position: absolute !important;
         top: calc(100% + 16px) !important;
@@ -1547,19 +1567,24 @@ a:after {
         width: 100vw;
         background-color: var(--background-color);
     }
+
     .navbar-collapse {
         margin: 0 !important;
     }
+
     .navbar-nav {
         justify-content: center;
         align-items: center;
     }
+
     .navbar .nav-item {
         width: 100%;
     }
+
     .navbar .nav-link:hover {
         background-color: var(--white-color);
     }
+
     .rightnav-login,
     .rightnav-cart,
     .navbar button {
