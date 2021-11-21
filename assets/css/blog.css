@@ -1,0 +1,151 @@
+.main-blog {
+    margin-top: 20px!important;
+}
+
+.organic-blog__wrapper {
+    margin-bottom: 50px!important;
+}
+
+.organic-blog__item {
+    padding-bottom: 40px ;
+}
+
+.organic-blog__image {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.organic-blog__list {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    border-top: 1px solid #f2f1f1;
+    border-bottom: 1px solid #f2f1f1;
+}
+
+.organic-blog__author,
+.organic-blog__comment,
+.organic-blog__date {
+    padding: 10px 10px;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    display: flex;
+    align-items: center;
+}
+
+.organic-blog__author {
+    flex: 3;
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.organic-blog__author-ava {
+    min-height: 40px;
+    max-height: 40px;
+    padding-bottom: 3px;
+    margin-right: 11px;
+    border-radius: 50%;
+}
+
+.organic-blog__author-name {
+    margin-left: 10px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--primary-text-color);
+}
+
+.organic-blog__comment {
+    flex: 1;
+}
+
+.organic-blog__comment i {
+    color: var(--primary-text-color);
+    margin: 0 5px;
+}
+
+.organic-blog__comment span {
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+.organic-blog__comment-counter {
+    margin: 0 5px;
+    color: var(--primary-color)!important;
+    font-weight: 500;
+}
+
+.organic-blog__date {
+    flex: 1;
+}
+
+.organic-blog__title {
+    height: 6rem;
+    font-size: 2.4rem;
+    font-weight: 600;
+    padding: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.organic-blog__btn {
+    position: relative;
+    height: 40px;
+    width: 120px;
+    background: linear-gradient(to right, #ff7e00 0%, #ffb63a 100%);
+    color: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.organic-blog__btn::before {
+    position: absolute;
+    content: "";
+    right: 0;
+    height: 100%;
+    border-radius: 50px;
+    width: 0%;
+    box-sizing: border-box;
+    background-color: var(--black-text-color);
+    -webkit-transition: 300ms all linear 0ms;
+    -khtml-transition: 300ms all linear 0ms;
+    -moz-transition: 300ms all linear 0ms;
+    -ms-transition: 300ms all linear 0ms;
+    -o-transition: 300ms all linear 0ms;
+    transition: 300ms all linear 0ms;
+}
+
+.organic-blog__btn:hover::before {
+    left: 0;
+    width: 100%;
+}
+
+.organic-blog__btn-link {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 300;
+    text-decoration: none;
+    color: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.organic-blog__btn-link-icon {
+    transition: all linear 0.5s;
+    margin-left: 10px;
+}
+
+.organic-blog__btn:hover .organic-blog__btn-link {
+    color: var(--white-color);
+}
+
+.organic-blog__btn:hover .organic-blog__btn-link-icon {
+    transform: translateX(10px);
+}
