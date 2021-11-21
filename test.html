@@ -20,21 +20,22 @@
 <body>
     <header class="sticky-top">
         <div class="container-fluid subnav">
-            <a href="#" class="buy-now-btn">Buy Now</a>
         </div>
         <div id="site-header-wrapper">
             <div class="grid wide-m">
                 <div class="header container-fluid">
                     <div class="site-branch">
                         <a href="#">
-                            <img src="./assets/img/header-logo.png" height="60" />
+                            <img src="./assets/img/header-logo.png" />
                         </a>
                     </div>
                     <div class="site-nav">
-                        <nav class="navbar navbar-expand-md navbar-light">
+                        <nav class="navbar navbar-expand-lg navbar-light">
                             <div class="container-fluid">
                                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
-                                    <span class="navbar-toggler-icon"></span>
+                                    <span class="navbar-toggler-icon">
+                                        <i class="fas fa-bars"></i>
+                                    </span>
                                 </button>
                                 <div class="collapse navbar-collapse row gx-5" id="navbarResponsive">
                                     <ul class="navbar-nav ml-auto">
@@ -55,10 +56,16 @@
                             </div>
                         </nav>
                         <div class="rightnav">
-                            <div class="rightnav-login">
-                                <a class="rightnav__login-btn" href="#">
-                                    <i class="fa fa-user"></i>
-                                </a>
+                            <!-- <div class="rightnav__item-login-logout">
+                                <a href="#" class="rightnav-list__link">Sign in/Login</a>
+                            </div> -->
+                            <div id="rightnav__user" class="rightnav__user">
+                                <img class="rightnav__user-ava" src="https://scontent.fsgn12-1.fna.fbcdn.net/v/t1.6435-9/154382447_1156359038137333_7518793113293878874_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=174925&_nc_ohc=N7m0Phfg2H8AX9jhIER&_nc_ht=scontent.fsgn12-1.fna&oh=e9618ec10b1f008eff2bdfd34cdb38bb&oe=61C175D8" alt="">
+                                <ul id="rightnav__user-menu" class="rightnav__user-menu">
+                                    <li class="rightnav__user-item"><a href="">Tài khoản của tôi</a></li>
+                                    <li class="rightnav__user-item"><a href="">Đơn mua</a></li>
+                                    <li class="rightnav__user-item rightnav__user-item--separate"><a href="">Đăng xuất</a></li>
+                                </ul>
                             </div>
                             <div class="rightnav-cart">
                                 <i class="fas fa-shopping-cart rightnav-cart__icon"></i>
@@ -68,9 +75,16 @@
                     </div>
                 </div>
             </div>
-        </div>
     </header>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script>
+    <script>
+    $(document).ready(function() {
+        $('#rightnav__user').on("click", function() {
+            $('#rightnav__user-menu').toggle();
+        })
+    })
+    </script>
 </body>
 
 </html>
