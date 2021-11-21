@@ -17,15 +17,15 @@ body {
   font-weight: 500;
 }
 
-body li {
+.organic li, footer li {
   list-style-type: none;
 }
 
-ul li {
+.organic ul li, footer ul li{
   list-style-position: inside;
 }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+h1, h2, h3, h4, h5, h6 {
   color: #ffb63a;
   clear: both;
   line-height: 1.5;
