@@ -34,10 +34,10 @@
                         <nav class="navbar navbar-expand-lg navbar-light">
                             <div class="container-fluid">
                                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
-                                  <span class="navbar-toggler-icon">
-                                      <i class="fas fa-bars"></i>
-                                  </span>
-                              </button>
+                                    <span class="navbar-toggler-icon">
+                                        <i class="fas fa-bars"></i>
+                                    </span>
+                                </button>
                                 <div class="collapse navbar-collapse row gx-5" id="navbarResponsive">
                                     <ul class="navbar-nav ml-auto">
                                         <li class="nav-item col-3">
@@ -72,75 +72,90 @@
             </div>
         </div>
     </header>
-    <div class="container content-container">
-        <div class="cart-container">
-            <h1 class="text-center cart-heading">Your Cart <i class="fas fa-shopping-cart"></i></h1>
-            <table>
-
-                <tr>
-                    <th>NO.</th>
-                    <th>PRODUCT</th>
-                    <th>PRICE</th>
-                    <th>QUANTITY</th>
-                    <th></th>
-                </tr>
-
-                <tr>
-                    <td class="cart-col-No">1</td>
-                    <td class="d-flex cart-col-product">
-                        <img src="assets/img/shop/Pomegranate.png">
-                        <p>Pomegranate</p>
-                    </td>
-                    <td class="cart-col-price">$98.57</td>
-                    <td class="cart-col-quantity">2</td>
-                    <td class="cart-col-remove">
-                        <button class="cart-col-remove-large_screen">REMOVE</button>
-                        <button type="button" class="cart-col-remove-small_screen" style="display: none">
-                <i class="material-icons">highlight_off</i>
-              </button>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="cart-col-No">2</td>
-                    <td class="d-flex cart-col-product">
-                        <img src="assets/img/shop/Banana.png">
-                        <p>Banana</p>
-                    </td>
-                    <td class="cart-col-price">$98.57</td>
-                    <td class="cart-col-quantity">3</td>
-                    <td class="cart-col-remove">
-                        <button class="cart-col-remove-large_screen">REMOVE</button>
-                        <button type="button" class="cart-col-remove-small_screen" style="display: none">
-                <i class="material-icons">highlight_off</i>
-              </button>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="cart-col-No">3</td>
-                    <td class="d-flex cart-col-product">
-                        <img src="assets/img/shop/Broccoli.png">
-                        <p>Broccoli</p>
-                    </td>
-                    <td class="cart-col-price">$98.57</td>
-                    <td class="cart-col-quantity">1</td>
-                    <td class="cart-col-remove">
-                        <button class="cart-col-remove-large_screen">REMOVE</button>
-                        <button type="button" class="cart-col-remove-small_screen" style="display: none">
-                <i class="material-icons">highlight_off</i>
-              </button>
-                    </td>
-                </tr>
-
-            </table>
-
-            <div class="cart-total">
-                <p class="cart-total-price">Total: $591.42</p>
-                <p class="cart-btn-group">
-                    <a href="#">BROWSE SHOP</a>
-                    <a href="#">CHECKOUT</a>
-                </p>
+    <div class="main">
+        <div class="page-title pd-150-0" style="background-color: #f4f4f4;         background-image: url('./assets/img/bgr-title-page.jpg');">
+            <div class="grid wide-m">
+                <div class="container-fluid">
+                    <div class="page-title-inner">
+                        <h1 class="page-title__name">Cart</h1>
+                        <div class="page-title__dir">
+                            <ul class="page-title__dir-list">
+                                <li class="page-title__dir-item">
+                                    <a href="./index.html" class="page-title__dir-link">Home</a>
+                                </li>
+                                <span> - </span>
+                                <li class="page-title__dir-item">Cart</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- main cart -->
+        <div class="container content-container">
+            <div class="cart-container">
+                <h1 class="text-center cart-heading">Your Cart <i class="fas fa-shopping-cart"></i></h1>
+                <table>
+                    <tr>
+                        <th>NO.</th>
+                        <th>PRODUCT</th>
+                        <th>PRICE</th>
+                        <th>QUANTITY</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td class="cart-col-No">1</td>
+                        <td class="d-flex cart-col-product">
+                            <img src="assets/img/shop/Pomegranate.png">
+                            <p>Pomegranate</p>
+                        </td>
+                        <td class="cart-col-price">$98.57</td>
+                        <td class="cart-col-quantity">2</td>
+                        <td class="cart-col-remove">
+                            <button class="cart-col-remove-large_screen">REMOVE</button>
+                            <button type="button" class="cart-col-remove-small_screen" style="display: none">
+                                <i class="material-icons">highlight_off</i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cart-col-No">2</td>
+                        <td class="d-flex cart-col-product">
+                            <img src="assets/img/shop/Banana.png">
+                            <p>Banana</p>
+                        </td>
+                        <td class="cart-col-price">$98.57</td>
+                        <td class="cart-col-quantity">3</td>
+                        <td class="cart-col-remove">
+                            <button class="cart-col-remove-large_screen">REMOVE</button>
+                            <button type="button" class="cart-col-remove-small_screen" style="display: none">
+                                <i class="material-icons">highlight_off</i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cart-col-No">3</td>
+                        <td class="d-flex cart-col-product">
+                            <img src="assets/img/shop/Broccoli.png">
+                            <p>Broccoli</p>
+                        </td>
+                        <td class="cart-col-price">$98.57</td>
+                        <td class="cart-col-quantity">1</td>
+                        <td class="cart-col-remove">
+                            <button class="cart-col-remove-large_screen">REMOVE</button>
+                            <button type="button" class="cart-col-remove-small_screen" style="display: none">
+                                <i class="material-icons">highlight_off</i>
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+                <div class="cart-total">
+                    <p class="cart-total-price">Total: $591.42</p>
+                    <p class="cart-btn-group">
+                        <a href="#">BROWSE SHOP</a>
+                        <a href="#">CHECKOUT</a>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -161,7 +176,7 @@
                     <div class="organic-footer-heading">
                         <h3 class="organic-footer-heading_text">Quick Links</h3>
                         <span class="organic-footer-heading_icon">
-                <span></span>
+                            <span></span>
                         </span>
                     </div>
                     <ul class="organic-footer-list_quick">
@@ -188,7 +203,7 @@
                     <div class="organic-footer-heading">
                         <h3 class="organic-footer-heading_text">Products</h3>
                         <span class="organic-footer-heading_icon">
-                <span></span>
+                            <span></span>
                         </span>
                     </div>
                     <ul class="organic-footer-list_product">
@@ -215,7 +230,7 @@
                     <div class="organic-footer-heading">
                         <h3 class="organic-footer-heading_text">Contact</h3>
                         <span class="organic-footer-heading_icon">
-                <span></span>
+                            <span></span>
                         </span>
                     </div>
                     <ul class="organic-footer-list_contact">
@@ -261,14 +276,11 @@
             </div>
         </div>
     </footer>
-
-
     <!------------------------------------------ BEGIN OFFCANVAS CART ------------------------------------------------>
-
     <div class="offcanvas offcanvas-end organic-offcanvas" id="offcanvas">
         <button type="button" class="organic-offcanvas-close" data-bs-dismiss="offcanvas">
-        &#10006;
-      </button>
+            &#10006;
+        </button>
         <div class="offcanvas-body organic-shopping">
             <div class="organic-shopping-title">
                 Shopping Cart <span>(1 item)</span>
@@ -285,11 +297,10 @@
                         </div>
                         <div class="organic-shopping-product_remove">
                             <button type="button">
-                  <i class="material-icons">highlight_off</i>
-                </button>
+                                <i class="material-icons">highlight_off</i>
+                            </button>
                         </div>
                     </li>
-
                     <li class="d-flex">
                         <div class="organic-shopping-product_img">
                             <img src="assets/img/shop/Banana.png" />
@@ -300,8 +311,8 @@
                         </div>
                         <div class="organic-shopping-product_remove">
                             <button type="button">
-                  <i class="material-icons">highlight_off</i>
-                </button>
+                                <i class="material-icons">highlight_off</i>
+                            </button>
                         </div>
                     </li>
                 </ul>
@@ -317,9 +328,7 @@
             </p>
         </div>
     </div>
-
     <!------------------------------------------ END OFFCANVAS CART ------------------------------------------------>
-
     <script src="assets/js/select.js"></script>
 </body>
 
