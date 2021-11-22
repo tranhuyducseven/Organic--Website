@@ -16,12 +16,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="./assets/img/vegetables.png" />
     <title>Organic</title>
+<<<<<<< HEAD:index.html
 </head>
 
 <body>
     <!-- #############HEADER######### -->
     <header class="sticky-top">
         <div class="container-fluid subnav">
+            <a href="#" class="buy-now-btn">Buy Now </a>
         </div>
         <div id="site-header-wrapper">
             <div class="grid wide-m">
@@ -58,24 +60,70 @@
                             </div>
                         </nav>
                         <div class="rightnav">
-                            <!-- <div class="rightnav__item-login-logout">
-                                <a href="#" class="rightnav-list__link">Sign in/Login</a>
-                            </div> -->
-                            <div id="rightnav__user" class="rightnav__user">
-                                <img class="rightnav__user-ava" src="https://scontent.fsgn12-1.fna.fbcdn.net/v/t1.6435-9/154382447_1156359038137333_7518793113293878874_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=174925&_nc_ohc=N7m0Phfg2H8AX9jhIER&_nc_ht=scontent.fsgn12-1.fna&oh=e9618ec10b1f008eff2bdfd34cdb38bb&oe=61C175D8" alt="">
-                                <ul id="rightnav__user-menu" class="rightnav__user-menu">
-                                    <li class="rightnav__user-item"><a href="">See your profile</a></li>
-                                    <li class="rightnav__user-item"><a href="">Purchase order</a></li>
-                                    <li class="rightnav__user-item rightnav__user-item--separate"><a href="">Logout</a></li>
-                                </ul>
+                            <div class="rightnav-login">
+                                <a class="rightnav__login-btn" href="#">
+                                    <i class="fa fa-user"></i>
+                                </a>
                             </div>
-                            <a href="./cart.html"class="rightnav-cart">
+                            <div class="rightnav-cart">
                                 <i class="fas fa-shopping-cart rightnav-cart__icon"></i>
                                 <span class="rightnav-cart__counter">0</span>
-                            </a>
+                            </div>
                         </div>
                     </div>
                 </div>
+=======
+  </head>
+  <body>
+        <!-- #############HEADER######### -->
+      <header class="sticky-top">
+        <div class=" container-fluid subnav">
+         <a href="#" class="buy-now-btn">Buy Now</a>
+        </div>          
+       <nav class="navbar navbar-expand-md navbar-light "> 
+        <div class="row container-fluid">
+          <a class="navbar-branch" href="#">
+            <img src="./assets/img/header-logo.png" height="60" />
+          </a>           
+          <div class="main-nav">          
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarResponsive"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+             <div
+                  class="collapse navbar-collapse row gx-5"
+                  id="navbarResponsive"
+                >
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item col-3">
+                      <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item col-3">
+                      <a class="nav-link" href="./shop.php">Shop</a>
+                    </li>
+                    <li class="nav-item col-3">
+                      <a class="nav-link" href="./contact.html">Contact </a>
+                    </li>
+                    <li class="nav-item col-3">
+                      <a class="nav-link" href="./blog.html">Blog</a>
+                    </li>
+                  </ul>
+                </div>         
+            </div>         
+          <div class="rightnav">
+            <div class="rightnav-login">
+                <a  class="rightnav__login-btn" href="#">
+                  <i class="fa fa-user"></i>
+                </a>
+            </div>
+            <div class="rightnav-cart">
+              <i class="fas fa-shopping-cart rightnav-cart__icon"></i>
+              <span class="rightnav-cart__counter">0</span>
+>>>>>>> 8e14d7c4f14c246af5f0446eebd965fbd2401565:index.php
             </div>
         </div>
     </header>
@@ -464,6 +512,7 @@
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD:index.html
             <!--Carousel ITEM-->
             <div id="carousel-p-cpn-3rd ">
                 <div class="grid wide-m row carousel owl-carousel ">
@@ -700,6 +749,102 @@
                         </div>
                     </div>
                 </div>
+=======
+          </div>
+           <!--Carousel ITEM-->
+           <div
+           id="carousel-p-cpn-3rd"
+           class="carousel carousel-dark slide"
+           data-bs-ride="carousel"
+         >
+           <div class="carousel-indicators">
+             <button
+               type="button"
+               data-bs-target="#carousel-p-cpn-3rd"
+               data-bs-slide-to="0"
+               class="active"
+               aria-current="true"
+               aria-label="Slide 1"
+             ></button>
+             <button
+               type="button"
+               data-bs-target="#carousel-p-cpn-3rd"
+               data-bs-slide-to="1"
+               aria-label="Slide 2"
+             ></button>
+             <button
+               type="button"
+               data-bs-target="#carousel-p-cpn-3rd"
+               data-bs-slide-to="2"
+               aria-label="Slide 3"
+             ></button>
+           </div>
+           <div class="carousel-inner">
+              <?php
+                require_once('controllers/product-controller.php');
+                $productController = new ProductController();
+                $productController->getAllProduct_homepage();
+              ?>
+           </div>
+           <button
+             class="carousel-control-prev"
+             type="button"
+             data-bs-target="#carousel-p-cpn-3rd"
+             data-bs-slide="prev"
+           >
+             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+             <span class="visually-hidden">Previous</span>
+           </button>
+           <button
+             class="carousel-control-next"
+             type="button"
+             data-bs-target="#carousel-p-cpn-3rd"
+             data-bs-slide="next"
+           >
+             <span class="carousel-control-next-icon" aria-hidden="true"></span>
+             <span class="visually-hidden">Next</span>
+           </button>
+         </div>
+        </div>
+        <!--BREAK-->
+        <div
+        class="page-break pd-150-0"
+        style="background-image: url('./assets/img/bgr-client-h1.jpg')"
+      >
+        <ul class="grid wide-l row page-break-list">
+          <li class="col page-break-item-2">
+            <div class="page-break-item-2__icon">
+              <img
+                src="./assets/img/cucumber.png"
+                alt=""
+                
+              />
+            </div>
+            <div class="page-break-item-2__content">
+              <h1 class="page-break-item-2__content-counter">
+                895 <span>+</span>
+              </h1>
+              <h2 class="page-break-item-2__content-subheading">
+                Combine old 
+              </h2>
+            </div>
+          </li>
+          <li class="col page-break-item-2">
+            <div class="page-break-item-2__icon">
+              <img
+                src="./assets/img/cucumber.png"
+                alt=""
+                
+              />
+            </div>
+            <div class="page-break-item-2__content">
+              <h1 class="page-break-item-2__content-counter">
+                895 <span>+</span>
+              </h1>
+              <h2 class="page-break-item-2__content-subheading">
+                Combine old 
+              </h2>
+>>>>>>> 8e14d7c4f14c246af5f0446eebd965fbd2401565:index.php
             </div>
         </div>
     </div>
@@ -791,6 +936,7 @@
                     <img src="./assets/img/home/img-ud-hd.png " alt=" ">
                 </div>
             </div>
+<<<<<<< HEAD:index.html
         </div>
         <div class=" grid wide-m row carousel owl-carousel ">
             <div class="col ">
@@ -923,6 +1069,17 @@
                     </div>
                 </div>
             </div>
+=======
+          </div>
+          <div class=" grid wide-m row">
+              <?php
+                  require_once('controllers/blog-controller.php');
+                  $blogController = new BlogController();
+                  $blogController->getAllBlog_homepage();
+              ?>
+          </div>
+        
+>>>>>>> 8e14d7c4f14c246af5f0446eebd965fbd2401565:index.php
         </div>
     </div>
     </div>
@@ -1048,11 +1205,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js "></script>
     <script>
-    $(document).ready(function() {
-        $('#rightnav__user').on("click", function() {
-            $('#rightnav__user-menu').toggle();
-        })
-    })
     $(".carousel ").owlCarousel({
         margin: 20,
         loop: true,
@@ -1077,7 +1229,7 @@
     </script>
 </body>
 
-</html>
+</html>ript> $(".carousel ").owlCarousel({ margin: 20, loop: true, autoplay: true, autoplayTimeout: 2000, autoplayHoverPause: true, responsive: { 0: { items: 1, nav: false }, 600: { items: 2, nav: false }, 1000: { items: 3, nav: false } } });
 </script>
 </body>
 

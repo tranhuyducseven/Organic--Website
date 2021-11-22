@@ -1,0 +1,204 @@
+<!-- blog-view.php sẽ render ra phần lõi nội dung, frontend sẽ sửa thêm phần này -->
+
+<?php
+
+class BlogView{
+    public function showAllBlog($blogs){
+        foreach ($blogs as $blog):
+            echo $blog['ID'];
+            echo '<br>';
+            echo $blog['Image'];
+            echo '<br>';
+            echo $blog['Title'];
+            echo '<br>';
+            echo $blog['Content'];
+            echo '<br>';
+            echo $blog['Tag'];
+            echo '<br>';
+            echo $blog['Description'];
+            echo '<br>';
+        endforeach;
+    }
+
+    public function getAllBlog_homepage($blogs){
+        foreach ($blogs as $blog):
+           echo '<div class="col">
+            <div class="p-cpn-item-4th">       
+                <img class="p-cpn-item-4th__img" src="' . $blog['Image'] . '" alt="" />
+            <div class="p-cpn-item-4th__wrapper">
+                <div class="overlay">                  
+                </div>
+                <div class="p-cpn-item-4th__info">
+                <span class="p-cpn-item-4th__info-time">
+                    <i class="far fa-calendar-alt"></i>
+                    ' . $blog['Day'] . '
+                </span>
+                </div>
+            <div class="p-cpn-item-4th__content">
+                
+                <a class="p-cpn-item-4th__title" href="#">' . $blog['Title'] . '</a>
+                <span class="p-cpn-item__break"><span></span></span>
+                
+                <p class="p-cpn-item-4th__paragraph">
+                ' . $blog['Description'] . '
+                </p>    
+            </div>
+            </div>
+            </div>            
+            </div>';
+        endforeach;
+    }
+
+    public function showOneBlog($blog){
+        echo $blog['ID'];
+        echo '<br>';
+        echo $blog['Image'];
+        echo '<br>';
+        echo $blog['Title'];
+        echo '<br>';
+        echo $blog['Content'];
+        echo '<br>';
+        echo $blog['Tag'];
+        echo '<br>';
+        echo $blog['Description'];
+        echo '<br>';
+    }
+
+    public function showAllBlog_adminpage($blogs){
+        echo '<h1 class="admin-view-blog">View Blog <i class="far fa-eye"></i></h1>';
+        echo '<table>';
+        echo '<tr>
+        <th>ID</th>
+        <th>IMAGE LINK</th>
+        <th>TITLE</th>
+        <th>CONTENT</th>
+        <th>TAG</th>
+        <th>DAY</th>
+        <th>DESCRIPTION</th>
+        <th>CHANGE INFORMATION</th>
+        </tr>';
+        foreach ($blogs as $blog):
+            echo '<tr>';
+            echo '<td class="admin-blog-ID">' . $blog['ID'] . '</td>';
+            echo '<td class="admin-blog-img">' . $blog['Image'] . '</td>';
+            echo '<td class="admin-blog-title">'. $blog['Title'] . '</td>';
+            echo '<td class="admin-blog-content">'. $blog['Content'] .'</td>';
+            echo '<td class="admin-blog-tag">'. $blog['Tag'] .'</td>';
+            echo '<td class="admin-blog-day">'. $blog['Day'] .'</td>';
+            echo '<td class="admin-blog-descr">' . $blog['Description'] . '</td>';
+            echo '<td>
+                    <form method="post"  class="admin-blog-btn-group"> 
+                        <button name="editInfo" type="submit" value="' . $blog['ID'] . '">EDIT</button>
+                        <button name="deleteInfo" type="submit" value="' . $blog['ID'] . '">DELETE</button>
+                    </form>
+                  </td>';
+            echo '</tr>';
+        endforeach;
+        echo '</table>';
+    }
+
+    public function showFormBlog_adminpage($action){
+        if ($action == "addnew")
+        {
+            echo '<h1 class="admin-add-blog">Add Blog <i class="material-icons">library_add</i></h1>';
+            echo '<form method="post" action="" class="add-blog-form">
+
+            <div class="add-blog-info row">
+              <label for="add-blog-img" class="col-3">IMAGE LINK</label>
+              <input id="add-blog-img" class="col-9" name="Image" type="url">
+            </div>
+
+            <div class="add-blog-info row">
+              <label for="add-blog-title" class="col-3">TITLE</label>
+              <input id="add-blog-title" class="col-9" name="Title" type="text">
+            </div>
+
+            <div class="add-blog-info row">
+              <label for="add-blog-content" class="col-3">CONTENT</label>
+              <textarea id="add-blog-content" class="col-9" name="Content"></textarea>
+            </div>
+
+            <div class="add-blog-info row">
+              <label for="add-blog-tag" class="col-3">TAG</label>
+              <input id="add-blog-tag" class="col-9" name="Tag" type="text">
+            </div>            
+
+            <div class="add-blog-info row">
+              <label for="add-blog-descr" class="col-3">DESCRIPTION</label>
+              <textarea id="add-blog-descr" class="col-9" name="Description"></textarea>
+            </div>
+
+            <div class="add-blog-info row">
+              <button class="offset-3" name="submit" type="submit">SAVE</button>
+            </div>
+            </form>';
+        }
+        else if ($action == "edit")
+        {
+            echo '<h1 class="admin-add-blog">Edit Blog <i class="fas fa-edit edit-icon"></i></h1>';
+            echo '<form method="post" action="" class="add-blog-form">
+
+            <div class="add-blog-info row">
+              <label for="add-blog-img" class="col-3">IMAGE LINK</label>
+              <input id="add-blog-img" class="col-9" name="Image" type="url" value="'. $_SESSION['Image'] .'">
+            </div>
+
+            <div class="add-blog-info row">
+              <label for="add-blog-title" class="col-3">TITLE</label>
+              <input id="add-blog-title" class="col-9" name="Title" type="text" value="'. $_SESSION['Title'] .'">
+            </div>
+
+            <div class="add-blog-info row">
+              <label for="add-blog-content" class="col-3">CONTENT</label>
+              <textarea id="add-blog-content" class="col-9" name="Content">'. $_SESSION['Content'] .'</textarea>
+            </div>
+
+            <div class="add-blog-info row">
+              <label for="add-blog-tag" class="col-3">TAG</label>
+              <input id="add-blog-tag" class="col-9" name="Tag" type="text" value="'. $_SESSION['Tag'] .'">
+            </div>            
+
+            <div class="add-blog-info row">
+              <label for="add-blog-descr" class="col-3">DESCRIPTION</label>
+              <textarea id="add-blog-descr" class="col-9" name="Description">'. $_SESSION['Description'] .'</textarea>
+            </div>
+
+            <div class="add-blog-info row">
+                <button class="offset-3" name="submit" type="submit">SAVE</button>
+            </div>
+            </form>';
+
+
+
+            echo '<form method="post" action="">
+            <p><input name="Image" type="text" placeholder="Image" value="'. $_SESSION['Image'] .'"</p>
+            <p><input name="Title" type="text" placeholder="Title" value="'. $_SESSION['Title'] .'"</p>
+            <p><input name="Content" type="text" placeholder="Content" value="'. $_SESSION['Content'] .'"</p>
+            <p><input name="Tag" type="text" placeholder="Tag" value="'. $_SESSION['Tag'] .'"</p>
+            <p><input name="Description" type="text" placeholder="Description" value="'. $_SESSION['Description'] .'"</p>
+            <p><button name="submit" type="submit"> Save </button> </p>
+            </form>';
+        }
+    }
+
+    public function alertResultPopUp($ctrl, $result) {
+        if ($result == true)
+        {
+            echo '<script>
+                    var result = confirm("Successfully");
+                    if (result)
+                        location.href = "admin.php?ctrl='. $ctrl .'";
+                    else
+                        location.href = "admin.php?ctrl='. $ctrl .'";
+                  </script>';
+        }
+        else
+        {
+            echo '<script>
+                    alert("Failed");
+                  </script>';
+        }
+    }
+}
+
+?>
