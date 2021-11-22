@@ -64,6 +64,7 @@ form {
     border-radius: 4px;
 }
 
+
 .remember-group {
     flex-wrap: nowrap !important;
     align-items: center;
@@ -107,8 +108,16 @@ form {
 }
 
 
+
+
+
 @media (max-width: 992px) {
     .col-md-0 {
         display: none;
     }
+}
+.msg {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #f02849;
 }
