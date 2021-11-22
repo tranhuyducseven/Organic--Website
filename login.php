@@ -1,5 +1,5 @@
 <?php
-    require_once('controllers/login-controller.php');
+    require_once('./controllers/login-controller.php');
     $loginController = new LoginController();
     $loginController->checkLogin();
 ?>
@@ -40,7 +40,7 @@
                                     Login
                                 </button>
                                 <p class="text-center mt-5">Don't have an account?
-                                    <a class="text-primary" href="../functions/register.php">Sign Up</a>
+                                    <a class="text-primary" href="register.php">Sign Up</a>
                                 </p>
                             </div>
                         </form>

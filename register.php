@@ -1,5 +1,5 @@
 <?php
-    require_once('../controllers/login-controller.php');
+    require_once('controllers/login-controller.php');
     $loginController = new LoginController();
     $loginController->checkSignUp();
 ?>
