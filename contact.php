@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,64 +16,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" type="image/x-icon" href="./assets/img/vegetables.png" />
-    <title>Organic - Contact</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="assets/css/shop.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Contact</title>
 
 <body>
     <!-- #############HEADER######### -->
-    <header class="sticky-top">
-        <div class="container-fluid subnav">
-            <a href="#" class="buy-now-btn">Buy Now </a>
-        </div>
-        <div id="site-header-wrapper">
-            <div class="grid wide-m">
-                <div class="header container-fluid">
-                    <div class="site-branch">
-                        <a href="#">
-                            <img src="./assets/img/header-logo.png" />
-                        </a>
-                    </div>
-                    <div class="site-nav">
-                        <nav class="navbar navbar-expand-lg navbar-light">
-                            <div class="container-fluid">
-                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
-                                    <span class="navbar-toggler-icon">
-                                        <i class="fas fa-bars"></i>
-                                    </span>
-                                </button>
-                                <div class="collapse navbar-collapse row gx-5" id="navbarResponsive">
-                                    <ul class="navbar-nav ml-auto">
-                                        <li class="nav-item col-3">
-                                            <a class="nav-link" href="./index.html">Home</a>
-                                        </li>
-                                        <li class="nav-item col-3">
-                                            <a class="nav-link" href="./shop.html">Shop</a>
-                                        </li>
-                                        <li class="nav-item col-3">
-                                            <a class="nav-link" href="./contact.html">Contact </a>
-                                        </li>
-                                        <li class="nav-item col-3">
-                                            <a class="nav-link" href="./blog.html">Blog</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </nav>
-                        <div class="rightnav">
-                            <div class="rightnav-login">
-                                <a class="rightnav__login-btn" href="#">
-                                    <i class="fa fa-user"></i>
-                                </a>
-                            </div>
-                            <div class="rightnav-cart">
-                                <i class="fas fa-shopping-cart rightnav-cart__icon"></i>
-                                <span class="rightnav-cart__counter">0</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    <?php require_once("./views/header.php") ?>
     <!-- #############MAIN######### -->
     <div class="main">
         <!--page-title-->
@@ -356,6 +308,7 @@
             </div>
         </div>
     </footer>
+    <?php require_once("./views/canvas.php") ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADcAsikUujuWYa3M18bmoGoDuVnC8yk6I&callback=initMap"></script>
     <script>
@@ -377,6 +330,38 @@
             map: map,
         });
     }
+    </script>
+    <script src="./assets/js/cart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js "></script>
+    <script>
+    $(document).ready(function() {
+        $('#rightnav__user').on("click", function() {
+            $('#rightnav__user-menu').toggle();
+        })
+    })
+    $(".carousel ").owlCarousel({
+        margin: 20,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: false
+            },
+            600: {
+                items: 2,
+                nav: false
+            },
+            1000: {
+                items: 3,
+                nav: false
+            }
+        }
+    });
     </script>
 </body>
 

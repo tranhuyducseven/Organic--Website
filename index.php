@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,70 +17,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="./assets/img/vegetables.png" />
+    <link type="text/css" rel="stylesheet" href="assets/css/shop.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Organic</title>
 </head>
 
 <body>
     <!-- #############HEADER######### -->
-    <header class="sticky-top">
-        <div class="container-fluid subnav">
-        </div>
-        <div id="site-header-wrapper">
-            <div class="grid wide-m">
-                <div class="header container-fluid">
-                    <div class="site-branch">
-                        <a href="#">
-                            <img src="./assets/img/header-logo.png" />
-                        </a>
-                    </div>
-                    <div class="site-nav">
-                        <nav class="navbar navbar-expand-lg navbar-light">
-                            <div class="container-fluid">
-                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
-                                    <span class="navbar-toggler-icon">
-                                        <i class="fas fa-bars"></i>
-                                    </span>
-                                </button>
-                                <div class="collapse navbar-collapse row gx-5" id="navbarResponsive">
-                                    <ul class="navbar-nav ml-auto">
-                                        <li class="nav-item col-3">
-                                            <a class="nav-link" href="./index.html">Home</a>
-                                        </li>
-                                        <li class="nav-item col-3">
-                                            <a class="nav-link" href="./shop.html">Shop</a>
-                                        </li>
-                                        <li class="nav-item col-3">
-                                            <a class="nav-link" href="./contact.html">Contact </a>
-                                        </li>
-                                        <li class="nav-item col-3">
-                                            <a class="nav-link" href="./blog.html">Blog</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </nav>
-                        <div class="rightnav">
-                            <!-- <div class="rightnav__item-login-logout">
-                                <a href="#" class="rightnav-list__link">Sign in/Login</a>
-                            </div> -->
-                            <div id="rightnav__user" class="rightnav__user">
-                                <img class="rightnav__user-ava" src="https://scontent.fsgn12-1.fna.fbcdn.net/v/t1.6435-9/154382447_1156359038137333_7518793113293878874_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=174925&_nc_ohc=N7m0Phfg2H8AX9jhIER&_nc_ht=scontent.fsgn12-1.fna&oh=e9618ec10b1f008eff2bdfd34cdb38bb&oe=61C175D8" alt="">
-                                <ul id="rightnav__user-menu" class="rightnav__user-menu">
-                                    <li class="rightnav__user-item"><a href="">Tài khoản của tôi</a></li>
-                                    <li class="rightnav__user-item"><a href="">Đơn mua</a></li>
-                                    <li class="rightnav__user-item rightnav__user-item--separate"><a href="">Đăng xuất</a></li>
-                                </ul>
-                            </div>
-                            <div class="rightnav-cart">
-                                <i class="fas fa-shopping-cart rightnav-cart__icon"></i>
-                                <span class="rightnav-cart__counter">0</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    <?php require_once("./views/header.php") ?>
     <!-- #############MAIN######### -->
     <div class="main">
         <!--slogan-->
@@ -467,238 +414,11 @@
             <!--Carousel ITEM-->
             <div id="carousel-p-cpn-3rd ">
                 <div class="grid wide-m row carousel owl-carousel ">
-                    <div class="col m-3 p-cpn-item-3rd ">
-                        <div class="p-cpn-item-3rd-front ">
-                            <img class="p-cpn-item-3rd-front__img " src="./assets/img/shop/Pomegranate.png " alt=" " />
-                            <span class="p-cpn-item__break ">
-                                <span></span>
-                            </span>
-                            <h1 class="p-cpn-item-3rd-front__name ">
-                                Pomegranate
-                            </h1>
-                            <h3 class="p-cpn-item-3rd-front__price ">
-                                $98.57
-                            </h3>
-                        </div>
-                        <div class="p-cpn-item-3rd-back " style="background-image: url( './assets/img/shop/Pomegranate.png'); ">
-                            <div class="p-cpn-item-3rd-back__overlay ">
-                                <div class="p-cpn-item-3rd__buttons-group ">
-                                    <a class="p-cpn-item-3rd__button "><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></a>
-                                    <a class="p-cpn-item-3rd__button "><i class="far fa-heart p-cpn-item-3rd__button-icon "></i></a>
-                                </div>
-                                <h1 class="p-cpn-item-3rd-back__name ">
-                                    Pomegranate
-                                </h1>
-                                <h3 class="p-cpn-item-3rd-back__price ">
-                                    $98.57
-                                </h3>
-                                <a class="add-to-cart-btn " href="# ">Add To Cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col m-3 p-cpn-item-3rd ">
-                        <div class="p-cpn-item-3rd-front ">
-                            <img class="p-cpn-item-3rd-front__img " src="./assets/img/shop/Pomegranate.png " alt=" " />
-                            <span class="p-cpn-item__break ">
-                                <span></span>
-                            </span>
-                            <h1 class="p-cpn-item-3rd-front__name ">
-                                Pomegranate
-                            </h1>
-                            <h3 class="p-cpn-item-3rd-front__price ">
-                                $98.57
-                            </h3>
-                        </div>
-                        <div class="p-cpn-item-3rd-back " style="background-image: url( './assets/img/shop/Pomegranate.png'); ">
-                            <div class="p-cpn-item-3rd-back__overlay ">
-                                <div class="p-cpn-item-3rd__buttons-group ">
-                                    <a class="p-cpn-item-3rd__button "><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></a>
-                                    <a class="p-cpn-item-3rd__button "><i class="far fa-heart p-cpn-item-3rd__button-icon "></i></a>
-                                </div>
-                                <h1 class="p-cpn-item-3rd-back__name ">
-                                    Pomegranate
-                                </h1>
-                                <h3 class="p-cpn-item-3rd-back__price ">
-                                    $98.57
-                                </h3>
-                                <a class="add-to-cart-btn " href="# ">Add To Cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col m-3 p-cpn-item-3rd ">
-                        <div class="p-cpn-item-3rd-front ">
-                            <img class="p-cpn-item-3rd-front__img " src="./assets/img/shop/Pomegranate.png " alt=" " />
-                            <span class="p-cpn-item__break ">
-                                <span></span>
-                            </span>
-                            <h1 class="p-cpn-item-3rd-front__name ">
-                                Pomegranate
-                            </h1>
-                            <h3 class="p-cpn-item-3rd-front__price ">
-                                $98.57
-                            </h3>
-                        </div>
-                        <div class="p-cpn-item-3rd-back " style="background-image: url( './assets/img/shop/Pomegranate.png'); ">
-                            <div class="p-cpn-item-3rd-back__overlay ">
-                                <div class="p-cpn-item-3rd__buttons-group ">
-                                    <a class="p-cpn-item-3rd__button "><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></a>
-                                    <a class="p-cpn-item-3rd__button "><i class="far fa-heart p-cpn-item-3rd__button-icon "></i></a>
-                                </div>
-                                <h1 class="p-cpn-item-3rd-back__name ">
-                                    Pomegranate
-                                </h1>
-                                <h3 class="p-cpn-item-3rd-back__price ">
-                                    $98.57
-                                </h3>
-                                <a class="add-to-cart-btn " href="# ">Add To Cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col m-3 p-cpn-item-3rd ">
-                        <div class="p-cpn-item-3rd-front ">
-                            <img class="p-cpn-item-3rd-front__img " src="./assets/img/shop/Pomegranate.png " alt=" " />
-                            <span class="p-cpn-item__break ">
-                                <span></span>
-                            </span>
-                            <h1 class="p-cpn-item-3rd-front__name ">
-                                Pomegranate
-                            </h1>
-                            <h3 class="p-cpn-item-3rd-front__price ">
-                                $98.57
-                            </h3>
-                        </div>
-                        <div class="p-cpn-item-3rd-back " style="background-image: url( './assets/img/shop/Pomegranate.png'); ">
-                            <div class="p-cpn-item-3rd-back__overlay ">
-                                <div class="p-cpn-item-3rd__buttons-group ">
-                                    <a class="p-cpn-item-3rd__button "><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></a>
-                                    <a class="p-cpn-item-3rd__button "><i class="far fa-heart p-cpn-item-3rd__button-icon "></i></a>
-                                </div>
-                                <h1 class="p-cpn-item-3rd-back__name ">
-                                    Pomegranate
-                                </h1>
-                                <h3 class="p-cpn-item-3rd-back__price ">
-                                    $98.57
-                                </h3>
-                                <a class="add-to-cart-btn " href="# ">Add To Cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col m-3 p-cpn-item-3rd ">
-                        <div class="p-cpn-item-3rd-front ">
-                            <img class="p-cpn-item-3rd-front__img " src="./assets/img/shop/Pomegranate.png " alt=" " />
-                            <span class="p-cpn-item__break ">
-                                <span></span>
-                            </span>
-                            <h1 class="p-cpn-item-3rd-front__name ">
-                                Pomegranate
-                            </h1>
-                            <h3 class="p-cpn-item-3rd-front__price ">
-                                $98.57
-                            </h3>
-                        </div>
-                        <div class="p-cpn-item-3rd-back " style="background-image: url( './assets/img/shop/Pomegranate.png'); ">
-                            <div class="p-cpn-item-3rd-back__overlay ">
-                                <div class="p-cpn-item-3rd__buttons-group ">
-                                    <a class="p-cpn-item-3rd__button "><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></a>
-                                    <a class="p-cpn-item-3rd__button "><i class="far fa-heart p-cpn-item-3rd__button-icon "></i></a>
-                                </div>
-                                <h1 class="p-cpn-item-3rd-back__name ">
-                                    Pomegranate
-                                </h1>
-                                <h3 class="p-cpn-item-3rd-back__price ">
-                                    $98.57
-                                </h3>
-                                <a class="add-to-cart-btn " href="# ">Add To Cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col m-3 p-cpn-item-3rd ">
-                        <div class="p-cpn-item-3rd-front ">
-                            <img class="p-cpn-item-3rd-front__img " src="./assets/img/shop/Pomegranate.png " alt=" " />
-                            <span class="p-cpn-item__break ">
-                                <span></span>
-                            </span>
-                            <h1 class="p-cpn-item-3rd-front__name ">
-                                Pomegranate
-                            </h1>
-                            <h3 class="p-cpn-item-3rd-front__price ">
-                                $98.57
-                            </h3>
-                        </div>
-                        <div class="p-cpn-item-3rd-back " style="background-image: url( './assets/img/shop/Pomegranate.png'); ">
-                            <div class="p-cpn-item-3rd-back__overlay ">
-                                <div class="p-cpn-item-3rd__buttons-group ">
-                                    <a class="p-cpn-item-3rd__button "><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></a>
-                                    <a class="p-cpn-item-3rd__button "><i class="far fa-heart p-cpn-item-3rd__button-icon "></i></a>
-                                </div>
-                                <h1 class="p-cpn-item-3rd-back__name ">
-                                    Pomegranate
-                                </h1>
-                                <h3 class="p-cpn-item-3rd-back__price ">
-                                    $98.57
-                                </h3>
-                                <a class="add-to-cart-btn " href="# ">Add To Cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col m-3 p-cpn-item-3rd ">
-                        <div class="p-cpn-item-3rd-front ">
-                            <img class="p-cpn-item-3rd-front__img " src="./assets/img/shop/Pomegranate.png " alt=" " />
-                            <span class="p-cpn-item__break ">
-                                <span></span>
-                            </span>
-                            <h1 class="p-cpn-item-3rd-front__name ">
-                                Pomegranate
-                            </h1>
-                            <h3 class="p-cpn-item-3rd-front__price ">
-                                $98.57
-                            </h3>
-                        </div>
-                        <div class="p-cpn-item-3rd-back " style="background-image: url( './assets/img/shop/Pomegranate.png'); ">
-                            <div class="p-cpn-item-3rd-back__overlay ">
-                                <div class="p-cpn-item-3rd__buttons-group ">
-                                    <a class="p-cpn-item-3rd__button "><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></a>
-                                    <a class="p-cpn-item-3rd__button "><i class="far fa-heart p-cpn-item-3rd__button-icon "></i></a>
-                                </div>
-                                <h1 class="p-cpn-item-3rd-back__name ">
-                                    Pomegranate
-                                </h1>
-                                <h3 class="p-cpn-item-3rd-back__price ">
-                                    $98.57
-                                </h3>
-                                <a class="add-to-cart-btn " href="# ">Add To Cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col m-3 p-cpn-item-3rd ">
-                        <div class="p-cpn-item-3rd-front ">
-                            <img class="p-cpn-item-3rd-front__img " src="./assets/img/shop/Pomegranate.png " alt=" " />
-                            <span class="p-cpn-item__break ">
-                                <span></span>
-                            </span>
-                            <h1 class="p-cpn-item-3rd-front__name ">
-                                Pomegranate
-                            </h1>
-                            <h3 class="p-cpn-item-3rd-front__price ">
-                                $98.57
-                            </h3>
-                        </div>
-                        <div class="p-cpn-item-3rd-back " style="background-image: url( './assets/img/shop/Pomegranate.png'); ">
-                            <div class="p-cpn-item-3rd-back__overlay ">
-                                <div class="p-cpn-item-3rd__buttons-group ">
-                                    <a class="p-cpn-item-3rd__button "><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></a>
-                                    <a class="p-cpn-item-3rd__button "><i class="far fa-heart p-cpn-item-3rd__button-icon "></i></a>
-                                </div>
-                                <h1 class="p-cpn-item-3rd-back__name ">
-                                    Pomegranate
-                                </h1>
-                                <h3 class="p-cpn-item-3rd-back__price ">
-                                    $98.57
-                                </h3>
-                                <a class="add-to-cart-btn " href="# ">Add To Cart</a>
-                            </div>
-                        </div>
-                    </div>
+                    <?php
+                        require_once('controllers/product-controller.php');
+                        $productController = new ProductController();
+                        $productController->getAllProduct_homepage();
+                    ?>
                 </div>
             </div>
         </div>
@@ -793,136 +513,11 @@
             </div>
         </div>
         <div class=" grid wide-m row carousel owl-carousel ">
-            <div class="col ">
-                <div class="p-cpn-item-4th ">
-                    <img class="p-cpn-item-4th__img " src="./assets/img/home/blog2-370x435.jpg " alt=" " />
-                    <div class="p-cpn-item-4th__wrapper ">
-                        <div class="overlay ">
-                        </div>
-                        <div class="p-cpn-item-4th__info ">
-                            <span class="p-cpn-item-4th__info-time ">
-                                <i class="far fa-calendar-alt "></i>
-                                21 May, 2021
-                            </span>
-                            <span class="p-cpn-item-4th__info-react ">
-                                <i class="fas fa-heart "></i>
-                                0
-                            </span>
-                        </div>
-                        <div class="p-cpn-item-4th__content ">
-                            <a class="p-cpn-item-4th__title " href="# "> Warm and humid, a sticky day health.</a>
-                            <span class="p-cpn-item__break "><span></span></span>
-                            <p class="p-cpn-item-4th__paragraph ">
-                                Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col ">
-                <div class="p-cpn-item-4th ">
-                    <img class="p-cpn-item-4th__img " src="./assets/img/home/blog2-370x435.jpg " alt=" " />
-                    <div class="p-cpn-item-4th__wrapper ">
-                        <div class="overlay ">
-                        </div>
-                        <div class="p-cpn-item-4th__info ">
-                            <span class="p-cpn-item-4th__info-time ">
-                                <i class="far fa-calendar-alt "></i>
-                                21 May, 2021
-                            </span>
-                            <span class="p-cpn-item-4th__info-react ">
-                                <i class="fas fa-heart "></i>
-                                0
-                            </span>
-                        </div>
-                        <div class="p-cpn-item-4th__content ">
-                            <a class="p-cpn-item-4th__title " href="# "> Warm and humid, a sticky day health.</a>
-                            <span class="p-cpn-item__break "><span></span></span>
-                            <p class="p-cpn-item-4th__paragraph ">
-                                Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col ">
-                <div class="p-cpn-item-4th ">
-                    <img class="p-cpn-item-4th__img " src="./assets/img/home/blog2-370x435.jpg " alt=" " />
-                    <div class="p-cpn-item-4th__wrapper ">
-                        <div class="overlay ">
-                        </div>
-                        <div class="p-cpn-item-4th__info ">
-                            <span class="p-cpn-item-4th__info-time ">
-                                <i class="far fa-calendar-alt "></i>
-                                21 May, 2021
-                            </span>
-                            <span class="p-cpn-item-4th__info-react ">
-                                <i class="fas fa-heart "></i>
-                                0
-                            </span>
-                        </div>
-                        <div class="p-cpn-item-4th__content ">
-                            <a class="p-cpn-item-4th__title " href="# "> Warm and humid, a sticky day health.</a>
-                            <span class="p-cpn-item__break "><span></span></span>
-                            <p class="p-cpn-item-4th__paragraph ">
-                                Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col ">
-                <div class="p-cpn-item-4th ">
-                    <img class="p-cpn-item-4th__img " src="./assets/img/home/blog2-370x435.jpg " alt=" " />
-                    <div class="p-cpn-item-4th__wrapper ">
-                        <div class="overlay ">
-                        </div>
-                        <div class="p-cpn-item-4th__info ">
-                            <span class="p-cpn-item-4th__info-time ">
-                                <i class="far fa-calendar-alt "></i>
-                                21 May, 2021
-                            </span>
-                            <span class="p-cpn-item-4th__info-react ">
-                                <i class="fas fa-heart "></i>
-                                0
-                            </span>
-                        </div>
-                        <div class="p-cpn-item-4th__content ">
-                            <a class="p-cpn-item-4th__title " href="# "> Warm and humid, a sticky day health.</a>
-                            <span class="p-cpn-item__break "><span></span></span>
-                            <p class="p-cpn-item-4th__paragraph ">
-                                Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col ">
-                <div class="p-cpn-item-4th ">
-                    <img class="p-cpn-item-4th__img " src="./assets/img/home/blog2-370x435.jpg " alt=" " />
-                    <div class="p-cpn-item-4th__wrapper ">
-                        <div class="overlay ">
-                        </div>
-                        <div class="p-cpn-item-4th__info ">
-                            <span class="p-cpn-item-4th__info-time ">
-                                <i class="far fa-calendar-alt "></i>
-                                21 May, 2021
-                            </span>
-                            <span class="p-cpn-item-4th__info-react ">
-                                <i class="fas fa-heart "></i>
-                                0
-                            </span>
-                        </div>
-                        <div class="p-cpn-item-4th__content ">
-                            <a class="p-cpn-item-4th__title " href="# "> Warm and humid, a sticky day health.</a>
-                            <span class="p-cpn-item__break "><span></span></span>
-                            <p class="p-cpn-item-4th__paragraph ">
-                                Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php
+                require_once('controllers/blog-controller.php');
+                $blogController = new BlogController();
+                $blogController->getAllBlog_homepage();
+            ?>
         </div>
     </div>
     </div>
@@ -1044,6 +639,8 @@
             </div>
         </div>
     </footer>
+    <?php require_once("./views/canvas.php") ?>
+    <script src="./assets/js/cart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js "></script>
