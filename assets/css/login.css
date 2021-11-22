@@ -64,11 +64,13 @@ form {
     border-radius: 4px;
 }
 
+
 .msg {
     font-size: 1.4rem;
     margin-bottom: 20px;
     color: #f02849;
 }
+
 
 .remember-group {
     flex-wrap: nowrap !important;
@@ -117,4 +119,11 @@ form {
     .col-md-0 {
         display: none;
     }
+
+}
+.msg {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #f02849;
+>>>>>>> 2a008f6d3bdce7577c3da08ac819444bc25ada02
 }
