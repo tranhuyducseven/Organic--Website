@@ -18,6 +18,9 @@ label {
     align-items: center;
     position: relative;
     transition: all 0.3s ease;
+    border-radius: 50%;
+    border: 1px solid #6daf70;
+    padding: 20px;
 }
 
 .profile-pic input {
