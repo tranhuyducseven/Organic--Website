@@ -3,8 +3,13 @@
     session_start();
     $loginController = new LoginController;
     if ($_POST['act'] == "login"){
-        if ($loginController->checkLogin($_POST['username'], $_POST['password']) == false)
+        $res = $loginController->checkLogin($_POST['username'], $_POST['password']);
+        if ($res == false)
             echo "Username or password is incorrect.";
+        else if ($res == true){
+            if ($_SESSION['username'] == "admin")
+                echo "admin";
+        }
     } else if ($_POST['act'] == "reg") {
         $res = $loginController->checkSignUp($_POST['username'], $_POST['password'], $_POST['email'], $_POST['phone']);
         if ($res == -1){
