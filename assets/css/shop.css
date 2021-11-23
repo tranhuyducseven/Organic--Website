@@ -19,7 +19,7 @@ body {
 
 .organic li,
 footer li {
-    list-style-type: none;
+    list-style-type: none !important;
 }
 
 
@@ -31,22 +31,20 @@ footer li {
 
 .organic-sort-bar {
     display: flex;
-    align-items: center;
     background-color: #f4f4f4;
     margin-bottom: 60px;
     position: relative;
-    z-index: 99;
     border-radius: 2px;
-    padding: 8px 30px 8px 20px;
-    flex-wrap: wrap;
-    float: none;
+    text-align: center;
+    width: 100%;
+
 }
 
 div.organic-sort-bar_note {
-    margin: 43px 30px 45px 0;
+    margin: 30px auto;
     flex-grow: 1;
     color: #7a7a7a;
-    font-size: 15px;
+    font-size: 25px;
     font-weight: 400;
 }
 
@@ -54,102 +52,10 @@ p.organic-sort-bar_note {
     margin-bottom: 0;
 }
 
-.organic-sort-bar_select {
-    position: relative;
-    background-color: #fff;
-    border: none;
-    font-size: 12px;
-    color: #9b9b9b;
-    text-transform: none;
-    padding: 0;
-    height: 52px;
-    line-height: normal;
-    width: 100%;
-    min-width: 330px;
-}
-
-.organic-sort-bar_select select {
-    display: none;
-    /*hide original SELECT element:*/
-}
-
-.organic-select-selected {
-    background-color: white;
-    line-height: 34px;
-    font-size: 15px;
-    font-weight: 400;
-    margin-left: 0;
-}
-
-
-/*style the arrow inside the select element:*/
-
-.organic-select-selected:after {
-    position: absolute;
-    content: "";
-    right: 10px;
-    width: 0;
-    height: 0;
-    border: 6px solid transparent;
-    border-color: black transparent transparent transparent;
-    top: 40%;
-}
-
-
-/*point the arrow upwards when the select box is open (active):*/
-
-.organic-select-selected.organic-select-arrow-active:after {
-    border-color: transparent transparent black transparent;
-    top: 30%;
-}
-
-
-/*style the items (options), including the selected item:*/
-
-.organic-select-items div,
-.organic-select-selected {
-    color: #9b9b9b;
-    padding: 8px 16px;
-    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-    cursor: pointer;
-    user-select: none;
-}
-
-.organic-select-items div:hover {
-    font-weight: bold;
-    color: #172017;
-    border-radius: 5px;
-}
-
-
-/*style items (options):*/
-
-.organic-select-items {
-    position: absolute;
-    background-color: white;
-    top: 110%;
-    left: 0;
-    right: 0;
-    z-index: 99;
-    padding: 6px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgb(0 0 0 / 24%);
-}
-
-
-/*hide the items when the select box is closed:*/
-
-.organic-select-hide {
-    display: none;
-}
-
-.organic-select-items div:hover,
-.organic-same-as-selected {
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
 .organic-item-col {
     justify-content: center;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 .organic-card {
@@ -160,7 +66,14 @@ p.organic-sort-bar_note {
     margin-left: auto;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1400px) {
+    .organic-card {
+        width: 240px;
+        height: 320px;
+    }
+}
+
+@media screen and (max-width: 1400px) and (min-width: 1200px) {
     .organic-card {
         width: 210px;
         height: 310px;
@@ -289,7 +202,7 @@ p.organic-sort-bar_note {
     margin-right: 0;
     padding: 0 19px;
     background-color: #f4f4f4;
-    margin: 0 3.8% 2.992em 0;
+
     margin-left: 0;
 }
 

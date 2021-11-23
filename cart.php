@@ -36,8 +36,8 @@
                         '</tr>';
                 if (data == "false"){
                     output +=   '<tr>'+
-                                    '<td colspan="4" style = "border: 1px solid #dddddd; text-align: left; padding: 8px; text-align: center;">'+
-                                        'Your current data is empty'+
+                                    '<td colspan="4" style = "border: 1px solid #dddddd; text-align: left; padding: 8px; text-align: center; width: 100%">'+
+                                        'Your cart is empty'+
                                     '</td>'+
                                 '</tr>';
                     document.getElementsByClassName("cart-table")[0].innerHTML = output;
@@ -69,8 +69,8 @@
                 if (numList == 0)
                 {
                     output +=   '<tr>'+
-                                    '<td colspan="4" style = "border: 1px solid #dddddd; text-align: left; padding: 8px; text-align: center;">'+
-                                        'Your current data is empty'+
+                                    '<td colspan="4" style = "border: 1px solid #dddddd; text-align: left; padding: 8px; text-align: center; width: 100%">'+
+                                        'Your cart is empty'+
                                     '</td>'+
                                 '</tr>';
                 }

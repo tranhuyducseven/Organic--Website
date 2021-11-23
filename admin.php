@@ -62,7 +62,7 @@
                     </li>
 
                     <li class="admin-manage-item nav-item dropdown">
-                        <a class="admin-manage-item_btn nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Manage Transaction</a>
+                        <a class="admin-manage-item_btn nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Manage Transactions</a>
                         <ul class="admin-manage-item_list dropdown-menu">
                             <li><a href="admin.php?ctrl=historyTransaction">View History</a><//li>
                         </ul>

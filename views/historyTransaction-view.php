@@ -4,33 +4,34 @@
 
 class HistoryTransactionView{
     public function showAllHistoryTransaction_adminpage($historyTransactions){
-        echo '<table style="border-collapse: collapse;width: 100%;">';
+        echo '<h1 class="admin-view-transaction">View History Transactions <i class="far fa-eye"></i></h1>';
+        echo '<table>';
         echo '<tr>
-        <th style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">ID</th>
-        <th style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">Username</th>
-        <th style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">ID Product</th>
-        <th style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">Image</th>
-        <th style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">Name product</th>
-        <th style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">Price</th>
-        <th style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">Quantity</th>
-        <th style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">Total</th>
-        <th style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">Day</th>
+        <th>ID</th>
+        <th>USERNAME</th>
+        <th>PRODUCT ID</th>
+        <th>IMAGE</th>
+        <th>PRODUCT NAME</th>
+        <th>PRICE</th>
+        <th>QUANTITY</th>
+        <th>TOTAL</th>
+        <th>DAY</th>
         </tr>';
         if (sizeof($historyTransactions) > 0)
         {
             foreach ($historyTransactions as $historyTransaction):
                 echo '<tr>';
-                echo '<td style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">' . $historyTransaction['ID'] . '</td>';
-                echo '<td style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">' . $historyTransaction['Username'] . '</td>';
-                echo '<td style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">' . $historyTransaction['ID_product'] . '</td>';
-                echo '<td style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">
+                echo '<td class="admin-transaction-ID">' . $historyTransaction['ID'] . '</td>';
+                echo '<td class="admin-transaction-username">' . $historyTransaction['Username'] . '</td>';
+                echo '<td class="admin-transaction-ID_product">' . $historyTransaction['ID_product'] . '</td>';
+                echo '<td class="admin-transaction-img">
                         <img src="' . $historyTransaction['Image'] . '">
                      </td>';
-                echo '<td style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">' . $historyTransaction['Name_product'] . '</td>';
-                echo '<td style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">' . $historyTransaction['Price'] . '</td>';
-                echo '<td style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">'. $historyTransaction['Quantity'] . '</td>';
-                echo '<td style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">' . $historyTransaction['Total'] . '</td>';
-                echo '<td style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">'. $historyTransaction['Day'] .'</td>';
+                echo '<td class="admin-transaction-name_product">' . $historyTransaction['Name_product'] . '</td>';
+                echo '<td class="admin-transaction-price">' . $historyTransaction['Price'] . '</td>';
+                echo '<td class="admin-transaction-quantity">'. $historyTransaction['Quantity'] . '</td>';
+                echo '<td class="admin-transaction-total">' . $historyTransaction['Total'] . '</td>';
+                echo '<td class="admin-transaction-day">'. $historyTransaction['Day'] .'</td>';
                 echo '</tr>';
             endforeach;
             echo '</table>';
@@ -38,7 +39,7 @@ class HistoryTransactionView{
         else
         {
             echo '<tr>';
-            echo '<td colspan="9" style = "border: 1px solid #dddddd; text-align: left; padding: 8px; text-align: center;">Your current data is empty</td>';
+            echo '<td colspan="9" style = "border: 1px solid #dddddd; text-align: left; padding: 8px; text-align: center; width: 100%;">Your current data is empty</td>';
             echo '</tr>';
             echo '</table>';
         }

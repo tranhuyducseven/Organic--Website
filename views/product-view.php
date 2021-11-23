@@ -7,7 +7,7 @@ class ProductView{
     $item = 1;
     foreach ($products as $product):
     echo '<div class="
-            col-xl-4 col-sm-6 col-xl-offset-1 col-sm-offset-1 col-12
+            col-xl-4 col-sm-6  col-12
             organic-item-col
           ">
                     <div class="organic-card">
@@ -16,17 +16,17 @@ class ProductView{
                                 <img class="organic-item-front_img" src="'. $product['Image'] .'" alt="Product image" style="width: 100%" />
                                 <div class="organic-item-front_text">
                                     <p class="organic-item-front_name">'. $product['Name'] .'</p>
-                                    <p class="organic-item-front_price">$'. $product['Price'] .'Kg</p>
+                                    <p class="organic-item-front_price">$'. $product['Price'] .' Kg</p>
                                 </div>
                             </div>
                             <div class="organic-item-back" style="
-                  background-image: url("'. $product['Image'] .'");
+                  background-image: url('. $product["Image"] .');
                 ">
                                 <div class="organic-item-back_overlay">
                                     <div class="organic-item-back_text">
                                         <a class="organic-item-back_name" href="#">'. $product['Name'] .'</a
                     >
-                    <p class="organic-item-back_price">$'. $product['Price'] .'Kg</p>
+                    <p class="organic-item-back_price">$'. $product['Price'] .' Kg</p>
                   </div>
                   <div
                     class="
@@ -197,7 +197,7 @@ class ProductView{
         <th>DESCRIPTION</th>
         <th>HOT</th>
         <th>TAG</th>
-        <th>CHANGE INFORMATION</th>
+        <th>OPERATION</th>
         </tr>';
         foreach ($products as $product):
             echo '<tr>';
@@ -209,7 +209,7 @@ class ProductView{
             echo '<td class="admin-product-price">'. $product['Price'] .'</td>';
             echo '<td class="admin-product-descr">' . $product['Description'] . '</td>';
             echo '<td class="admin-product-hot">' . (($product['Hot'] == 1)? "HOT": "UNHOT") . '</td>';
-            echo '<td class="admin-product-hot">' . $product['Tag'] . '</td>';
+            echo '<td class="admin-product-tag">' . $product['Tag'] . '</td>';
             echo '<td>
                     <form method="post" class="admin-product-btn-group"> 
                         <button name="toggleHot" type="submit" value="' . $product['ID'] . '">TOGGLE HOT</button>
@@ -228,7 +228,7 @@ class ProductView{
             echo '<h1 class="admin-add-product">Add Product <i class="material-icons">library_add</i></h1>';
             echo '<form method="post" action="" class="add-product-form">
             <div class="add-product-info row">
-              <label for="add-product-img" class="col-3">IMAGE LINK</label>
+              <label for="add-product-img" class="col-3">IMAGE</label>
               <input id="add-product-img" class="col-9" name="Image" type="url">
             </div>
             <div class="add-product-info row">

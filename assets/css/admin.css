@@ -121,7 +121,7 @@ h6 {
     font-family: "Roboto", sans-serif;
  }
 
- .admin-view-product, .admin-view-customer, .admin-view-blog, .admin-add-product, .admin-add-blog {
+ .admin-view-product, .admin-view-customer, .admin-view-blog, .admin-view-transaction, .admin-add-product, .admin-add-blog {
     color: #ff7e00;
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
@@ -156,8 +156,8 @@ th {
     color: white;
     background-color: #6f9a37;
     border: 1px solid #ddd;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 
 td {
@@ -167,20 +167,34 @@ td {
     padding: 5px;
   }
 
-  .admin-product-name, .admin-customer-username, .admin-blog-title {
+  .admin-product-name, .admin-customer-username, .admin-blog-title, .admin-transaction-name_product {
     color: #ff7e00;
     font-weight: 700;
     font-size: 16px;
   }
 
-  .admin-product-price {
+  .admin-product-price, .admin-transaction-price {
     font-family: 'Montserrat', sans-serif;
     color: #111;
     font-weight: 700;
   }
 
-  .admin-product-ID, .admin-product-name, .admin-product-price, .admin-product-hot, .admin-customer-phone, .admin-customer-permissionCmt, .admin-blog-ID, .admin-blog-day {
+  .admin-product-ID, .admin-product-img, .admin-product-name, .admin-product-price, .admin-product-hot, .admin-customer-phone, .admin-customer-permissionCmt, .admin-blog-ID, .admin-blog-day, .admin-transaction-ID, .admin-transaction-ID_product, .admin-transaction-img, .admin-transaction-name_product, .admin-transaction-price, .admin-transaction-quantity, .admin-transaction-total, .admin-transaction-day {
     text-align: center;
+  }
+
+  .admin-product-img img, .admin-transaction-img img {
+    width: 100px !important;
+    height: 100px !important;
+  }
+
+  .admin-blog-img img {
+    width: 200px;
+    height: auto;
+  }
+
+  .admin-blog-day {
+    width: 100px;
   }
 
   .admin-product-btn-group, .admin-customer-btn-group, .admin-blog-btn-group {

@@ -87,7 +87,7 @@ class BlogView{
         <th>TAG</th>
         <th>DAY</th>
         <th>DESCRIPTION</th>
-        <th>CHANGE INFORMATION</th>
+        <th>OPERATION</th>
         </tr>';
         foreach ($blogs as $blog):
             echo '<tr>';

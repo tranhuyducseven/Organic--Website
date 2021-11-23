@@ -142,7 +142,7 @@ a {
 .cart-btn-group a {
   flex-grow: 1;
   background-color: #ff7e00;
-  color: #fff;
+  color: #fff !important;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0;
@@ -150,6 +150,7 @@ a {
   line-height: 45px;
   font-size: 13px;
   text-align: center;
+  cursor: pointer;
 }
 
 .cart-btn-group a:hover {
