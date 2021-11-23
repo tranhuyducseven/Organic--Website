@@ -19,10 +19,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="./assets/img/vegetables.png" />
-    <link type="text/css" rel="stylesheet" href="assets/css/shop.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <title>Organic</title>
+    <title>Organic - Home</title>
 </head>
 
 <body>
@@ -148,7 +147,7 @@
                 <div class="col">
                     <div class="p-cpn-item-1st">
                         <div class="p-cpn-item-1st__icon">
-                            <img src="./assets/img/home/leaf.png" alt="" />
+                            <img src="./assets/img/wwd-1.png" alt="" />
                         </div>
                         <div class="p-cpn-item-1st__content">
                             <h5 class="p-cpn-item-1st__title">
@@ -166,17 +165,17 @@
                 <div class="col">
                     <div class="p-cpn-item-1st">
                         <div class="p-cpn-item-1st__icon">
-                            <img src="./assets/img/home/leaf.png" alt="" />
+                            <img src="./assets/img/wwd-2.png" alt="" />
                         </div>
                         <div class="p-cpn-item-1st__content">
                             <h5 class="p-cpn-item-1st__title">
-                                <a href="#"> Agriculture Product</a>
+                                <a href="#"> Organic Products</a>
                             </h5>
                             <span class="p-cpn-item__break">
                                 <span></span>
                             </span>
                             <p class="p-cpn-item-1st__paragraph">
-                                Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth.
+                                        Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery.                                    
                             </p>
                         </div>
                     </div>
@@ -184,17 +183,17 @@
                 <div class="col">
                     <div class="p-cpn-item-1st">
                         <div class="p-cpn-item-1st__icon">
-                            <img src="./assets/img/home/leaf.png" alt="" />
+                            <img src="./assets/img/wwd-3.png" alt="" />
                         </div>
                         <div class="p-cpn-item-1st__content">
                             <h5 class="p-cpn-item-1st__title">
-                                <a href="#"> Agriculture Product</a>
+                                <a href="#"> Dairy Products</a>
                             </h5>
                             <span class="p-cpn-item__break">
                                 <span></span>
                             </span>
                             <p class="p-cpn-item-1st__paragraph">
-                                Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth.
+                                        Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic.
                             </p>
                         </div>
                     </div>
@@ -202,39 +201,21 @@
                 <div class="col">
                     <div class="p-cpn-item-1st">
                         <div class="p-cpn-item-1st__icon">
-                            <img src="./assets/img/home/leaf.png" alt="" />
+                            <img src="./assets/img/wwd-4.png" alt="" />
                         </div>
                         <div class="p-cpn-item-1st__content">
                             <h5 class="p-cpn-item-1st__title">
-                                <a href="#"> Agriculture Product</a>
+                                <a href="#"> Fresh Fruites</a>
                             </h5>
                             <span class="p-cpn-item__break">
                                 <span></span>
                             </span>
                             <p class="p-cpn-item-1st__paragraph">
-                                Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth.
+                                        Water spinach arugula pea tatsoi aubergine spring onion bush tomato kale radicchio.
                             </p>
                         </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="p-cpn-item-1st">
-                        <div class="p-cpn-item-1st__icon">
-                            <img src="./assets/img/home/leaf.png" alt="" />
-                        </div>
-                        <div class="p-cpn-item-1st__content">
-                            <h5 class="p-cpn-item-1st__title">
-                                <a href="#"> Agriculture Product</a>
-                            </h5>
-                            <span class="p-cpn-item__break">
-                                <span></span>
-                            </span>
-                            <p class="p-cpn-item-1st__paragraph">
-                                Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                </div>               
             </div>
         </div>
         <!--BREAK-->
@@ -249,18 +230,18 @@
                     </div>
                     <div class="page-break-item-1__content ">
                         <h1 class="page-break-item-1__content-heading ">
-                            High Quality Food
+                            Natural Process
                         </h1>
                         <p class="page-break-item-1__content-paragraph ">
-                            Combine old fashioned oats and wheat germ in a large bowl
+                            Dandelion cucumber earthnut pea peanut soko zucchini.
                         </p>
                     </div>
                 </div>
                 <div class="col-ssm-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-3 page-break-item-1 ">
                     <div class="page-break-item-1__icon ">
                         <div class="page-break-item-1__icon-group ">
-                            <img src="./assets/img/img-fc-car1.png " alt=" " class="page-break-item-1__icon-img1 " />
-                            <img src="./assets/img/img-fc-gr-car1.png " alt=" " class="page-break-item-1__icon-img2 " />
+                            <img src="./assets/img/img-fc-car2.png " alt=" " class="page-break-item-1__icon-img1 " />
+                            <img src="./assets/img/img-fc-gr-car2.png " alt=" " class="page-break-item-1__icon-img2 " />
                         </div>
                     </div>
                     <div class="page-break-item-1__content ">
@@ -275,32 +256,32 @@
                 <div class="col-ssm-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-3 page-break-item-1 ">
                     <div class="page-break-item-1__icon ">
                         <div class="page-break-item-1__icon-group ">
-                            <img src="./assets/img/img-fc-car1.png " alt=" " class="page-break-item-1__icon-img1 " />
-                            <img src="./assets/img/img-fc-gr-car1.png " alt=" " class="page-break-item-1__icon-img2 " />
+                            <img src="./assets/img/img-fc-car3.png " alt=" " class="page-break-item-1__icon-img1 " />
+                            <img src="./assets/img/img-fc-gr-car3.png " alt=" " class="page-break-item-1__icon-img2 " />
                         </div>
                     </div>
                     <div class="page-break-item-1__content ">
                         <h1 class="page-break-item-1__content-heading ">
-                            High Quality Food
+                            Best For Health
                         </h1>
                         <p class="page-break-item-1__content-paragraph ">
-                            Combine old fashioned oats and wheat germ in a large bowl
+                           Gumbo beet greens corn soko endive gumbo gourd.
                         </p>
                     </div>
                 </div>
                 <div class="col-ssm-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-3  page-break-item-1 ">
                     <div class="page-break-item-1__icon ">
                         <div class="page-break-item-1__icon-group ">
-                            <img src="./assets/img/img-fc-car1.png " alt=" " class="page-break-item-1__icon-img1 " />
-                            <img src="./assets/img/img-fc-gr-car1.png " alt=" " class="page-break-item-1__icon-img2 " />
+                            <img src="./assets/img/img-fc-car4.png " alt=" " class="page-break-item-1__icon-img1 " />
+                            <img src="./assets/img/img-fc-gr-car4.png " alt=" " class="page-break-item-1__icon-img2 " />
                         </div>
                     </div>
                     <div class="page-break-item-1__content ">
                         <h1 class="page-break-item-1__content-heading ">
-                            High Quality Food
+                            Grown by Nature
                         </h1>
                         <p class="page-break-item-1__content-paragraph ">
-                            Combine old fashioned oats and wheat germ in a large bowl
+                           Bunya nuts black-eyed pea prairie turnip leek lentil.
                         </p>
                     </div>
                 </div>
@@ -333,15 +314,15 @@
             </div>
             <div class="container-fluid row gx-5 ">
                 <div class="col ">
-                    <div class="p-cpn-image ">
-                        <img src="./assets/img/home/img-ud-hd.png " alt=" ">
+                    <div class="p-cpn-image">
+                        <img src="./assets/img/home/img-ud-hd.png" alt=" ">
                     </div>
                 </div>
             </div>
             <div class="grid wide-m row carousel owl-carousel ">
                 <div class="col ">
                     <div class="p-cpn-item-2nd ">
-                        <img class="p-cpn-item-2nd__ava " src="./assets/img/home/testava.jpg " alt=" " />
+                        <img class="p-cpn-item-2nd__ava " src="https://scontent.fsgn6-1.fna.fbcdn.net/v/t1.6435-9/124693546_1080575599049011_1048264268143765157_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=174925&_nc_ohc=HEg_cEQLQUsAX9HGE5c&_nc_ht=scontent.fsgn6-1.fna&oh=b99ff241e5a78243c54b3b5c055b1fac&oe=61C3D2E7" alt=" " />
                         <span class="p-cpn-item__break ">
                             <span></span>
                         </span>
@@ -355,10 +336,11 @@
                 </div>
                 <div class="col ">
                     <div class="p-cpn-item-2nd ">
-                        <img class="p-cpn-item-2nd__ava " src="./assets/img/home/testava.jpg " alt=" " />
+                        <img class="p-cpn-item-2nd__ava " src="https://www.awn.com/sites/default/files/styles/large_featured/public/image/featured/1032868-abp-2017-celebrate-10-year-anniversary-dreamworks-animations-bee-movie.jpg?itok=_xA8HGWh" alt="" />
                         <span class="p-cpn-item__break "><span></span></span>
                         <h1 class="p-cpn-item-2nd__name ">
-                            Trần Huy Đức
+                            Phạm Ngọc Tân
+
                         </h1>
                         <h3 class="p-cpn-item-2nd__career ">
                             Student
@@ -367,12 +349,27 @@
                 </div>
                 <div class="col ">
                     <div class="p-cpn-item-2nd ">
-                        <img class="p-cpn-item-2nd__ava " src="./assets/img/home/testava.jpg " alt=" " />
+                        <img class="p-cpn-item-2nd__ava " src="https://scontent.fsgn6-2.fna.fbcdn.net/v/t1.6435-9/80194343_1104817576522824_136626233990447104_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=GzlVmSeJtyoAX8L6vxh&_nc_ht=scontent.fsgn6-2.fna&oh=28ad83c15777ace31d145be08ad8508f&oe=61C3BEFB" alt=" " />
                         <span class="p-cpn-item__break ">
                             <span></span>
                         </span>
                         <h1 class="p-cpn-item-2nd__name ">
-                            Trần Huy Đức
+                            Vũ Khánh Hưng 
+                        </h1>
+                        <h3 class="p-cpn-item-2nd__career ">
+                            Student
+                        </h3>
+                    </div>
+                </div>
+                 <div class="col ">
+                    <div class="p-cpn-item-2nd ">
+                        <img class="p-cpn-item-2nd__ava" src="https://scontent.fsgn12-1.fna.fbcdn.net/v/t1.6435-9/89656804_1099371807092974_3562073153192591360_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=e3f864&_nc_ohc=Vbo5YyC-ImoAX9ZEZto&_nc_ht=scontent.fsgn12-1.fna&oh=57cbf33921057acd9c6e3b92415e9cbe&oe=61C30D45" alt=" " />
+                        <span class="p-cpn-item__break ">
+                            <span></span>
+                        </span>
+                        <h1 class="p-cpn-item-2nd__name ">
+                            Nguyễn Phúc 
+
                         </h1>
                         <h3 class="p-cpn-item-2nd__career ">
                             Student
@@ -409,7 +406,7 @@
             <div class="container-fluid row gx-5 ">
                 <div class="col ">
                     <div class="p-cpn-image ">
-                        <img src="./assets/img/home/img-ud-hd.png " alt=" ">
+                        <img src="./assets/img/home/img-ud-hd.png" alt=" ">
                     </div>
                 </div>
             </div>
@@ -430,53 +427,46 @@
         <div class="grid wide-l row page-break-list ">
             <div class="col-ssm-12 col-sm-12 col-md-12 col-lg-5 c-20 page-break-item-2 ">
                 <div class="page-break-item-2__icon ">
-                    <img src="./assets/img/cucumber.png " alt=" " />
+                    <img src="./assets/img/pbr-1.png " alt=" " />
                 </div>
                 <div class="page-break-item-2__content ">
-                    <h1 class="page-break-item-2__content-counter ">
-                        895 <span>+</span>
+                    <h1 class="page-break-item-2__content-counter ">895<span>M</span>
                     </h1>
-                    <h2 class="page-break-item-2__content-subheading ">
-                        Combine old
+                    <h2 class="page-break-item-2__content-subheading ">COMPLETE PROJECT
                     </h2>
                 </div>
             </div>
             <div class="col-ssm-12 col-sm-12 col-md-12 col-lg-5 c-20 page-break-item-2 ">
                 <div class="page-break-item-2__icon ">
-                    <img src="./assets/img/cucumber.png " alt=" " />
+                    <img src="./assets/img/pbr-2.png " alt=" " />
                 </div>
                 <div class="page-break-item-2__content ">
-                    <h1 class="page-break-item-2__content-counter ">
-                        895 <span>+</span>
+                    <h1 class="page-break-item-2__content-counter">790<span>+</span>
                     </h1>
-                    <h2 class="page-break-item-2__content-subheading ">
-                        Combine old
+                    <h2 class="page-break-item-2__content-subheading">AWARD WINNING
                     </h2>
                 </div>
             </div>
             <div class="col-ssm-12 col-sm-12 col-md-12 col-lg-5 c-20 page-break-item-2 ">
                 <div class="page-break-item-2__icon ">
-                    <img src="./assets/img/cucumber.png " alt=" " />
+                    <img src="./assets/img/pbr-3.png " alt=" " />
                 </div>
                 <div class="page-break-item-2__content ">
-                    <h1 class="page-break-item-2__content-counter ">
-                        895 <span>+</span>
+                    <h1 class="page-break-item-2__content-counter">205<span>K</span>
                     </h1>
-                    <h2 class="page-break-item-2__content-subheading ">
-                        Combine old
+                    <h2 class="page-break-item-2__content-subheading">PRODUCT ITEM
                     </h2>
                 </div>
             </div>
             <div class="col-ssm-12 col-sm-12 col-md-12 col-lg-5 c-20 page-break-item-2 ">
                 <div class="page-break-item-2__icon ">
-                    <img src="./assets/img/cucumber.png " alt=" " />
+                    <img src="./assets/img/pbr-4.png " alt=" " />
                 </div>
                 <div class="page-break-item-2__content ">
-                    <h1 class="page-break-item-2__content-counter ">
-                        895 <span>+</span>
+                    <h1 class="page-break-item-2__content-counter ">120<span>+</span>
                     </h1>
                     <h2 class="page-break-item-2__content-subheading ">
-                        Combine old
+                        HAPPY CLIENTS
                     </h2>
                 </div>
             </div>

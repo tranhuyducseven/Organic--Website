@@ -154,9 +154,9 @@ class ProductView{
                       $'. $product['Price'] .'
                   </h3>
               </div>
-              <div class="p-cpn-item-3rd-back " style="background-image: url("'. $product['Image'] .'"); ">
+              <div class="p-cpn-item-3rd-back " style="background-image: url('. $product["Image"] .');">
                   <div class="p-cpn-item-3rd-back__overlay ">
-                      <div class="p-cpn-item-3rd__buttons-group ">
+                      <div class="p-cpn-item-3rd__buttons-group">
                           <a class="p-cpn-item-3rd__button "><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></a>
                           <a class="p-cpn-item-3rd__button "><i class="far fa-heart p-cpn-item-3rd__button-icon "></i></a>
                       </div>
