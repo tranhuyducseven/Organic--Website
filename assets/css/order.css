@@ -92,3 +92,13 @@ td img{
         display: block;
     }
 }
+@media (max-width: 576px) {
+    .col-ssm-12 {
+        flex: 0 0 auto;
+        width: 100%!important;
+
+    }
+    .row>*{
+        padding: 0!important;
+    }
+}
