@@ -28,6 +28,10 @@ footer ul li {
     list-style-position: inside;
 }
 
+a {
+    text-decoration: none !important;
+}
+
 
 
 
@@ -340,7 +344,6 @@ footer ul li {
     .organic-footer-content {
         padding: 150px 40px;
     }
-
     .organic-footer-paragraph {
         padding-right: 0 !important;
     }
@@ -358,6 +361,9 @@ footer ul li {
     font-weight: 700;
     font-family: "Montserrat", sans-serif;
     color: #fff;
+    clear: both;
+    line-height: 1.5;
+    margin: 0 0 15px;
 }
 
 .organic-footer-heading_icon span {

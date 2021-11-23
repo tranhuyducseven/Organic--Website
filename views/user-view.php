@@ -10,35 +10,42 @@ class UserView{
     }
 
     public function showAllUser_adminpage($users){
-        echo '<table style="border-collapse: collapse;width: 100%;">';
-        echo '<tr>
-        <th style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">Username</th>
-        <th style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">Email</th>
-        <th style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">Phone Number</th>
-        <th style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">Avatar Link</th>
-        <th style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">Comment Permission</th>
-        <th style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">Action</th>
-        </tr>';
-
+        echo '<h1 class="admin-view-customer">View Customer <i class="far fa-eye"></i></h1>';
+        echo ""
+        ,    "<table class=&quottable&quot>"
+        ,    "<thead>"
+        ,        "<tr>"
+        ,        "<th scope=&quotcol&quot>USERNAME</th>"
+        ,        "<th scope=&quotcol&quot>EMAIL</th>"
+        ,        "<th scope=&quotcol&quot>PHONE NUMBER</th>"
+        ,        "<th scope=&quotcol&quot>AVATAR LINK</th>"
+        ,        "<th scope=&quotcol&quot>COMMENT PERMISSION</th>"
+        ,        "<th scope=&quotcol&quot>OPERATION</th>"
+        ,        "</tr>"
+        ,    "</thead>"
+        ,       "<tbody>";
         foreach ($users as $user):
-            echo '<tr>';
-            echo '<td style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">' . $user['Username'] . '</td>';
-            echo '<td style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">' . $user['Email'] . '</td>';
-            echo '<td style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">'. $user['PhoneNumber']. '</td>';
-            echo '<td style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">'. $user['Avatar'] .'</td>';
-            echo '<td style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">' . (($user['PermissionComment'] == 1)? "ALLOW": "BAN") . '</td>';
-            echo '<td style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">
-                    <form method="POST" action="admin.php?ctrl=user&username=' . $user['Username'] . '"';
-            if ($user['PermissionComment'] == 1)
-                echo '<p><button name="ban" type="ban"> Ban User </button> </p>';
-            else
-                echo '<p><button name="unban" type="unban"> Unban User </button> </p>';
-                echo '<p><button name="del" type="del"> Delete User </button> </p>
-                    </form>
-                  </td>';
-            echo '</tr>';
+            echo ""
+            .    "<tr>"
+            .    "<td class='admin-customer-username'>" . $user['Username'] . "</td>"
+            .    "<td class='admin-customer-email'>" . $user['Email'] . "</td>"
+            .    "<td class='admin-customer-phone'>" . $user['PhoneNumber'] . "</td>"
+            .    "<td class='admin-customer-avatar'>" . $user['Avatar'] . "</td>"
+            .    "<td class='admin-customer-permissionCmt'>" . (($user['PermissionComment'] == 1)? "ALLOW" : "BAN") . "</td>";
+            echo    "<td>"  
+            ,       '<form method="POST" class="admin-customer-btn-group" action="admin.php?ctrl=user&username=' , $user['Username'] , '"';
+            if ($user['PermissionComment'] == 1){
+                echo '<div><button class="admin-customer-ban" name="ban" type="ban"> BAN USER </button></div>';
+            }
+            else echo '<div><button class="admin-customer-unban" name="unban" type="unban"> UNBAN USER </button></div>';
+            echo '<button name="del" type="del"> DELETE USER </button>'
+            ,       '</form>'
+            ,    "</td>"
+            ,    "</tr>";
         endforeach;
-        echo '</table>';
+        echo ""
+        ,    "</tbody>"
+        ,    "</table>";
     }
 
     public function showOneUser_userpage($user){
