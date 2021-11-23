@@ -10,10 +10,11 @@ table {
     border: 2px solid var(--primary-text-color) !important;
 
 }
-th,td{
-    
+th,td{    
     text-align: center!important;
     vertical-align: middle!important;   
+    padding-top: 10px!important;
+    padding-bottom: 10px!important;
 }
 td span,td img{
 
