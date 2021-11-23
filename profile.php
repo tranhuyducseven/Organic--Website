@@ -106,7 +106,7 @@
                             <div class="col-md-12"><label class="labels">Avatar Link</label><input type="text" class="form-control" placeholder="enter your avatar link" value=""></div>
                             <div class="col-md-12"><label class="labels ">Right to comment</label><input class="form-control right-cmt" type="text" value="You do not have permission to comment" readonly></div>
                         </div>
-                        <div class="mt-5 text-center"><button class="btn btn-primary profile-button " type="button" onclick="editProfile();">Save Profile</button></div>
+                        <div class="mt-5 text-center"><button class="btn btn-primary profile-button active " type="button" onclick="editProfile();">Save Profile</button></div>
                     </div>
                 </div>
             </div>

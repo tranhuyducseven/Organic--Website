@@ -44,9 +44,9 @@
                                     echo '<div id="rightnav__user" class="rightnav__user">
                                             <img class="rightnav__user-ava" src="'. $pic .'" alt="">
                                             <ul id="rightnav__user-menu" class="rightnav__user-menu">
-                                                <li class="rightnav__user-item"><a href="profile.php">Tài khoản của tôi</a></li>
-                                                <li class="rightnav__user-item"><a href="order.php">Đơn mua</a></li>
-                                                <li class="rightnav__user-item rightnav__user-item--separate"><a href="logout.php">Đăng xuất</a></li>
+                                                <li class="rightnav__user-item"><a href="profile.php">See your profile</a></li>
+                                                <li class="rightnav__user-item"><a href="order.php">Purchase order</a></li>
+                                                <li class="rightnav__user-item rightnav__user-item--separate"><a href="logout.php">Logout</a></li>
                                             </ul>
                                         </div>';
                                 }

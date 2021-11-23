@@ -19,9 +19,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" type="image/x-icon" href="./assets/img/vegetables.png" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="assets/css/shop.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <title>Order History</title>
+    
+    <title>Organic - Purchase order</title>
 </head>
 
 <body>
@@ -224,35 +223,13 @@
     <?php require_once("./views/canvas.php") ?>
     <script src="./assets/js/cart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script>   
     <script>
         $(document).ready(function() {
             $('#rightnav__user').on("click", function() {
                 $('#rightnav__user-menu').toggle();
             })
-        })
-        $(".carousel ").owlCarousel({
-            margin: 20,
-            loop: true,
-            autoplay: true,
-            autoplayTimeout: 2000,
-            autoplayHoverPause: true,
-            responsive: {
-                0: {
-                    items: 1,
-                    nav: false
-                },
-                600: {
-                    items: 2,
-                    nav: false
-                },
-                1000: {
-                    items: 3,
-                    nav: false
-                }
-            }
-        });
+        })        
     </script>
 </body>
 
