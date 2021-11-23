@@ -101,31 +101,90 @@
                                 <div class="row">
                                     <input type="password" name="password" id="password" class="form__input" placeholder="Password">
                                 </div>
-
                                 <div class="row">
                                     <!-- display msg when failed!! -->
-                                    <span class="msg">The password that you've entered is incorrect. </span>
+                                    <span class="msg">The password or the username that you've entered is incorrect. </span>
                                 </div>
-
                                 <div class="row remember-group">
                                     <input type="checkbox" name="remember_me" id="remember_me" class="">
                                     <label for="remember_me">Remember Me!</label>
                                 </div>
                                 <div class="row">
-                                    <button class="btn btn-success login-btn">
+                                    <button class="btn btn-primary login-btn">
                                         Login
                                     </button>
                                 </div>
                             </form>
                         </div>
                         <div class="row">
-                            <p class="query">Don't have an account? <a href="#./sign-in.html">Register Here</a></p>
+                            <p class="query">Don't have an account? <span id='register-btn'>Register Here</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sign up modal-->
+        <div id="modal" class="">
+            <div class="modal__overlay"></div>
+            <div class="modal__body">
+                <!-- Modal register-->
+                <div class="grid wide-m">
+                    <div class="row modal__container">
+                        <div class="col-md-0 col-lg-4 company__info">
+                            <h1 class="company__name">Organic Food</h1>
+                            <div class="company__logo" style="background-image:url('./assets/img/header-logo.png')">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-8 login_form ">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <h2 class="login_form__name">Sign Up</h2>
+                                </div>
+                                <div class="row">
+                                    <form control="" class="form-group">
+                                        <div class="row">
+                                            <input type="text" name="username" id="username" class="form__input" placeholder="Chose your username" required>
+                                            <!-- display msg when failed!! -->
+                                            <span class="msg">The username is invalid! </span>
+                                        </div>
+                                        <div class="row">
+                                            <input type="email" name="email" id="email" class="form__input" placeholder="Email address" required>
+                                            <span class="msg">The email is invalid! </span>
+                                        </div>
+                                        <div class="row">
+                                            <input type="number" name="phone" id="phone" class="form__input" placeholder="Phone number" required>
+                                            <span class="msg">The phone numbe is invalid! </span>
+                                        </div>
+                                        <div class="row">
+                                            <input type="password" name="password" id="password" class="form__input" placeholder="New password" required>
+                                            <span class="msg">The password is invalid! </span>
+                                        </div>
+                                        <div class="row">
+                                            <button class="btn btn-success login-btn">
+                                                Sign Up
+                                            </button>
+                                        </div>
+                                        <div class="row">
+                                            <span class="col-md-3" id='back-btn'>Back to login</span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script>
+    <script>
+    document.getElementById('register-btn').addEventListener("click", function() {
+        document.getElementById('modal').style.display = "flex";
+    })
+    document.getElementById('back-btn').addEventListener("click", function() {
+        document.getElementById('modal').style.display = "none";
+    })
+    </script>
 </body>
 
 </html>
