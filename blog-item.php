@@ -146,11 +146,11 @@
                 <div class="organic-comment container-fluid">
                     <h1 class="comments-title">
                     </h1>
-                    <div class="organic-comment__addnew">
-                        
-                    </div>
                     <div class="organic-comment__wrapper">
 
+                    </div>
+                    <div class="organic-comment__addnew">
+                        
                     </div>
                 </div>
             </div>
