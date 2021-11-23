@@ -54,6 +54,7 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link type="text/css" rel="stylesheet" href="assets/css/base.css" />
     <link type="text/css" rel="stylesheet" href="assets/css/shop.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/img/vegetables.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
@@ -64,43 +65,48 @@
             <div class="organic-primary col-xl-8 col-lg-8 col-sm-12 col-12">
                 <div class="organic-sort-bar d-flex">
                     <div class="organic-sort-bar_note">
-                        <p class="organic-sort-bar_note">Showing 1-9 of <?php echo $productController->countProductNumber() ?> results</p>
+                        <p class="organic-sort-bar_note">
+                            <?php 
+                                echo "Showing ";
+                                if (!isset($_GET['search']) && !isset($_GET['tag'])){
+                                    echo 9*$_SESSION['current_page_shop']-8;
+                                    echo " - ";
+                                    if ($_SESSION['current_page_shop']*9 <= $productController->countProductNumber())
+                                        echo 9*$_SESSION['current_page_shop'];
+                                    else echo $productController->countProductNumber(); 
+                                    echo " of ";
+                                }
+                            ?> 
+                            <?php 
+                                if (!isset($_GET['search']) && !isset($_GET['tag'])){
+                                    echo $productController->countProductNumber();
+                                }
+                                else echo $productController->getAllProduct_userpage($_SESSION['current_page_shop'], 0);
+                            ?> 
+                        results</p>
                     </div>
-                    <div>
-                        <form class="organic-sort-bar_select" method="get">
-                            <select name="orderby" class="organic-select form-select" aria-label="Shop order">
-
-                  <option value="0">Sort by</option>
-                  <option value="1">Sort by popularity</option>
-                  <option value="1">Sort by average rating</option>
-                  <option value="2" selected="selected">Sort by latest</option>
-                  <option value="3">Sort by price: low to high</option>
-                  <option value="4">Sort by price: high to low</option>
-                </select>
-                        </form>
-                    </div>
+                    
                 </div>
                 <div class="organic-items row">
                   <?php
-                    $productController->getAllProduct_userpage($_SESSION['current_page_shop']);
+                    $productController->getAllProduct_userpage($_SESSION['current_page_shop'], 1);
                   ?>
-                    
                 </div>
                 <nav class="organic-pagination">
                   <ul class="organic-page-numbers justify-content-center">
                     <li>
                       <?php 
-                        if (!isset($_GET['search']))
+                        if (!isset($_GET['search']) && !isset($_GET['tag']))
                           echo '<a href="shop.php?act=left"><i class="fas fa-angle-double-left"></i></a>';
                       ?>
                     </li>
                     <?php
-                      if (!isset($_GET['search']))
+                      if (!isset($_GET['search']) && !isset($_GET['tag']))
                         generatePageNumber();
                     ?>
                     <li>
                       <?php 
-                        if (!isset($_GET['search']))
+                        if (!isset($_GET['search']) && !isset($_GET['tag']))
                           echo '<a href="shop.php?act=right"><i class="fas fa-angle-double-right"></i></a>';
                       ?>
                     </li>
@@ -114,56 +120,15 @@
                         <input class="organic-filter-search_input" type="text" placeholder="Search Here" name="search"/>
                         <button class="organic-filter-search_btn" type="submit">
                 <i class="material-icons">search</i>
-              </button>
+                    </button>
                     </form>
-                </div>
-                <div class="organic-filter-group">
-                    <h2 class="organic-filter-group_heading text-left">
-                        Product Categories
-                    </h2>
-                    <ul class="organic-filter-group_list">
-                        <li class="cat-item">
-                            <a href="#"><i class="fas fa-angle-double-right"></i>Dairy Product</a
-                >
-              </li>
-              <li class="cat-item">
-                <a href="#"
-                  ><i class="fas fa-angle-double-right"></i>Food & Vegetables</a
-                >
-              </li>
-              <li class="cat-item">
-                <a href="#"
-                  ><i class="fas fa-angle-double-right"></i>Fresh Vegetables</a
-                >
-              </li>
-              <li class="cat-item">
-                <a href="#"
-                  ><i class="fas fa-angle-double-right"></i>Healthy Organic
-                  Food</a
-                >
-              </li>
-              <li class="cat-item">
-                <a href="#"
-                  ><i class="fas fa-angle-double-right"></i>Organic Product</a
-                >
-              </li>
-            </ul>
-          </div>
+            </div>
           <div class="organic-filter-group">
-            <h2 class="organic-filter-group_heading text-left">Popular Tags</h2>
+            <h2 class="organic-filter-group_heading text-left">Tags</h2>
             <div class="organic-filter-group_wrapper">
-              <a class="tag-cloud" href="#">Farmer</a>
-                            <a class="tag-cloud" href="#">Flower</a>
-                            <a class="tag-cloud" href="#">Food</a>
-                            <a class="tag-cloud" href="#">Fruit</a>
-                            <a class="tag-cloud" href="#">Juice</a>
-                            <a class="tag-cloud" href="#">Lemon</a>
-                            <a class="tag-cloud" href="#">Orange</a>
-                            <a class="tag-cloud" href="#">Organic</a>
-                            <a class="tag-cloud" href="#">Plant</a>
-                            <a class="tag-cloud" href="#">Tomato</a>
-                            <a class="tag-cloud" href="#">Trees</a>
-                            <a class="tag-cloud" href="#">Vegetable</a>
+                    <?php
+                        $productController->showTag();
+                    ?>
                 </div>
             </div>
         </div>

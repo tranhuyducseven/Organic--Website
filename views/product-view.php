@@ -140,36 +140,55 @@ class ProductView{
   }
 
     public function showAllProduct_homepage($products){
+      $cnt = 0;
+      echo '<div class="carousel-item active">
+              <div class="grid wide-m row">
+            ';
       foreach ($products as $product):
-        echo '<div class="col m-3 p-cpn-item-3rd ">
-                <div class="p-cpn-item-3rd-front ">
-                    <img class="p-cpn-item-3rd-front__img " src="'. $product['Image'] .'" alt=" " />
-                      <span class="p-cpn-item__break ">
-                                <span></span>
-                            </span>
-                            <h1 class="p-cpn-item-3rd-front__name ">
-                            '. $product['Name'] .'
-                            </h1>
-                            <h3 class="p-cpn-item-3rd-front__price ">
-                                $'. $product['Price'] .'
-                            </h3>
-                        </div>
-                        <div class="p-cpn-item-3rd-back " style="background-image: url("'. $product['Image'] .'"); ">
-                            <div class="p-cpn-item-3rd-back__overlay ">
-                                <div class="p-cpn-item-3rd__buttons-group ">
-                                    <a class="p-cpn-item-3rd__button "><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></a>
-                                    <a class="p-cpn-item-3rd__button "><i class="far fa-heart p-cpn-item-3rd__button-icon "></i></a>
-                                </div>
-                                <h1 class="p-cpn-item-3rd-back__name ">
-                                '. $product['Name'] .'
-                                </h1>
-                                <h3 class="p-cpn-item-3rd-back__price ">
-                                    $'. $product['Price'] .'
-                                </h3>
-                                <a class="add-to-cart-btn " href="shop.php">Add To Cart</a>
-                            </div>
-                        </div>
-          </div>';
+        if ($cnt%4 == 0 && $cnt != 0)
+          echo '<div class="carousel-item">
+                  <div class="grid wide-m row">
+                  ';
+        echo '
+          <div class="col m-3  p-cpn-item-3rd">    
+            <div class="p-cpn-item-3rd-front">
+              <img class="p-cpn-item-3rd-front__img" src="' . $product['Image'] . '" alt="" />
+              <span class="p-cpn-item__break">
+               <span></span>               
+             </span>
+               <h1 class="p-cpn-item-3rd-front__name">
+               ' . $product['Name'] . '
+               </h1>             
+               <h3 class="p-cpn-item-3rd-front__price">
+                       $' . $product['Price'] . '
+               </h3>
+            </div>     
+            <div class="p-cpn-item-3rd-back" style="background-image: url("' . $product['Image'] . '");">    
+                  
+              <div class="p-cpn-item-3rd-back__overlay">
+                <div class="p-cpn-item-3rd__buttons-group">
+                  
+                    <a class="p-cpn-item-3rd__button"><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></a>
+                    <a class="p-cpn-item-3rd__button"><i class="far fa-heart p-cpn-item-3rd__button-icon "></i></a>                    
+                  
+                </div>
+                  
+                <h1 class="p-cpn-item-3rd-back__name">
+                ' . $product['Name'] . '
+                  </h1>             
+                  <h3 class="p-cpn-item-3rd-back__price">
+                          $' . $product['Price'] . '
+                  </h3>
+                  <a class="add-to-cart-btn" href="#">Add To Cart</a>
+               
+              </div>
+            </div>    
+          </div>';  
+        $cnt++;
+        if ($cnt%4 == 0)
+            echo '  </div>
+                  </div>
+                  ';
       endforeach;
     }
 
@@ -187,29 +206,34 @@ class ProductView{
     }
 
     public function showAllProduct_adminpage($products){
-        echo '<table style="border-collapse: collapse;width: 100%;">';
+        echo '<h1 class="admin-view-product">View Product <i class="far fa-eye"></i></h1>';
+        echo '<table>';
         echo '<tr>
-        <th style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">ID</th>
-        <th style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">Image</th>
-        <th style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">Name</th>
-        <th style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">Price</th>
-        <th style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">Description</th>
-        <th style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">Hot</th>
-        <th style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">Change information</th>
+        <th>ID</th>
+        <th>IMAGE</th>
+        <th>NAME</th>
+        <th>PRICE</th>
+        <th>DESCRIPTION</th>
+        <th>HOT</th>
+        <th>TAG</th>
+        <th>CHANGE INFORMATION</th>
         </tr>';
         foreach ($products as $product):
             echo '<tr>';
-            echo '<td style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">' . $product['ID'] . '</td>';
-            echo '<td style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">' . $product['Image'] . '</td>';
-            echo '<td style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">'. $product['Name'] . '</td>';
-            echo '<td style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">'. $product['Price'] .'</td>';
-            echo '<td style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">' . $product['Description'] . '</td>';
-            echo '<td style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">' . $product['Hot'] . '</td>';
-            echo '<td style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">
-                    <form method="post"> 
-                        <p><button name="toggleHot" type="submit" value="' . $product['ID'] . '">Toggle Hot</button></p>
-                        <p><button name="editInfo" type="submit" value="' . $product['ID'] . '">Edit</button></p>
-                        <p><button name="deleteInfo" type="submit" value="' . $product['ID'] . '">Delete</button></p>
+            echo '<td class="admin-product-ID">' . $product['ID'] . '</td>';
+            echo '<td class="admin-product-img">
+                    <img src="' . $product['Image'] . '" alt="">
+                  </td>';
+            echo '<td class="admin-product-name">'. $product['Name'] . '</td>';
+            echo '<td class="admin-product-price">'. $product['Price'] .'</td>';
+            echo '<td class="admin-product-descr">' . $product['Description'] . '</td>';
+            echo '<td class="admin-product-hot">' . (($product['Hot'] == 1)? "HOT": "UNHOT") . '</td>';
+            echo '<td class="admin-product-hot">' . $product['Tag'] . '</td>';
+            echo '<td>
+                    <form method="post" class="admin-product-btn-group"> 
+                        <button name="toggleHot" type="submit" value="' . $product['ID'] . '">TOGGLE HOT</button>
+                        <button name="editInfo" type="submit" value="' . $product['ID'] . '">EDIT</button>
+                        <button name="deleteInfo" type="submit" value="' . $product['ID'] . '">DELETE</button>
                     </form>
                   </td>';
             echo '</tr>';
@@ -220,22 +244,56 @@ class ProductView{
     public function showFormProduct_adminpage($action){
         if ($action == "addnew")
         {
-            echo '<form method="post" action="">
-            <p><input name="Image" type="text" placeholder="Image"></p>
-            <p><input name="Name" type="text" placeholder="Name"></p>
-            <p><input name="Price" type="text" placeholder="Price"></p>
-            <p><input name="Description" type="text" placeholder="Description"></p>
-            <p><button name="submit" type="submit"> Save </button> </p>
+            echo '<h1 class="admin-add-product">Add Product <i class="material-icons">library_add</i></h1>';
+            echo '<form method="post" action="" class="add-product-form">
+            <div class="add-product-info row">
+              <label for="add-product-img" class="col-3">IMAGE LINK</label>
+              <input id="add-product-img" class="col-9" name="Image" type="url">
+            </div>
+            <div class="add-product-info row">
+              <label for="add-product-name" class="col-3">NAME</label>
+              <input id="add-product-name" class="col-9" name="Name" type="text">
+            </div>
+            <div class="add-product-info row">
+              <label for="add-product-price" class="col-3">PRICE</label>
+              <input id="add-product-price" class="col-9" name="Price" type="number" step="any" min="0">
+            </div>
+            <div class="add-product-info row">
+              <label for="add-product-tag" class="col-3">Tag</label>
+              <input id="add-product-tag" class="col-9" name="tag">
+            </div>
+            <div class="add-product-info row">
+              <label for="add-product-descr" class="col-3">DESCRIPTION</label>
+              <textarea id="add-product-descr" class="col-9" name="Description"></textarea>
+            </div>
+            <div class="add-product-info row">
+              <button class="offset-3" name="submit" type="submit">SAVE</button>
+            </div>
             </form>';
         }
         else if ($action == "edit")
         {
-            echo '<form method="post" action="">
-            <p><input name="Image" type="text" placeholder="Image" value="'. $_SESSION['Image'] .'"</p>
-            <p><input name="Name" type="text" placeholder="Name" value="'. $_SESSION['Name'] .'"</p>
-            <p><input name="Price" type="text" placeholder="Price" value="'. $_SESSION['Price'] .'"</p>
-            <p><input name="Description" type="text" placeholder="Description" value="'. $_SESSION['Description'] .'"</p>
-            <p><button name="submit" type="submit"> Save </button> </p>
+            echo '<h1 class="admin-add-product">Edit Product <i class="fas fa-edit edit-icon"></i></h1>';
+            echo '<form method="post" action="" class="add-product-form">
+            <div class="add-product-info row">
+              <label for="add-product-img" class="col-3">IMAGE LINK</label>
+              <input id="add-product-img" class="col-9" name="Image" type="url" value="'. $_SESSION['Image'] .'">
+            </div>
+            <div class="add-product-info row">
+              <label for="add-product-name" class="col-3">NAME</label>
+              <input id="add-product-name" class="col-9" name="Name" type="text" value="'. $_SESSION['Name'] .'">
+            </div>
+            <div class="add-product-info row">
+              <label for="add-product-price" class="col-3">PRICE</label>
+              <input id="add-product-price" class="col-9" name="Price" type="number" step="any" min="0" value="'. $_SESSION['Price'] .'">
+            </div>
+            <div class="add-product-info row">
+              <label for="add-product-descr" class="col-3">DESCRIPTION</label>
+              <textarea id="add-product-descr" class="col-9" name="Description">'. $_SESSION['Description'] .'</textarea>
+            </div>
+            <div class="add-product-info row">
+              <button class="offset-3" name="submit" type="submit">SAVE</button>
+            </div>
             </form>';
         }
     }
@@ -289,6 +347,12 @@ class ProductView{
                   </div>
                 </li>';
         endforeach;
+    }
+
+    public function showAllTag($tags){
+      foreach ($tags as $tag):
+        echo '<a class="tag-cloud" href="shop.php?tag='. $tag .'">'. $tag .'</a>';
+      endforeach;
     }
 }
 

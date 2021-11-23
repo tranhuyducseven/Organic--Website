@@ -51,10 +51,22 @@ class BlogController {
         if (isset($_GET['search'])) {
             $blogs = $blogModel->search($_GET['search']);
         }
+        else if (isset($_GET['tag'])){
+            $blogs = $blogModel->tag($_GET['tag']);
+        }
         else $blogs = $blogModel->getAllBlog_userpage($numPage);
 
         $blogView = new BlogView();
         $blogView->showAllBlog($blogs);
+    }
+
+    public function showTag(){
+        $this->InitBlogController();
+        $blogModel = new BlogModel();
+        $blogView = new BlogView();
+        $tags = $blogModel->getAllTag();
+        
+        $blogView->showAllTag($tags);
     }
 }
 

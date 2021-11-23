@@ -98,17 +98,17 @@
                         <ul class="organic-page-numbers justify-content-center">
                             <li>
                                 <?php 
-                                    if (!isset($_GET['search']))
+                                    if (!isset($_GET['search']) && !isset($_GET['tag']))
                                     echo '<a href="blog.php?act=left"><i class="fas fa-angle-double-left"></i></a>';
                                 ?>
                             </li>
                                 <?php
-                                if (!isset($_GET['search']))
+                                if (!isset($_GET['search']) && !isset($_GET['tag']))
                                     generatePageNumber();
                                 ?>
                             <li>
                                 <?php 
-                                    if (!isset($_GET['search']))
+                                    if (!isset($_GET['search']) && !isset($_GET['tag']))
                                     echo '<a href="blog.php?act=right"><i class="fas fa-angle-double-right"></i></a>';
                                 ?>
                             </li>
@@ -126,43 +126,11 @@
                         </form>
                     </div>
                     <div class="organic-filter-group">
-                        <h2 class="organic-filter-group_heading text-left">
-                            Product Categories
-                        </h2>
-                        <ul class="organic-filter-group_list">
-                            <li class="cat-item">
-                                <a href="#"><i class="fas fa-angle-double-right"></i>Dairy Product</a>
-                            </li>
-                            <li class="cat-item">
-                                <a href="#"><i class="fas fa-angle-double-right"></i>Food & Vegetables</a>
-                            </li>
-                            <li class="cat-item">
-                                <a href="#"><i class="fas fa-angle-double-right"></i>Fresh Vegetables</a>
-                            </li>
-                            <li class="cat-item">
-                                <a href="#"><i class="fas fa-angle-double-right"></i>Healthy Organic
-                                    Food</a>
-                            </li>
-                            <li class="cat-item">
-                                <a href="#"><i class="fas fa-angle-double-right"></i>Organic Product</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="organic-filter-group">
-                        <h2 class="organic-filter-group_heading text-left">Popular Tags</h2>
+                        <h2 class="organic-filter-group_heading text-left">Tags</h2>
                         <div class="organic-filter-group_wrapper">
-                            <a class="tag-cloud" href="#">Farmer</a>
-                            <a class="tag-cloud" href="#">Flower</a>
-                            <a class="tag-cloud" href="#">Food</a>
-                            <a class="tag-cloud" href="#">Fruit</a>
-                            <a class="tag-cloud" href="#">Juice</a>
-                            <a class="tag-cloud" href="#">Lemon</a>
-                            <a class="tag-cloud" href="#">Orange</a>
-                            <a class="tag-cloud" href="#">Organic</a>
-                            <a class="tag-cloud" href="#">Plant</a>
-                            <a class="tag-cloud" href="#">Tomato</a>
-                            <a class="tag-cloud" href="#">Trees</a>
-                            <a class="tag-cloud" href="#">Vegetable</a>
+                            <?php 
+                                $blogController->showTag();
+                            ?>
                         </div>
                     </div>
                 </div>

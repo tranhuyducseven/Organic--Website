@@ -35,16 +35,22 @@ class ProductController {
         return $numOfProduct;
     }
 
-    public function getAllProduct_userpage($numPage){
+    public function getAllProduct_userpage($numPage, $show){
         $this->InitProductController();
         $productModel = new ProductModel();
         if (isset($_GET['search'])) {
             $products = $productModel->search($_GET['search']);
         }
+        else if (isset($_GET['tag'])){
+            $products = $productModel->tag($_GET['tag']);
+        }
         else $products = $productModel->getAllProduct_userpage($numPage);
-
-        $productView = new ProductView();
-        $productView->showAllProduct($products);
+        
+        if ($show == 1){
+            $productView = new ProductView();
+            $productView->showAllProduct($products);
+        }
+        else return sizeof($products);
     }
 
     public function getAllProduct_homepage(){
@@ -91,6 +97,15 @@ class ProductController {
         {    
             unset($_SESSION['cartInfo'][$id]);
         } 
+    }
+
+    public function showTag(){
+        $this->InitProductController();
+        $productModel = new ProductModel();
+        $productView = new ProductView();
+        $tags = $productModel->getAllTag();
+        
+        $productView->showAllTag($tags);
     }
 }
 

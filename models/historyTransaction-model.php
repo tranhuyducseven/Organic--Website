@@ -10,9 +10,9 @@ class HistoryTransactionModel {
         else return $con;
     }
 
-    public function getAllHistoryTransaction($username){
+    public function getAllHistoryTransaction(){
         $con = $this->InitConnect();
-        $res = $con->query('SELECT * FROM history_transaction WHERE Username="'. $username . '"');
+        $res = $con->query('SELECT * FROM history_transaction');
 
         $historyTransactions = array();
         if (mysqli_num_rows($res) > 0){
@@ -23,23 +23,10 @@ class HistoryTransactionModel {
         return $historyTransactions;
     }
 
-    public function Edit($historyTransactions){
-        $conn = $this->InitConnect();
-        $sql = "INSERT INTO history_transaction (Username, ID_product, Day, Quantity) VALUES('". $historyTransactions['Username'] ."', '". $historyTransactions['ID'] ."', now(), '". $historyTransactions['Quantity'] ."')";
-        if ($conn->query($sql) === TRUE) {
-            $conn->close();
-            return true;
-        }
-        else {
-            $conn->close();
-            return false;
-        }
-    }
-
     public function addTrans($trans){
         $conn = $this->InitConnect();
         foreach ($trans as $tran):
-            $sql = "INSERT INTO history_transaction (Username, ID_product, Quantity) VALUES('". $_SESSION['username'] ."', '". $tran['ID'] ."', '". $tran['quantity'] ."')";
+            $sql = "INSERT INTO history_transaction (Username, ID_product, Image, Name_product, Price, Quantity, Total) VALUES('". $_SESSION['username'] ."', '". $tran['ID'] ."',  '". $tran['Image'] ."', '". $tran['Name'] ."', '". $tran['Price'] ."', '". $tran['quantity'] ."', '". $tran['quantity'] * $tran['Price'] ."')";
             if ($conn->query($sql) === false) {
                 $conn->close();
                 return false;
@@ -47,6 +34,19 @@ class HistoryTransactionModel {
         endforeach;
         $conn->close();
         return true;
+    }
+
+    public function getAllHistoryOneUser($username){
+        $con = $this->InitConnect();
+        $res = $con->query("SELECT * FROM history_transaction WHERE Username='" . $username . "'");
+
+        $historyTransactions = array();
+        if (mysqli_num_rows($res) > 0){
+            while ($historyTransaction = mysqli_fetch_assoc($res)){
+                $historyTransactions[] = $historyTransaction;
+            }
+        }
+        return $historyTransactions;
     }
 }
 

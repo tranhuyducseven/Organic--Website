@@ -91,13 +91,13 @@ class UserModel {
     // username a-z A-Z 0-9 _ . 5 to 20 chars
 
 
-    public function checkSignUp($username, $password, $email){
+    public function checkSignUp($username, $password, $email, $phone){
         $con = $this->InitConnect();
 
         $res = $con->query("SELECT * FROM user_table WHERE Username = '" . $username . "'");
         if (mysqli_num_rows($res) == 0){        
-            if (preg_match('/^[a-z\d_.]{5,20}$/i', $username) && preg_match("#.*^(?=.{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$#", $password) && filter_var($email, FILTER_VALIDATE_EMAIL)){
-                $sql = "INSERT INTO user_table (Username, Password, Email, PermissionComment) VALUES('".$username."', '".$password."', '".$email."', 1)";
+            if (preg_match('/^[a-z\d_.]{5,20}$/i', $username) && preg_match("#.*^(?=.{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$#", $password) && filter_var($email, FILTER_VALIDATE_EMAIL) && strlen($phone) < 13){
+                $sql = "INSERT INTO user_table (Username, Password, Email, PhoneNumber,PermissionComment) VALUES('".$username."', '".$password."', '".$email."','".$phone."', 1)";
                 if ($con->query($sql) === TRUE) {
                     $con->close();
                     return 1;
@@ -109,11 +109,11 @@ class UserModel {
             }
             else {
                 $con->close();
-                return 0;
+                return 3;       // 3 is invalid input
             }
         }
         else {
-            return 0;
+            return 2;           // 2 is duplicate
         }
     }
 

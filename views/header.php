@@ -45,7 +45,7 @@
                                             <img class="rightnav__user-ava" src="'. $pic .'" alt="">
                                             <ul id="rightnav__user-menu" class="rightnav__user-menu">
                                                 <li class="rightnav__user-item"><a href="profile.php">Tài khoản của tôi</a></li>
-                                                <li class="rightnav__user-item"><a href="">Đơn mua</a></li>
+                                                <li class="rightnav__user-item"><a href="order.php">Đơn mua</a></li>
                                                 <li class="rightnav__user-item rightnav__user-item--separate"><a href="logout.php">Đăng xuất</a></li>
                                             </ul>
                                         </div>';

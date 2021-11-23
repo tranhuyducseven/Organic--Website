@@ -120,21 +120,58 @@ class BlogModel {
                 $blogs[] = $blog;
             }
         }
-
+        $con->close();
         return $blogs;
     }
 
     public function search($key){
         $con = $this->InitConnect();
-        $res = $con->query('SELECT * FROM blog_table WHERE Name LIKE \'' . $key . '%\'');
-
+        $res = $con->query('SELECT * FROM blog_table WHERE Title LIKE \'' . $key . '%\'');
+        if ($res === false){
+            $con->close();
+            return array();
+        }
         $blogs = array();
         if (mysqli_num_rows($res) > 0){
             while ($blog = mysqli_fetch_assoc($res)){
                 $blogs[] = $blog;
             }
         }
+        $con->close();
         return $blogs;
+    }
+
+    public function tag($key){
+        $con = $this->InitConnect();
+        $res = $con->query('SELECT * FROM blog_table');
+        $blogs = array();
+        if (mysqli_num_rows($res) > 0){
+            while ($blog = mysqli_fetch_assoc($res)){
+                $tagDB = $blog['Tag'];
+                if (strpos($tagDB, $key) !== false){
+                    $blogs[] = $blog;
+                }
+            }
+        }
+        return $blogs;
+    }
+
+    public function getAllTag(){
+        $con = $this->InitConnect();
+        $res = $con->query('SELECT * FROM blog_table');
+        $tags = array();
+        if (mysqli_num_rows($res) > 0){
+            while ($tag = mysqli_fetch_assoc($res)){
+                $tagtmp = $tag['Tag'];
+                $tagtmp = explode(",", $tagtmp);
+                foreach ($tagtmp as $tag):
+                    $tags[] = $tag;
+                endforeach;
+            }
+        }
+        $tags = array_unique($tags);
+        unset($tags[sizeof($tags)]);
+        return $tags;
     }
 }
 

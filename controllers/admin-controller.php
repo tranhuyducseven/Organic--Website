@@ -7,6 +7,8 @@
             require_once('views/product-view.php');
             require_once('models/blog-model.php'); 
             require_once('views/blog-view.php');
+            require_once('models/historyTransaction-model.php');           
+            require_once('views/historyTransaction-view.php');
         }
 
         public function View($ctrl){
@@ -95,6 +97,13 @@
 
                     $blogs = $blogModel->getAllBlog();
                     $blogView->showAllBlog_adminpage($blogs);
+                    break;
+                case 'historyTransaction':
+                    $historyTransactionView = new HistoryTransactionView();       
+                    $historyTransactionModel = new HistoryTransactionModel();
+    
+                    $historyTransactions = $historyTransactionModel->getAllHistoryTransaction();
+                    $historyTransactionView->showAllHistoryTransaction_adminpage($historyTransactions); 
                     break;
             }
         }

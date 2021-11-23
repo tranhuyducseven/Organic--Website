@@ -11,7 +11,10 @@
 	if (isset($_POST['idDel'])){
 		$productController->removeToCart($_POST['idDel']);
 	}
-	echo json_encode($_SESSION['cartInfo']);
+	if (!isset($_SESSION['cartInfo'])){
+		echo "false";
+	}
+	else echo json_encode($_SESSION['cartInfo']);
 
 	if (isset($_POST['idPay']) && sizeof($_SESSION['cartInfo']) > 0){
 		$historyTransactionController->payment();

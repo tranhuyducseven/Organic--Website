@@ -16,6 +16,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/img/vegetables.png" />
     <link type="text/css" rel="stylesheet" href="assets/css/shop.css" />
     <link type="text/css" rel="stylesheet" href="assets/css/base.css" />
     <link type="text/css" rel="stylesheet" href="assets/css/cart.css" />
@@ -30,7 +31,6 @@
         $.ajax({
             url: "services/product-service.php",
             success: function(data) {
-                var cartInfo = JSON.parse(data);
                 var output = '<tr>'+
                         '<th>NO.</th>'+
                         '<th>PRODUCT</th>'+
@@ -38,6 +38,17 @@
                         '<th>QUANTITY</th>'+
                         '<th></th>'+
                         '</tr>';
+                if (data == "false"){
+                    output +=   '<tr>'+
+                                    '<td colspan="4" style = "border: 1px solid #dddddd; text-align: left; padding: 8px; text-align: center;">'+
+                                        'Your current data is empty'+
+                                    '</td>'+
+                                '</tr>';
+                    document.getElementsByClassName("cart-table")[0].innerHTML = output;
+                    return;
+                }
+                var cartInfo = JSON.parse(data);
+                
                 var numList = 0;
                 var totalPrice = 0;
                 for (var key in cartInfo) {
@@ -58,6 +69,14 @@
                             '</tr>';
                     numList++;
                     totalPrice += ((parseFloat(cartInfo[key].Price) * 100) * parseInt(cartInfo[key].quantity) / 100);
+                }
+                if (numList == 0)
+                {
+                    output +=   '<tr>'+
+                                    '<td colspan="4" style = "border: 1px solid #dddddd; text-align: left; padding: 8px; text-align: center;">'+
+                                        'Your current data is empty'+
+                                    '</td>'+
+                                '</tr>';
                 }
                 document.getElementsByClassName("cart-table")[0].innerHTML = output;
                 document.getElementsByClassName("cart-total-price")[0].innerHTML = "Total: $" + totalPrice.toFixed(2);

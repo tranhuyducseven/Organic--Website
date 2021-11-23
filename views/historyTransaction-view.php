@@ -3,12 +3,17 @@
 <?php
 
 class HistoryTransactionView{
-    public function showAllHistoryTransaction($historyTransactions){
+    public function showAllHistoryTransaction_adminpage($historyTransactions){
         echo '<table style="border-collapse: collapse;width: 100%;">';
         echo '<tr>
         <th style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">ID</th>
-        <th style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">ID_product</th>
+        <th style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">Username</th>
+        <th style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">ID Product</th>
+        <th style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">Image</th>
+        <th style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">Name product</th>
+        <th style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">Price</th>
         <th style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">Quantity</th>
+        <th style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">Total</th>
         <th style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">Day</th>
         </tr>';
         if (sizeof($historyTransactions) > 0)
@@ -16,8 +21,15 @@ class HistoryTransactionView{
             foreach ($historyTransactions as $historyTransaction):
                 echo '<tr>';
                 echo '<td style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">' . $historyTransaction['ID'] . '</td>';
+                echo '<td style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">' . $historyTransaction['Username'] . '</td>';
                 echo '<td style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">' . $historyTransaction['ID_product'] . '</td>';
+                echo '<td style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">
+                        <img src="' . $historyTransaction['Image'] . '">
+                     </td>';
+                echo '<td style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">' . $historyTransaction['Name_product'] . '</td>';
+                echo '<td style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">' . $historyTransaction['Price'] . '</td>';
                 echo '<td style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">'. $historyTransaction['Quantity'] . '</td>';
+                echo '<td style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">' . $historyTransaction['Total'] . '</td>';
                 echo '<td style = "border: 1px solid #dddddd; text-align: left; padding: 8px;">'. $historyTransaction['Day'] .'</td>';
                 echo '</tr>';
             endforeach;
@@ -26,7 +38,7 @@ class HistoryTransactionView{
         else
         {
             echo '<tr>';
-            echo '<td colspan="4" style = "border: 1px solid #dddddd; text-align: left; padding: 8px; text-align: center;">Your current data is empty</td>';
+            echo '<td colspan="9" style = "border: 1px solid #dddddd; text-align: left; padding: 8px; text-align: center;">Your current data is empty</td>';
             echo '</tr>';
             echo '</table>';
         }
