@@ -36,6 +36,10 @@
     margin: 40px 0 0;
     padding: 20px 0 28px;
     width: 396px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 form {
@@ -104,14 +108,17 @@ form {
     text-align: center;
 }
 
-.query a {
+.query span {
     font-size: 1.4rem;
     margin-left: 5px;
+    color:#0d51fd ;
+    text-decoration: underline;
 }
 
-.query a:hover,
-.query a:focus {
+.query span:hover,
+.query span:focus {
     color: #0db5fd;
+    cursor: pointer;
 }
 
 
@@ -121,9 +128,64 @@ form {
     }
 
 }
+
 .msg {
     font-size: 1.4rem;
     margin-bottom: 20px;
     color: #f02849;
 
+}
+
+
+/**** SIGN UP *******/
+#modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    animation: fadeIn linear 0.3s;
+}
+
+.modal__overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, .8);
+}
+
+.modal__body {
+    --growth-form: 0.5;
+    --growth-to: 1;
+    margin: 200px auto auto;
+    position: relative;
+    background-color: #fff;
+    border-radius: 4px; 
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    z-index: 100;
+    animation: growth linear 0.1s;
+}
+.modal__container{
+  margin: 0!important;
+  padding: 40px 20px;
+}
+.modal__body .login_form{
+  border-radius: 0;
+  box-shadow: none;
+  border-left: 1px solid #dadde1!important;
+  padding: 25px;
+}
+#back-btn{
+  text-align: right;
+  position: absolute;
+  right: 64px;
+  font-size: 1.2rem;
+  color: var(--primary-text-color);
+  font-weight: 600;
+}
+#back-btn:hover,
+#back-btn:focus{
+  color: #eab121;
+  cursor: pointer;
 }
