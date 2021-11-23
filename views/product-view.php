@@ -140,55 +140,36 @@ class ProductView{
   }
 
     public function showAllProduct_homepage($products){
-      $cnt = 0;
-      echo '<div class="carousel-item active">
-              <div class="grid wide-m row">
-            ';
       foreach ($products as $product):
-        if ($cnt%4 == 0 && $cnt != 0)
-          echo '<div class="carousel-item">
-                  <div class="grid wide-m row">
-                  ';
-        echo '
-          <div class="col m-3  p-cpn-item-3rd">    
-            <div class="p-cpn-item-3rd-front">
-              <img class="p-cpn-item-3rd-front__img" src="' . $product['Image'] . '" alt="" />
-              <span class="p-cpn-item__break">
-               <span></span>               
-             </span>
-               <h1 class="p-cpn-item-3rd-front__name">
-               ' . $product['Name'] . '
-               </h1>             
-               <h3 class="p-cpn-item-3rd-front__price">
-                       $' . $product['Price'] . '
-               </h3>
-            </div>     
-            <div class="p-cpn-item-3rd-back" style="background-image: url("' . $product['Image'] . '");">    
-                  
-              <div class="p-cpn-item-3rd-back__overlay">
-                <div class="p-cpn-item-3rd__buttons-group">
-                  
-                    <a class="p-cpn-item-3rd__button"><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></a>
-                    <a class="p-cpn-item-3rd__button"><i class="far fa-heart p-cpn-item-3rd__button-icon "></i></a>                    
-                  
-                </div>
-                  
-                <h1 class="p-cpn-item-3rd-back__name">
-                ' . $product['Name'] . '
-                  </h1>             
-                  <h3 class="p-cpn-item-3rd-back__price">
-                          $' . $product['Price'] . '
+        echo '<div class="col m-3 p-cpn-item-3rd ">
+              <div class="p-cpn-item-3rd-front ">
+                  <img class="p-cpn-item-3rd-front__img " src="'. $product['Image'] .'" alt=" " />
+                  <span class="p-cpn-item__break ">
+                      <span></span>
+                  </span>
+                  <h1 class="p-cpn-item-3rd-front__name ">
+                  '. $product['Name'] .'
+                  </h1>
+                  <h3 class="p-cpn-item-3rd-front__price ">
+                      $'. $product['Price'] .'
                   </h3>
-                  <a class="add-to-cart-btn" href="#">Add To Cart</a>
-               
               </div>
-            </div>    
-          </div>';  
-        $cnt++;
-        if ($cnt%4 == 0)
-            echo '  </div>
+              <div class="p-cpn-item-3rd-back " style="background-image: url("'. $product['Image'] .'"); ">
+                  <div class="p-cpn-item-3rd-back__overlay ">
+                      <div class="p-cpn-item-3rd__buttons-group ">
+                          <a class="p-cpn-item-3rd__button "><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></a>
+                          <a class="p-cpn-item-3rd__button "><i class="far fa-heart p-cpn-item-3rd__button-icon "></i></a>
+                      </div>
+                      <h1 class="p-cpn-item-3rd-back__name ">
+                      '. $product['Name'] .'
+                      </h1>
+                      <h3 class="p-cpn-item-3rd-back__price ">
+                          $'. $product['Price'] .'
+                      </h3>
+                      <a class="add-to-cart-btn " href="# ">Add To Cart</a>
                   </div>
-                  ';
+              </div>
+          </div>';
       endforeach;
     }
 
