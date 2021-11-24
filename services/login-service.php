@@ -14,10 +14,16 @@
         $res = $loginController->checkSignUp($_POST['username'], $_POST['password'], $_POST['email'], $_POST['phone']);
         if ($res == -1){
             echo "Something unexpected happend.";
-        } else if ($res == 2){
+        } else if ($res == 0){
             echo "Username already existed.";
+        } else if ($res == 2){
+            echo "Invalid username. Username must be 5 - 20 characters, contains [a-z A-Z 0-9 _ .].";
         } else if ($res == 3){
-            echo "Check your information again.";
+            echo "Invalid password. Password must be 8 - 20 characters, contains at least 1 number, 1 upper, 1 lower, 1 special character.";
+        } else if ($res == 4){
+            echo "Invalid email. Check your email again.";
+        } else if ($res == 5){
+            echo "Invalid phone number. Phone number must be 9 - 13 numbers.";
         }
     }
 ?>

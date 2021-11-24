@@ -363,7 +363,7 @@
                 </div>
                  <div class="col ">
                     <div class="p-cpn-item-2nd ">
-                        <img class="p-cpn-item-2nd__ava" src="https://scontent.fsgn12-1.fna.fbcdn.net/v/t1.6435-9/89656804_1099371807092974_3562073153192591360_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=e3f864&_nc_ohc=Vbo5YyC-ImoAX9ZEZto&_nc_ht=scontent.fsgn12-1.fna&oh=57cbf33921057acd9c6e3b92415e9cbe&oe=61C30D45" alt=" " />
+                        <img class="p-cpn-item-2nd__ava" src="https://scontent.fdad3-5.fna.fbcdn.net/v/t1.6435-9/117819733_1226353787728108_459377324621918226_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=rocpn5oFZiIAX-pK4yx&tn=VkRRP8B3h1-Nl5uS&_nc_ht=scontent.fdad3-5.fna&oh=e7c1a2322857e49cee50fd963cf6cde4&oe=61C1FEED" alt=" " />
                         <span class="p-cpn-item__break ">
                             <span></span>
                         </span>

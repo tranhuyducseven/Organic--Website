@@ -96,24 +96,35 @@ class UserModel {
 
         $res = $con->query("SELECT * FROM user_table WHERE Username = '" . $username . "'");
         if (mysqli_num_rows($res) == 0){        
-            if (preg_match('/^[a-z\d_.]{5,20}$/i', $username) && preg_match("#.*^(?=.{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$#", $password) && filter_var($email, FILTER_VALIDATE_EMAIL) && strlen($phone) < 13){
-                $sql = "INSERT INTO user_table (Username, Password, Email, PhoneNumber,PermissionComment) VALUES('".$username."', '".$password."', '".$email."','".$phone."', 1)";
-                if ($con->query($sql) === TRUE) {
-                    $con->close();
-                    return 1;
-                }
-                else {
-                    $con->close();
-                    return -1;
-                }
+            if (!preg_match('/^[a-z\d_.]{5,20}$/i', $username)){
+                $con->close();
+                return 2;       // 2 is username
+            }
+            if (!preg_match("#.*^(?=.{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$#", $password)){
+                $con->close();
+                return 3;       // 3 is password
+            }
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
+                $con->close();
+                return 4;       // 4 is email
+            }
+            if (strlen($phone) > 13 || strlen($phone) < 9){
+                $con->close();
+                return 5;       // 5 is phone
+            }
+            
+            $sql = "INSERT INTO user_table (Username, Password, Email, PhoneNumber, PermissionComment) VALUES ('".$username."', '".$password."', '".$email."','".$phone."', 1)";
+            if ($con->query($sql) === TRUE) {
+                $con->close();
+                return 1;       // 1 is ok
             }
             else {
                 $con->close();
-                return 3;       // 3 is invalid input
+                return -1;      // query 
             }
         }
         else {
-            return 2;           // 2 is duplicate
+            return 0;           // 0 is duplicate
         }
     }
 

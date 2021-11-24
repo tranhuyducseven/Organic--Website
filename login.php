@@ -140,16 +140,16 @@
                                 <div class="row">
 
                                         <div class="row">
-                                            <input type="text" name="username" id="username" class="form__input" placeholder="Chose your username" required>
+                                            <input type="text" name="username" id="username" class="form__input" placeholder="Username (5 - 20 characters)." required>
                                         </div>
                                         <div class="row">
-                                            <input type="email" name="email" id="email" class="form__input" placeholder="Email address" required>
+                                            <input type="email" name="email" id="email" class="form__input" placeholder="Email address." required>
                                         </div>
                                         <div class="row">
-                                            <input type="number" name="phone" id="phone" class="form__input" placeholder="Phone number" required>
+                                            <input type="number" name="phone" id="phone" class="form__input" placeholder="Phone number (9 - 13 numbers)." required>
                                         </div>
                                         <div class="row">
-                                            <input type="password" name="password" id="password" class="form__input" placeholder="Password" required>
+                                            <input type="password" name="password" id="password" class="form__input" placeholder="Password (8 - 20 characters, contains at least 1 number, 1 upper case letter, 1 lower case letter and 1 special character)." required>
                                             <span class="msg"></span>
                                         </div>
                                         <div class="row">
