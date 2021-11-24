@@ -52,7 +52,7 @@ class ProductModel {
         {
             $conn = $this->InitConnect();
 
-            $sql = "INSERT INTO product_table (Image, Name, Price, Description) VALUES('".$product['Image']."', '".$product['Name']."', '".$product['Price']."', '".$product['Description']."')";
+            $sql = "INSERT INTO product_table (Image, Name, Price, Description, Tag) VALUES('".$product['Image']."', '".$product['Name']."', '".$product['Price']."', '".$product['Description']."', '".$product['Tag']."')";
             if ($conn->query($sql) === TRUE) {
                 $conn->close();
                 return true;
@@ -72,7 +72,7 @@ class ProductModel {
                 return false;
             else
             {
-                $sql = "UPDATE product_table SET Image = '".$product['Image']."', Name = '".$product['Name']."', Price = '".$product['Price']."', Description = '".$product['Description']."' WHERE ID = ".$product['ID']."";
+                $sql = "UPDATE product_table SET Image = '".$product['Image']."', Name = '".$product['Name']."', Price = '".$product['Price']."', Description = '".$product['Description']."', Tag = '".$product['Tag']."' WHERE ID = ".$product['ID']."";
                 if ($conn->query($sql) === TRUE) {
                     $conn->close();
                     return true;

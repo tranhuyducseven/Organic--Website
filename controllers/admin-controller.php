@@ -53,6 +53,7 @@
                         $_SESSION['Name'] = $products['Name'];
                         $_SESSION['Price'] = $products['Price'];
                         $_SESSION['Description'] = $products['Description'];
+                        $_SESSION['Tag'] = $products['Tag'];
 
                         $link = "admin.php?ctrl=product&act=edit";
                         header("Location: " . $link);
@@ -123,6 +124,7 @@
                         $arr['Name'] = $_POST['Name'];
                         $arr['Price'] = $_POST['Price'];
                         $arr['Description'] = $_POST['Description'];
+                        $arr['Tag'] = $_POST['Tag'];
                     }
                 }
                 else if ($action == "edit")
@@ -134,6 +136,7 @@
                         $arr['Name'] = $_POST['Name'];
                         $arr['Price'] = $_POST['Price'];
                         $arr['Description'] = $_POST['Description'];
+                        $arr['Tag'] = $_POST['Tag'];
                     }
                     $result = false;
                 }

@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if (!isset($_SESSION['usernameAdmin']))
+        header("Location: adminLogin.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,54 +28,49 @@
                     <a href="#"><img src="./assets/img/logo.png" /></a>
                 </div>
 
-                <?php
-                    $url = $_SERVER['REQUEST_URI'];
-                    if (strpos($url,'mode=') == false)
-                        echo '<ul class="navbar-nav admin-manage-list">
+                <ul class="navbar-nav admin-manage-list">
 
-                            <li class="admin-manage-item nav-item dropdown">
-                                <a class="admin-manage-item_btn nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Manage Customers</a>
-                                <ul class="admin-manage-item_list dropdown-menu">
-                                    <li><a href="admin.php?ctrl=user">View Customers</a></li>
-                                </ul>
-                            </li>
+                    <li class="admin-manage-item nav-item dropdown">
+                        <a class="admin-manage-item_btn nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Manage Customers</a>
+                        <ul class="admin-manage-item_list dropdown-menu">
+                            <li><a href="admin.php?ctrl=user">View Customers</a></li>
+                        </ul>
+                    </li>
 
-                            <li class="admin-manage-item nav-item dropdown">
-                                <a class="admin-manage-item_btn nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Manage Products</a>
-                                <ul class="admin-manage-item_list dropdown-menu">
-                                    <li><a href="admin.php?ctrl=product">View Product</a></li>
-                                    <li><a href="admin.php?ctrl=product&act=addnew">Add Product</a></li>
-                                </ul>                              
-                            </li>
+                    <li class="admin-manage-item nav-item dropdown">
+                        <a class="admin-manage-item_btn nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Manage Products</a>
+                        <ul class="admin-manage-item_list dropdown-menu">
+                            <li><a href="admin.php?ctrl=product">View Product</a></li>
+                            <li><a href="admin.php?ctrl=product&act=addnew">Add Product</a></li>
+                        </ul>                              
+                    </li>
 
-                            <li class="admin-manage-item nav-item dropdown">
-                                <a class="admin-manage-item_btn nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Manage Blogs</a>
-                                <ul class="admin-manage-item_list dropdown-menu">
-                                    <li><a href="admin.php?ctrl=blog">View Blog</a><//li>
-                                    <li><a href="admin.php?ctrl=blog&act=addnew">Add Blog</a></li>
-                                </ul>
-                            </li>
+                    <li class="admin-manage-item nav-item dropdown">
+                        <a class="admin-manage-item_btn nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Manage Blogs</a>
+                        <ul class="admin-manage-item_list dropdown-menu">
+                            <li><a href="admin.php?ctrl=blog">View Blog</a></li>
+                            <li><a href="admin.php?ctrl=blog&act=addnew">Add Blog</a></li>
+                        </ul>
+                    </li>
 
-                            <li class="admin-manage-item nav-item dropdown">
-                                <a class="admin-manage-item_btn nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Manage Transactions</a>
-                                <ul class="admin-manage-item_list dropdown-menu">
-                                    <li><a href="admin.php?ctrl=historyTransaction">View History</a><//li>
-                                </ul>
-                            </li>
+                    <li class="admin-manage-item nav-item dropdown">
+                        <a class="admin-manage-item_btn nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Manage Transactions</a>
+                        <ul class="admin-manage-item_list dropdown-menu">
+                            <li><a href="admin.php?ctrl=historyTransaction">View History</a></li>
+                        </ul>
+                    </li>
 
-                            <li class="admin-manage-item nav-item dropdown">
-                                <a class="admin-manage-item_btn nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Hello admin</a>
-                                <ul class="admin-manage-item_list dropdown-menu">
-                                    <li><a href="admin.php?ctrl=logout">Log out</a><//li>
-                                </ul>
-                            </li>
-                        </ul>';
-                ?>
+                    <li class="admin-manage-item nav-item dropdown">
+                        <a class="admin-manage-item_btn nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Hello, admin</a>
+                        <ul class="admin-manage-item_list dropdown-menu">
+                            <li><a href="adminLogout.php">Log out</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </nav>
 
             <main class="bg-white">
                 <?php
-                    session_start();
                     $url = $_SERVER['REQUEST_URI'];
                     require_once('controllers/admin-controller.php');
                     $adminController = new AdminController();
@@ -97,42 +98,7 @@
                                 break;
                             case 'home':
                                 break;
-                            case 'logout':
-                                unset($_SESSION['usernameAdmin']);
-                                unset($_SESSION['url']);
-                                header("Location: admin.php?mode=login");
-                                break;
                         }
-                    }
-
-                    if (strpos($url,'mode=') == true){
-                        echo '<form method="post" action="">
-                                <p><input name="Account" type="text" placeholder="Account"></p>
-                                <p><input name="Password" type="password" placeholder="Password"></p>
-                                <p><button name="submit" type="submit"> Login </button> </p>
-                              </form>';
-                    } 
-
-                    if (!isset($_SESSION['usernameAdmin']))
-                    {
-                        if (!isset($_SESSION['url']) || strpos($url, $_SESSION['url']) == false)
-                        {
-                            $_SESSION['url'] = "admin.php?mode=login";
-                            header("Location: admin.php?mode=login");
-                        }
-                        else if (strpos($url, $_SESSION['url']) == true)
-                        {
-                            if (isset($_POST['submit']))
-                            {
-                                if ($_POST['Account'] == "admin" && $_POST['Password'] == "admin")
-                                {
-                                    $_SESSION['usernameAdmin'] = 1;
-                                    header("Location: admin.php");
-                                }
-                                else
-                                    echo 'Your account is incorrect!';           
-                            }
-                        }   
                     }
                 ?>
             </main>

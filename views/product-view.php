@@ -241,7 +241,7 @@ class ProductView{
             </div>
             <div class="add-product-info row">
               <label for="add-product-tag" class="col-3">Tag</label>
-              <input id="add-product-tag" class="col-9" name="tag">
+              <input id="add-product-tag" class="col-9" name="Tag">
             </div>
             <div class="add-product-info row">
               <label for="add-product-descr" class="col-3">DESCRIPTION</label>
@@ -267,6 +267,10 @@ class ProductView{
             <div class="add-product-info row">
               <label for="add-product-price" class="col-3">PRICE</label>
               <input id="add-product-price" class="col-9" name="Price" type="number" step="any" min="0" value="'. $_SESSION['Price'] .'">
+            </div>
+            <div class="add-product-info row">
+              <label for="add-product-tag" class="col-3">TAG</label>
+              <input id="add-product-tag" class="col-9" name="Tag" value="'. $_SESSION['Tag'] .'">
             </div>
             <div class="add-product-info row">
               <label for="add-product-descr" class="col-3">DESCRIPTION</label>
@@ -301,18 +305,6 @@ class ProductView{
     public function showCartModal($products)
     {
         foreach ($products as $product):
-        /*
-            echo $product['ID'];
-            echo '<br>';
-            echo $product['Image'];
-            echo '<br>';
-            echo $product['Name'];
-            echo '<br>';
-            echo $product['Price'];
-            echo '<br>';
-            echo $product['Description'];
-            echo '<br>';
-        */
           echo '<li class="d-flex">
                   <div class="organic-shopping-product_img">
                       <img src="'. $product['Image'] .'" />
