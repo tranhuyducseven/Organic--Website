@@ -83,6 +83,7 @@ h6 {
 
  .admin-manage-item_list li {
      margin: 10px 0;
+     text-align: center;
  }
 
  .admin-manage-item_list li a:hover{

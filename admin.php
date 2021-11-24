@@ -9,7 +9,41 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link type="text/css" rel="stylesheet" href="assets/css/admin.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/login.css" />
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"> </script> 
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/img/vegetables.png" />
+    <title>Admin Login</title>
+    <style>
+        .main {
+            background-color: #444c54;
+        }
+        .company__logo{
+            background-size: 60%;
+            background-position: 20px center;
+        }
+
+        .company__name {
+            color: #8ca9c6;
+        }
+
+        .login_form__name {
+            color: #ff0000;
+            font-weight: 700;
+        }
+
+        .login_form {
+            background-color: #e6ccb3;
+        }
+
+        .login-btn:hover,
+        .login-btn:focus {
+            background-color: #a12632;
+        }
+        
+    </style>
+    
   </head>
 
   <body>
@@ -67,7 +101,7 @@
                 ?>
             </nav>
 
-            <main class="bg-white">
+            <div class="main">
                 <?php
                     session_start();
                     $url = $_SERVER['REQUEST_URI'];
@@ -106,11 +140,41 @@
                     }
 
                     if (strpos($url,'mode=') == true){
-                        echo '<form method="post" action="">
-                                <p><input name="Account" type="text" placeholder="Account"></p>
-                                <p><input name="Password" type="password" placeholder="Password"></p>
-                                <p><button name="submit" type="submit"> Login </button> </p>
-                              </form>';
+                        echo '<div class="grid wide-m">
+                        <div class="row container-fluid ">
+                            <div class="col-md-0 col-lg-4 company__info">
+                                <h1 class="company__name">Organic Food</h1>
+                                <div class="company__logo" style="background-image:url('.'./assets/img/logo.png'.')">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-6 login_form ">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <h2 class="login_form__name">Log in Admin!</h2>
+                                    </div>
+                                    <div class="row">
+                                        <form method="post" action="">
+                                            <div class="row">
+                                                <input name="Account" type="text" placeholder="Account" class="form__input">
+                                            </div>
+                                            <div class="row">
+                                                <input name="Password" type="password" placeholder="Password" class="form__input">
+                                            </div>
+                                            <div class="row">
+                                                <!-- display msg when failed!! -->
+                                                <span class="msg">display msg when failed!!</span>
+                                            </div>
+                                            <div class="row">
+                                                <button class="btn btn-danger login-btn">
+                                                    Login
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>';
                     } 
 
                     if (!isset($_SESSION['usernameAdmin']))
@@ -135,7 +199,7 @@
                         }   
                     }
                 ?>
-            </main>
+            </div>
         </div>
     
     <style>
