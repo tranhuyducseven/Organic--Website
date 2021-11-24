@@ -21,87 +21,52 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Organic - Posts</title>
+    <style>
+        .scroll-bar.on{
+        bottom: 100px;
+        opacity: 1;
+        visibility: visible; 
+
+        }
+        .scroll-bar{
+        opacity: 0;
+        bottom: 24px;
+        visibility: hidden;
+        position: fixed;        
+        right: 15px;
+        height: 50px;
+        width: 50px;               
+        overflow: hidden;
+        outline: none;
+        text-decoration: none;        
+        line-height: 50px;
+        text-align: center;
+        background: linear-gradient(to right, #ff7e00 0%, #ffb63a 100%);
+        -webkit-border-radius: 50px;
+        -khtml-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
+        border-radius: 50px;
+        color: #fff;
+        font-size: 22px;      
+        z-index: 99;
+        transition: all 300ms linear 0ms;
+
+        }
+        .scroll-bar i{
+            transition: all 100ms linear 0ms;
+            display: inline-block;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            color: white;
+            font-size: 22px;
+            font-weight: 600;
+        }
+    </style>
 </head>
 
 <body>
-<script>
-      function addNewComment(id)
-      {
-          var tmp = document.getElementsByClassName("organic-comment__input-text")[0].value;
-        $.ajax({
-            type: "POST",
-            url: "services/comment-service.php",
-            data: { 
-                content: tmp,
-                idAdd: id
-            },
-            success: function(data) {
-                showComment();
-                alert("Added successfully!");
-            }  
-        });
-      }
-
-      function showComment()
-      {
-        var tmp = window.location.href;
-        var id = tmp.substring(tmp.lastIndexOf('=') + 1);
-        $.ajax({
-            type: "POST",
-            url: "services/comment-service.php",
-            data: { 
-              idPost: id
-            },
-            success: function(data) {
-                var commentInfo = JSON.parse(data);
-                var output = "";
-                var numList = 0;
-                for (var key in commentInfo) {
-                    output +=     '<div class="organic-comment__item">' +
-                                        '<div class="organic-comment__ava">' +
-                                            '<img src="'+ commentInfo[key].Avatar.toString() +'">' +
-                                        '</div>' +
-                                        '<div class="organic-comment__content">' +
-                                            '<span class="organic-comment__name">' + commentInfo[key].Username +'</span>' +
-                                            '<span class="organic-comment__time"><i class="far fa-clock"></i>'+ commentInfo[key].Time +'</span>' +
-                                            '<p class="organic-comment__text">'
-                                                + commentInfo[key].Content +
-                                            '</p>' +
-                                        '</div>' +
-                                    '</div>';;
-                    numList++;
-                }
-                document.getElementsByClassName("organic-comment__wrapper")[0].innerHTML = output;
-                document.getElementsByClassName("comments-title")[0].innerHTML = 'Comments (<span class="comments-counter">'+ numList +'</span>)';
-            }  
-        });
-      }
-      function showBoxComment(){
-        $.ajax({
-            url: "services/box-service.php",
-            success: function(data) {
-                if (data != "false"){
-                    var tmp = window.location.href;
-                    var id = tmp.substring(tmp.lastIndexOf('=') + 1);
-                    document.getElementsByClassName("organic-comment__addnew")[0].innerHTML = '' +
-                    '<div class="organic-comment__input">' +
-                            '<div class="organic-comment__input-user">' +
-                                '<img src="'+ data +'">' +
-                            '</div>' +
-                            '<textarea class="form-control organic-comment__input-text" placeholder="Write a comment..." rows="5" value = ""></textarea>' +
-                        '</div>' +
-                        '<div class="organic-blog__btn">' +
-                            '<a class="organic-blog__btn-link " onclick="addNewComment('+ id +');">Submit' +
-                                '<i class="fas fa-angle-double-right organic-blog__btn-link-icon"></i></a>' +
-                    '</div>';
-                }
-            }  
-        });
-      }
-
-      showBoxComment();
-      showComment();
-    </script>
     <!-- #############HEADER######### -->
     <?php require_once("./views/header.php") ?>
     <!-- #############MAIN######### -->
@@ -154,11 +119,14 @@
             </div>
         </div>
         <!--end main-->
+        
     </div>
     <!-- #############FOOTER######### -->
+    <?php require_once("./views/footer.php") ?>
     
-
-    <?php require_once("./views/canvas.php") ?>
+    <a class="scroll-bar" href="#">
+       <i class="fas fa-arrow-up"></i>
+    </a>
     <script src="./assets/js/cart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>    
     <script>
@@ -166,8 +134,18 @@
             $('#rightnav__user').on("click", function() {
                 $('#rightnav__user-menu').toggle();
             })
+            
+            $(window).bind('scroll', function(){
+                if($(this).scrollTop() > 350) 
+                $(".scroll-bar").addClass("on");
+                else
+                    $(".scroll-bar").removeClass("on");
+                });
+        
+        
         })        
     </script>
+
 </body>
 
 </html>
