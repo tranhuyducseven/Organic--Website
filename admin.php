@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,42 +16,11 @@
     <link type="text/css" rel="stylesheet" href="assets/css/login.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"> </script> 
-    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" />
     <link rel="shortcut icon" type="image/x-icon" href="./assets/img/vegetables.png" />
     <title>Admin Login</title>
-    <style>
-        .main {
-            background-color: #444c54;
-        }
-        .company__logo{
-            background-size: 60%;
-            background-position: 20px center;
-        }
-
-        .company__name {
-            color: #8ca9c6;
-        }
-
-        .login_form__name {
-            color: #ff0000;
-            font-weight: 700;
-        }
-
-        .login_form {
-            background-color: #e6ccb3;
-        }
-
-        .login-btn:hover,
-        .login-btn:focus {
-            background-color: #a12632;
-        }
-        
-    </style>
-    
   </head>
 
   <body>
-
         <div class="admin">
 
             <nav class="navbar navbar-expand admin-nav"> 
@@ -101,10 +74,12 @@
                 ?>
             </nav>
 
-            <div class="main">
                 <?php
-                    session_start();
                     $url = $_SERVER['REQUEST_URI'];
+                    if (strpos($url,'mode=') == true)
+                        echo '<div class="main">';
+                    else
+                        echo '<main class="bg-white">';
                     require_once('controllers/admin-controller.php');
                     $adminController = new AdminController();
 
@@ -140,41 +115,42 @@
                     }
 
                     if (strpos($url,'mode=') == true){
-                        echo '<div class="grid wide-m">
-                        <div class="row container-fluid ">
-                            <div class="col-md-0 col-lg-4 company__info">
-                                <h1 class="company__name">Organic Food</h1>
-                                <div class="company__logo" style="background-image:url('.'./assets/img/logo.png'.')">
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-md-12 col-lg-6 login_form ">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <h2 class="login_form__name">Log in Admin!</h2>
+                        echo ' <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" />
+                            <div class="grid wide-m">
+                                <div class="row container-fluid ">
+                                    <div class="col-md-0 col-lg-4 company__info">
+                                        <h1 class="company__name">Organic Food</h1>
+                                        <div class="company__logo" style="background-image:url('.'assets/img/logo.png'.')">
+                                        </div>
                                     </div>
-                                    <div class="row">
-                                        <form method="post" action="">
+                                    <div class="col-sm-12 col-md-12 col-lg-6 login_form ">
+                                        <div class="container-fluid">
                                             <div class="row">
-                                                <input name="Account" type="text" placeholder="Account" class="form__input">
+                                                <h2 class="login_form__name">Log in Admin!</h2>
                                             </div>
                                             <div class="row">
-                                                <input name="Password" type="password" placeholder="Password" class="form__input">
+                                                <form method="post" action="">
+                                                    <div class="row">
+                                                        <input name="Account" type="text" placeholder="Account" class="form__input">
+                                                    </div>
+                                                    <div class="row">
+                                                        <input name="Password" type="password" placeholder="Password" class="form__input">
+                                                    </div>
+                                                    <div class="row">
+                                                        <!-- display msg when failed!! -->
+                                                        <span class="msg">display msg when failed!!</span>
+                                                    </div>
+                                                    <div class="row">
+                                                        <button class="btn btn-danger login-btn" name="login-btn-admin">
+                                                            Login
+                                                        </button>
+                                                    </div>
+                                                </form>
                                             </div>
-                                            <div class="row">
-                                                <!-- display msg when failed!! -->
-                                                <span class="msg">display msg when failed!!</span>
-                                            </div>
-                                            <div class="row">
-                                                <button class="btn btn-danger login-btn">
-                                                    Login
-                                                </button>
-                                            </div>
-                                        </form>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>';
+                            </div>';
                     } 
 
                     if (!isset($_SESSION['usernameAdmin']))
@@ -186,8 +162,9 @@
                         }
                         else if (strpos($url, $_SESSION['url']) == true)
                         {
-                            if (isset($_POST['submit']))
+                            if (isset($_POST['login-btn-admin']))
                             {
+                                echo '123';
                                 if ($_POST['Account'] == "admin" && $_POST['Password'] == "admin")
                                 {
                                     $_SESSION['usernameAdmin'] = 1;
@@ -198,6 +175,10 @@
                             }
                         }   
                     }
+                    if (strpos($url,'mode=') == true)
+                        echo '</div>';
+                    else
+                        echo '</main>';
                 ?>
             </div>
         </div>
@@ -206,6 +187,37 @@
         nav.row {height: 40px; line-height: 40px }
         div.noidung { min-height: 500px}
         div.noidung >main  { } 
+
+        .main {
+            background-color: #444c54;
+            padding: 200px 0;
+            height: calc(100vh - 53.83px - 1rem);
+        }
+        .company__logo{
+            background-size: 60%;
+            background-position: 20px center;
+            margin-top: 20px; 
+            padding-top: 80px; 
+            background-repeat: no-repeat;
+        }
+
+        .company__name {
+            color: #8ca9c6;
+        }
+
+        .login_form__name {
+            color: #ff0000;
+            font-weight: 700;
+        }
+
+        .login_form {
+            background-color: #e6ccb3;
+        }
+
+        .login-btn:hover,
+        .login-btn:focus {
+            background-color: #a12632;
+        }
     </style>
   </body>
 </html>
