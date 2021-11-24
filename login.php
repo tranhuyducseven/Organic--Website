@@ -44,9 +44,6 @@
                     if (data == ""){
                         window.location.href = "index.php";
                     }
-                    else if (data == "admin"){
-                        window.location.href = "admin.php";
-                    }
                     document.getElementsByClassName("msg")[0].innerHTML = data;
                 }  
             });

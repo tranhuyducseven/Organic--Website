@@ -83,6 +83,8 @@
                 if (data != "false"){
                     var tmp = window.location.href;
                     var id = tmp.substring(tmp.lastIndexOf('=') + 1);
+                    if (data == "")
+                        data = "./assets/img/vegetables.png";
                     document.getElementsByClassName("organic-comment__addnew")[0].innerHTML = '' +
                     '<div class="organic-comment__input">' +
                             '<div class="organic-comment__input-user">' +

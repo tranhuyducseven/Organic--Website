@@ -1,5 +1,8 @@
 <?php
     session_start();
+    if (!isset($_SESSION['username'])){
+        header("Location: login.php");
+    }
 ?>
 
 <!DOCTYPE html>
@@ -32,6 +35,8 @@
                     var historyInfo = JSON.parse(data);
                     document.getElementsByClassName("user-name")[0].innerHTML = historyInfo['Username'];
                     document.getElementsByClassName("user-email")[0].innerHTML = historyInfo['Email'];
+                    if (historyInfo['Avatar'] == "")
+                        historyInfo['Avatar'] = "./assets/img/vegetables.png";
                     document.getElementById("output").src = historyInfo['Avatar'];
                     var output = "";
                     var cnt = 1;
