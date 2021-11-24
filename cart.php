@@ -16,6 +16,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="./assets/img/vegetables.png" />
     <link type="text/css" rel="stylesheet" href="assets/css/base.css" />
     <link type="text/css" rel="stylesheet" href="assets/css/cart.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Organic - Cart</title>
 </head>
 
