@@ -20,7 +20,6 @@
                     $userModel = new UserModel();
 
                     if (isset($_GET['confirm'])) {
-                        echo $_GET['confirm'];
                         if ($_GET['confirm'] == 'true'){
                             
                             $username = $_GET['username'];
