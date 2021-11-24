@@ -56,7 +56,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="./assets/img/vegetables.png" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Organic - Blogs</title>
 </head>
 
