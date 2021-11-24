@@ -100,10 +100,6 @@ class UserModel {
                 $con->close();
                 return 2;       // 2 is username
             }
-            if (!preg_match("#.*^(?=.{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$#", $password)){
-                $con->close();
-                return 3;       // 3 is password
-            }
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
                 $con->close();
                 return 4;       // 4 is email
@@ -111,6 +107,10 @@ class UserModel {
             if (strlen($phone) > 13 || strlen($phone) < 9){
                 $con->close();
                 return 5;       // 5 is phone
+            }
+            if (!preg_match("#.*^(?=.{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$#", $password)){
+                $con->close();
+                return 3;       // 3 is password
             }
             
             $sql = "INSERT INTO user_table (Username, Password, Email, PhoneNumber, PermissionComment) VALUES ('".$username."', '".$password."', '".$email."','".$phone."', 1)";
