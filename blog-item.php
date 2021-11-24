@@ -117,7 +117,7 @@
                         <div class="page-title__dir">
                             <ul class="page-title__dir-list">
                                 <li class="page-title__dir-item">
-                                    <a href="./index.html" class="page-title__dir-link">Home</a>
+                                    <a href="./index.php" class="page-title__dir-link">Home</a>
                                 </li>
                                 <span> - </span>
                                 <li class="page-title__dir-item">
