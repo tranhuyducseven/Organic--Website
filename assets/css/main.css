@@ -214,20 +214,24 @@
 }
 
 @keyframes moveLeftRight {
+
     0%,
     100% {
         transform: translateX(30px);
     }
+
     50% {
         transform: translateX(0);
     }
 }
 
 @keyframes moveTopBot {
+
     0%,
     100% {
         transform: translateY(30px);
     }
+
     50% {
         transform: translateY(0);
     }
@@ -236,29 +240,81 @@
 
 /*RESPONSIVE------------------------*/
 
+
 @media (min-width:1200px) {
     .c-20 {
         flex: 0 0 auto;
-        width: 20%!important;
+        width: 20% !important;
     }
+
     /*about*/
 }
 
 @media (max-width: 1200px) {
+
     /*page slogan*/
     .page-slogan .container-fluid {
         position: relative;
     }
+
     .page-slogan {
         background-position: -200px;
     }
+
     .page-slogan__img {
         position: absolute;
         z-index: 1;
     }
+
     /*about*/
     .about__img img {
         width: 60%;
+    }
+    
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .page-slogan__img {
+        top: 0;
+        right: 5px;
+    }
+
+    /*about*/
+    
+
+}
+@media (max-width: 992px){
+    .about-item__icon-wrapper {
+        height: 60px;
+        min-width: 60px;
+    }
+    .about-item__icon {
+        font-size: 2.4rem !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .page-slogan__img {
+        top: 0;
+        right: 5px;
+    }
+
+    /*about*/
+    .about-description__subheading {
+        font-size: 1.8rem;
+    }
+
+    .about-description__heading {
+        font-size: 4rem;
+        padding-right: 10px;
+    }
+
+    .about-description__paragraph {
+        font-size: 1.2rem;
+    }
+
+    .about-item__title {
+        font-size: 3.2rem;
     }
 }
 
@@ -267,29 +323,47 @@
         bottom: -160px;
         right: 10px;
     }
+
     .page-slogan__paragraph {
         font-size: 1.4rem;
     }
+
     .page-slogan__btn {
         width: 150px;
     }
+
     .page-slogan__btn-link {
         font-size: 1.2rem;
     }
+
     /*about*/
     .about-description__subheading {
         font-size: 1.5rem;
     }
+
     .about-description__heading {
         font-size: 3rem;
         padding-right: 10px;
     }
+
     .about-description__paragraph {
         font-size: 1rem;
     }
+
     .about-item__title {
         font-size: 2.8rem;
     }
+}
+
+
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .page-slogan__heading {
+        font-size: 5.5rem;
+    }
+
+    /*about*/
+   
 }
 
 @media (max-width: 576px) {
@@ -297,48 +371,59 @@
         flex: 0 0 auto;
         width: 100%;
     }
+
     .col-ssm-6 {
         flex: 0 0 auto;
         width: 50%;
     }
+
     .page-slogan__heading {
         font-size: 3.5rem;
     }
+
     /*about*/
+     .about-item__title {
+        font-size: 2rem;
+    }
+    .about-item__icon-wrapper {
+        height: 40px;
+        min-width: 40px;
+        
+    }
+
+    .about-item__icon {
+        font-size: 1.8rem !important;
+    }
 }
 
-@media (min-width: 576px) and (max-width: 768px) {
-    .page-slogan__heading {
-        font-size: 5.5rem;
+@media (max-width: 450px) {
+    /*page*/
+    .page-slogan__heading{
+        font-size: 3rem;
     }
     /*about*/
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
-    .page-slogan__img {
-        top: 0;
-        right: 5px;
-    }
-    /*about*/
-    .about-description__subheading {
-        font-size: 1.8rem;
-    }
-    .about-description__heading {
-        font-size: 4rem;
-        padding-right: 10px;
-    }
-    .about-description__paragraph {
+    .about-description__subheading{
         font-size: 1.2rem;
-    }
-    .about-item__title {
-        font-size: 3.2rem;
-    }
-}
 
-@media (min-width: 992px) and (max-width: 1200px) {
-    .page-slogan__img {
-        top: 0;
-        right: 5px;
     }
+    .about-description__heading{
+        font-size: 2.5rem;
+    }
+    
     /*about*/
+     .about-item__title {
+        font-size: 1.5rem;
+    }
+    .about-item__icon-wrapper {
+        height: 30px;
+        min-width: 30px;
+        
+    }
+
+    .about-item__icon {
+        font-size: 1.2rem!important;
+    }
+    .about-item__paragraph{
+        font-size: 1rem;
+    }
 }
