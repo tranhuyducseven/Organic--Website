@@ -5,7 +5,7 @@
             <div class="grid wide-m">
                 <div class="header container-fluid">
                     <div class="site-branch">
-                        <a href="./index.php">
+                        <a href="./">
                             <img src="./assets/img/header-logo.png" />
                         </a>
                     </div>

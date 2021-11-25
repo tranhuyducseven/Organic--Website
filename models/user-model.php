@@ -114,7 +114,7 @@ class UserModel {
             }
             
             $sql = "INSERT INTO user_table (Username, Password, Email, PhoneNumber, PermissionComment) VALUES ('".$username."', '".$password."', '".$email."','".$phone."', 1)";
-            if ($con->query($sql) === TRUE) {
+            if ($con->query($sql) == TRUE) {
                 $con->close();
                 return 1;       // 1 is ok
             }
