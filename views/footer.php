@@ -46,21 +46,11 @@
                         </span>
                     </div>
                     <ul class="organic-footer-list_product">
-                        <li>
-                            <a href="#">Organic Fruits</a>
-                        </li>
-                        <li>
-                            <a href="#">Fresh Vegetables</a>
-                        </li>
-                        <li>
-                            <a href="#">Fresh Meats</a>
-                        </li>
-                        <li>
-                            <a href="#">Other Products</a>
-                        </li>
-                        <li>
-                            <a href="#">Organic Foods</a>
-                        </li>
+                        <?php
+                            require_once("controllers/product-controller.php");
+                            $productController = new ProductController;
+                            $productController->showTagFooter();
+                        ?>
                     </ul>
                 </div>
             </div>

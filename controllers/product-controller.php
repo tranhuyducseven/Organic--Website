@@ -107,6 +107,15 @@ class ProductController {
         
         $productView->showAllTag($tags);
     }
+
+    public function showTagFooter(){
+        $this->InitProductController();
+        $productModel = new ProductModel();
+        $productView = new ProductView();
+        $tags = $productModel->getAllTag();
+
+        $productView->showTagFooter($tags);
+    }
 }
 
 ?>

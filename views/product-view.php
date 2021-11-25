@@ -333,6 +333,14 @@ class ProductView{
         echo '<a class="tag-cloud" href="shop.php?tag='. $tag .'">'. $tag .'</a>';
       endforeach;
     }
+
+    public function showTagFooter($tags){
+      foreach ($tags as $tag):
+        echo '<li>
+                <a href="shop.php?tag='. $tag .'">'. $tag .'</a>
+            </li>';
+      endforeach;
+    }
 }
 
 ?>
