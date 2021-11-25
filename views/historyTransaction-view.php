@@ -4,46 +4,49 @@
 
 class HistoryTransactionView{
     public function showAllHistoryTransaction_adminpage($historyTransactions){
-        echo '<h1 class="admin-view-transaction">View History Transactions <i class="far fa-eye"></i></h1>';
-        echo '<table>';
-        echo '<tr>
-        <th>ID</th>
-        <th>USERNAME</th>
-        <th>PRODUCT ID</th>
-        <th>IMAGE</th>
-        <th>PRODUCT NAME</th>
-        <th>PRICE</th>
-        <th>QUANTITY</th>
-        <th>TOTAL</th>
-        <th>DAY</th>
-        </tr>';
+        $output = "";
+        $output .= '<h1 class="admin-view-transaction">View History Transactions <i class="far fa-eye"></i></h1>
+                    <table>
+                        <tr>
+                        <th>ID</th>
+                        <th>USERNAME</th>
+                        <th>PRODUCT ID</th>
+                        <th>IMAGE</th>
+                        <th>PRODUCT NAME</th>
+                        <th>PRICE</th>
+                        <th>QUANTITY</th>
+                        <th>TOTAL</th>
+                        <th>DAY</th>
+                    </tr>';
         if (sizeof($historyTransactions) > 0)
         {
             foreach ($historyTransactions as $historyTransaction):
-                echo '<tr>';
-                echo '<td class="admin-transaction-ID">' . $historyTransaction['ID'] . '</td>';
-                echo '<td class="admin-transaction-username">' . $historyTransaction['Username'] . '</td>';
-                echo '<td class="admin-transaction-ID_product">' . $historyTransaction['ID_product'] . '</td>';
-                echo '<td class="admin-transaction-img">
-                        <img src="' . $historyTransaction['Image'] . '">
-                     </td>';
-                echo '<td class="admin-transaction-name_product">' . $historyTransaction['Name_product'] . '</td>';
-                echo '<td class="admin-transaction-price">' . $historyTransaction['Price'] . '</td>';
-                echo '<td class="admin-transaction-quantity">'. $historyTransaction['Quantity'] . '</td>';
-                echo '<td class="admin-transaction-total">' . $historyTransaction['Total'] . '</td>';
-                echo '<td class="admin-transaction-day">'. $historyTransaction['Day'] .'</td>';
-                echo '</tr>';
+                $output .= '<tr>
+                                <td class="admin-transaction-ID">' . $historyTransaction['ID'] . '</td>
+                                <td class="admin-transaction-username">' . $historyTransaction['Username'] . '</td>
+                                <td class="admin-transaction-ID_product">' . $historyTransaction['ID_product'] . '</td>
+                                <td class="admin-transaction-img">
+                                    <img src="' . $historyTransaction['Image'] . '">
+                                </td>
+                                <td class="admin-transaction-name_product">' . $historyTransaction['Name_product'] . '</td>
+                                <td class="admin-transaction-price">' . $historyTransaction['Price'] . '</td>
+                                <td class="admin-transaction-quantity">'. $historyTransaction['Quantity'] . '</td>
+                                <td class="admin-transaction-total">' . $historyTransaction['Total'] . '</td>
+                                <td class="admin-transaction-day">'. $historyTransaction['Day'] .'</td>
+                            </tr>';
             endforeach;
-            echo '</table>';
+            $output .= '</table>';
         }
         else
         {
-            echo '<tr>';
-            echo '<td colspan="9" style = "border: 1px solid #dddddd; text-align: left; padding: 8px; text-align: center; width: 100%;">Your current data is empty</td>';
-            echo '</tr>';
-            echo '</table>';
+            $output .= '<tr>
+                            <td colspan="9" style = "border: 1px solid #dddddd; text-align: left; padding: 8px; text-align: center; width: 100%;">
+                                Your current data is empty
+                            </td>
+                        </tr>
+                    </table>';
         }
-        
+        return $output;
     }
 
     public function showFormHistoryTransaction_adminpage($action){

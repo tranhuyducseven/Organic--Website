@@ -2,6 +2,36 @@
     session_start();
     if (!isset($_SESSION['usernameAdmin']))
         header("Location: adminLogin.php");
+    $url = $_SERVER['REQUEST_URI'];
+    require_once('controllers/admin-controller.php');
+    $adminController = new AdminController();
+
+    $output = "";
+    if (strpos($url,'ctrl=') == true){                       // Nếu url có chứa 'ctrl=' thì hiển thị sản phẩm tương ứng
+        $ctrl = $_GET['ctrl'];
+        switch ($ctrl) {
+            case 'user':
+                $output = $adminController->View($ctrl);
+                break;
+            case 'product':
+                if (strpos($url,'act=') == true)
+                    $output = $adminController->Edit($ctrl, $_GET['act']);
+                else 
+                    $output = $adminController->View($ctrl);
+                break;
+            case 'blog':
+                if (strpos($url,'act=') == true)
+                    $output = $adminController->Edit($ctrl, $_GET['act']);
+                else 
+                    $output = $adminController->View($ctrl);
+                break;
+            case 'historyTransaction':
+                $output = $adminController->View($ctrl);
+                break;
+            case 'home':
+                break;
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -73,35 +103,7 @@
 
             <main class="bg-white">
                 <?php
-                    $url = $_SERVER['REQUEST_URI'];
-                    require_once('controllers/admin-controller.php');
-                    $adminController = new AdminController();
-
-                    if (strpos($url,'ctrl=') == true){                       // Nếu url có chứa 'ctrl=' thì hiển thị sản phẩm tương ứng
-                        $ctrl = $_GET['ctrl'];
-                        switch ($ctrl) {
-                            case 'user':
-                                $adminController->View($ctrl);
-                                break;
-                            case 'product':
-                                if (strpos($url,'act=') == true)
-                                    $adminController->Edit($ctrl, $_GET['act']);
-                                else 
-                                    $adminController->View($ctrl);
-                                break;
-                            case 'blog':
-                                if (strpos($url,'act=') == true)
-                                    $adminController->Edit($ctrl, $_GET['act']);
-                                else 
-                                    $adminController->View($ctrl);
-                                break;
-                            case 'historyTransaction':
-                                $adminController->View($ctrl);
-                                break;
-                            case 'home':
-                                break;
-                        }
-                    }
+                    echo $output;
                 ?>
             </main>
         </div>

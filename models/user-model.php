@@ -128,6 +128,17 @@ class UserModel {
         }
     }
 
+    public function checkForget($username){
+        $con = $this->InitConnect();
+
+        $res = $con->query("SELECT * FROM user_table WHERE Username = '" . $username . "'");
+        if (mysqli_num_rows($res) == 0){  
+            return 0;
+        } else {
+            return mysqli_fetch_assoc($res)['Password'];
+        }
+    }
+
     public function checkCommentPermission($username){
         $con = $this->InitConnect();
         $res = $con->query("SELECT PermissionComment FROM user_table WHERE Username = '" . $username . "'");

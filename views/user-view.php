@@ -10,42 +10,41 @@ class UserView{
     }
 
     public function showAllUser_adminpage($users){
-        echo '<h1 class="admin-view-customer">View Customer <i class="far fa-eye"></i></h1>';
-        echo ""
-        ,    "<table class=&quottable&quot>"
-        ,    "<thead>"
-        ,        "<tr>"
-        ,        "<th scope=&quotcol&quot>USERNAME</th>"
-        ,        "<th scope=&quotcol&quot>EMAIL</th>"
-        ,        "<th scope=&quotcol&quot>PHONE NUMBER</th>"
-        ,        "<th scope=&quotcol&quot>AVATAR LINK</th>"
-        ,        "<th scope=&quotcol&quot>COMMENT PERMISSION</th>"
-        ,        "<th scope=&quotcol&quot>OPERATION</th>"
-        ,        "</tr>"
-        ,    "</thead>"
-        ,       "<tbody>";
+        $output = "";
+        $output .= '<h1 class="admin-view-customer">View Customer <i class="far fa-eye"></i></h1>';
+        $output .= '<table class=&quottable&quot>
+                        <thead>
+                            <tr>
+                                <th scope=&quotcol&quot>USERNAME</th>
+                                <th scope=&quotcol&quot>EMAIL</th>
+                                <th scope=&quotcol&quot>PHONE NUMBER</th>
+                                <th scope=&quotcol&quot>AVATAR LINK</th>
+                                <th scope=&quotcol&quot>COMMENT PERMISSION</th>
+                                <th scope=&quotcol&quot>OPERATION</th>
+                            </tr>
+                        </thead>
+                        <tbody>';
         foreach ($users as $user):
-            echo ""
-            .    "<tr>"
-            .    "<td class='admin-customer-username'>" . $user['Username'] . "</td>"
-            .    "<td class='admin-customer-email'>" . $user['Email'] . "</td>"
-            .    "<td class='admin-customer-phone'>" . $user['PhoneNumber'] . "</td>"
-            .    "<td class='admin-customer-avatar'>" . $user['Avatar'] . "</td>"
-            .    "<td class='admin-customer-permissionCmt'>" . (($user['PermissionComment'] == 1)? "ALLOW" : "BAN") . "</td>";
-            echo    "<td>"  
-            ,       '<form method="POST" class="admin-customer-btn-group" action="admin.php?ctrl=user&username=' , $user['Username'] , '"';
-            if ($user['PermissionComment'] == 1){
-                echo '<div><button class="admin-customer-ban" name="ban" type="ban"> BAN USER </button></div>';
-            }
-            else echo '<div><button class="admin-customer-unban" name="unban" type="unban"> UNBAN USER </button></div>';
-            echo '<button name="del" type="del"> DELETE USER </button>'
-            ,       '</form>'
-            ,    "</td>"
-            ,    "</tr>";
+            $output .= '<tr>
+                            <td class="admin-customer-username">' . $user['Username'] . '</td>
+                            <td class="admin-customer-email">' . $user['Email'] . '</td>
+                            <td class="admin-customer-phone">' . $user['PhoneNumber'] . '</td>
+                            <td class="admin-customer-avatar">' . $user['Avatar'] . '</td>
+                            <td class="admin-customer-permissionCmt">' . (($user['PermissionComment'] == 1)? "ALLOW" : "BAN") . '</td>
+                            <td>  
+                                <form method="POST" class="admin-customer-btn-group" action="admin.php?ctrl=user&username=' . $user['Username'] . '"';
+            if ($user['PermissionComment'] == 1)
+                $output .=          '<div><button class="admin-customer-ban" name="ban" type="ban"> BAN USER </button></div>';
+            else 
+                $output .=          '<div><button class="admin-customer-unban" name="unban" type="unban"> UNBAN USER </button></div>';
+            $output .=              '<button name="del" type="del"> DELETE USER </button>
+                                </form>
+                            </td>
+                        </tr>';
         endforeach;
-        echo ""
-        ,    "</tbody>"
-        ,    "</table>";
+        $output .=      '</tbody>
+                    </table>';
+        return $output;
     }
 
     public function showOneUser_userpage($user){
@@ -107,7 +106,7 @@ class UserView{
     }
 
     public function confirmPopUp($mess){
-        echo '<script>
+        return '<script>
             var result = confirm("' . $mess . '");
             var url = window.location.href;  
             if (result){

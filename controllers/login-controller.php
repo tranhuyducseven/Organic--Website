@@ -26,5 +26,12 @@
             }
             else return $res;
         }
+
+        public function checkForget($username){
+            require_once('../models/user-model.php');
+
+            $userModel = new UserModel();
+            return $userModel->checkForget($username);
+        }
     }
 ?>

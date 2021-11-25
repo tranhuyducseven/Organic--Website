@@ -53,6 +53,7 @@
     <link type="text/css" rel="stylesheet" href="assets/css/shop.css" />
     <link rel="stylesheet" href="./assets/css/scrollbar.css" />    
     <link rel="shortcut icon" type="image/x-icon" href="./assets/img/vegetables.png" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Organic - Shop</title>
 </head>

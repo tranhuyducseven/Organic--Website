@@ -9,5 +9,7 @@
     } else if ($_POST['act'] == "reg") {
         $res = $loginController->checkSignUp($_POST['username'], $_POST['password'], $_POST['email'], $_POST['phone']);
         echo $res;
+    } else if ($_POST['act'] == "forget") {
+        echo $loginController->checkForget($_POST['username']);
     }
 ?>

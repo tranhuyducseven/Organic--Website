@@ -187,119 +187,125 @@ class ProductView{
     }
 
     public function showAllProduct_adminpage($products){
-        echo '<h1 class="admin-view-product">View Product <i class="far fa-eye"></i></h1>';
-        echo '<table>';
-        echo '<tr>
-        <th>ID</th>
-        <th>IMAGE</th>
-        <th>NAME</th>
-        <th>PRICE</th>
-        <th>DESCRIPTION</th>
-        <th>HOT</th>
-        <th>TAG</th>
-        <th>OPERATION</th>
-        </tr>';
+        $output = "";
+        $output .= '<h1 class="admin-view-product">View Product <i class="far fa-eye"></i></h1>;
+                      <table>
+                        <tr>
+                          <th>ID</th>
+                          <th>IMAGE</th>
+                          <th>NAME</th>
+                          <th>PRICE</th>
+                          <th>DESCRIPTION</th>
+                          <th>HOT</th>
+                          <th>TAG</th>
+                          <th>OPERATION</th>
+                        </tr>';
         foreach ($products as $product):
-            echo '<tr>';
-            echo '<td class="admin-product-ID">' . $product['ID'] . '</td>';
-            echo '<td class="admin-product-img">
-                    <img src="' . $product['Image'] . '" alt="">
-                  </td>';
-            echo '<td class="admin-product-name">'. $product['Name'] . '</td>';
-            echo '<td class="admin-product-price">'. $product['Price'] .'</td>';
-            echo '<td class="admin-product-descr">' . $product['Description'] . '</td>';
-            echo '<td class="admin-product-hot">' . (($product['Hot'] == 1)? "HOT": "UNHOT") . '</td>';
-            echo '<td class="admin-product-tag">' . $product['Tag'] . '</td>';
-            echo '<td>
-                    <form method="post" class="admin-product-btn-group"> 
-                        <button name="toggleHot" type="submit" value="' . $product['ID'] . '">TOGGLE HOT</button>
-                        <button name="editInfo" type="submit" value="' . $product['ID'] . '">EDIT</button>
-                        <button name="deleteInfo" type="submit" value="' . $product['ID'] . '">DELETE</button>
-                    </form>
-                  </td>';
-            echo '</tr>';
+            $output .= '<tr>
+                          <td class="admin-product-ID">' . $product['ID'] . '</td>
+                          <td class="admin-product-img">
+                              <img src="' . $product['Image'] . '" alt="">
+                          </td>
+                          <td class="admin-product-name">'. $product['Name'] . '</td>
+                          <td class="admin-product-price">'. $product['Price'] .'</td>
+                          <td class="admin-product-descr">' . $product['Description'] . '</td>
+                          <td class="admin-product-hot">' . (($product['Hot'] == 1)? "HOT": "UNHOT") . '</td>
+                          <td class="admin-product-tag">' . $product['Tag'] . '</td>
+                          <td>
+                                  <form method="post" class="admin-product-btn-group"> 
+                                      <button name="toggleHot" type="submit" value="' . $product['ID'] . '">TOGGLE HOT</button>
+                                      <button name="editInfo" type="submit" value="' . $product['ID'] . '">EDIT</button>
+                                      <button name="deleteInfo" type="submit" value="' . $product['ID'] . '">DELETE</button>
+                                  </form>
+                                </td>
+                        </tr>';
         endforeach;
-        echo '</table>';
+        $output .=    '</table>';
+        return $output;
     }
 
     public function showFormProduct_adminpage($action){
+        $output = "";
         if ($action == "addnew")
         {
-            echo '<h1 class="admin-add-product">Add Product <i class="material-icons">library_add</i></h1>';
-            echo '<form method="post" action="" class="add-product-form">
-            <div class="add-product-info row">
-              <label for="add-product-img" class="col-3">IMAGE</label>
-              <input id="add-product-img" class="col-9" name="Image" type="url">
-            </div>
-            <div class="add-product-info row">
-              <label for="add-product-name" class="col-3">NAME</label>
-              <input id="add-product-name" class="col-9" name="Name" type="text">
-            </div>
-            <div class="add-product-info row">
-              <label for="add-product-price" class="col-3">PRICE</label>
-              <input id="add-product-price" class="col-9" name="Price" type="number" step="any" min="0">
-            </div>
-            <div class="add-product-info row">
-              <label for="add-product-tag" class="col-3">Tag</label>
-              <input id="add-product-tag" class="col-9" name="Tag">
-            </div>
-            <div class="add-product-info row">
-              <label for="add-product-descr" class="col-3">DESCRIPTION</label>
-              <textarea id="add-product-descr" class="col-9" name="Description"></textarea>
-            </div>
-            <div class="add-product-info row">
-              <button class="offset-3" name="submit" type="submit">SAVE</button>
-            </div>
-            </form>';
+            $output .= '<h1 class="admin-add-product">Add Product <i class="material-icons">library_add</i></h1>
+                          <form method="post" action="" class="add-product-form">
+                          <div class="add-product-info row">
+                            <label for="add-product-img" class="col-3">IMAGE</label>
+                            <input id="add-product-img" class="col-9" name="Image" type="url">
+                          </div>
+                          <div class="add-product-info row">
+                            <label for="add-product-name" class="col-3">NAME</label>
+                            <input id="add-product-name" class="col-9" name="Name" type="text">
+                          </div>
+                          <div class="add-product-info row">
+                            <label for="add-product-price" class="col-3">PRICE</label>
+                            <input id="add-product-price" class="col-9" name="Price" type="number" step="any" min="0">
+                          </div>
+                          <div class="add-product-info row">
+                            <label for="add-product-tag" class="col-3">TAG</label>
+                            <input id="add-product-tag" class="col-9" name="Tag">
+                          </div>
+                          <div class="add-product-info row">
+                            <label for="add-product-descr" class="col-3">DESCRIPTION</label>
+                            <textarea id="add-product-descr" class="col-9" name="Description"></textarea>
+                          </div>
+                          <div class="add-product-info row">
+                            <button class="offset-3" name="submit" type="submit">SAVE</button>
+                          </div>
+                        </form>';
         }
         else if ($action == "edit")
         {
-            echo '<h1 class="admin-add-product">Edit Product <i class="fas fa-edit edit-icon"></i></h1>';
-            echo '<form method="post" action="" class="add-product-form">
-            <div class="add-product-info row">
-              <label for="add-product-img" class="col-3">IMAGE LINK</label>
-              <input id="add-product-img" class="col-9" name="Image" type="url" value="'. $_SESSION['Image'] .'">
-            </div>
-            <div class="add-product-info row">
-              <label for="add-product-name" class="col-3">NAME</label>
-              <input id="add-product-name" class="col-9" name="Name" type="text" value="'. $_SESSION['Name'] .'">
-            </div>
-            <div class="add-product-info row">
-              <label for="add-product-price" class="col-3">PRICE</label>
-              <input id="add-product-price" class="col-9" name="Price" type="number" step="any" min="0" value="'. $_SESSION['Price'] .'">
-            </div>
-            <div class="add-product-info row">
-              <label for="add-product-tag" class="col-3">TAG</label>
-              <input id="add-product-tag" class="col-9" name="Tag" value="'. $_SESSION['Tag'] .'">
-            </div>
-            <div class="add-product-info row">
-              <label for="add-product-descr" class="col-3">DESCRIPTION</label>
-              <textarea id="add-product-descr" class="col-9" name="Description">'. $_SESSION['Description'] .'</textarea>
-            </div>
-            <div class="add-product-info row">
-              <button class="offset-3" name="submit" type="submit">SAVE</button>
-            </div>
-            </form>';
+            $output .= '<h1 class="admin-add-product">Edit Product <i class="fas fa-edit edit-icon"></i></h1>
+                        <form method="post" action="" class="add-product-form">
+                          <div class="add-product-info row">
+                            <label for="add-product-img" class="col-3">IMAGE LINK</label>
+                            <input id="add-product-img" class="col-9" name="Image" type="url" value="'. $_SESSION['Image'] .'">
+                          </div>
+                          <div class="add-product-info row">
+                            <label for="add-product-name" class="col-3">NAME</label>
+                            <input id="add-product-name" class="col-9" name="Name" type="text" value="'. $_SESSION['Name'] .'">
+                          </div>
+                          <div class="add-product-info row">
+                            <label for="add-product-price" class="col-3">PRICE</label>
+                            <input id="add-product-price" class="col-9" name="Price" type="number" step="any" min="0" value="'. $_SESSION['Price'] .'">
+                          </div>
+                          <div class="add-product-info row">
+                            <label for="add-product-tag" class="col-3">TAG</label>
+                            <input id="add-product-tag" class="col-9" name="Tag" value="'. $_SESSION['Tag'] .'">
+                          </div>
+                          <div class="add-product-info row">
+                            <label for="add-product-descr" class="col-3">DESCRIPTION</label>
+                            <textarea id="add-product-descr" class="col-9" name="Description">'. $_SESSION['Description'] .'</textarea>
+                          </div>
+                          <div class="add-product-info row">
+                            <button class="offset-3" name="submit" type="submit">SAVE</button>
+                          </div>
+                        </form>';
         }
+        return $output;
     }
 
     public function alertResultPopUp($ctrl, $result) {
+        $output = "";
         if ($result == true)
         {
-            echo '<script>
-                    var result = confirm("Successfully");
-                    if (result)
-                        location.href = "admin.php?ctrl='. $ctrl .'";
-                    else
-                        location.href = "admin.php?ctrl='. $ctrl .'";
-                  </script>';
+            $output .= '<script>
+                          var result = confirm("Successfully");
+                          if (result)
+                              location.href = "admin.php?ctrl='. $ctrl .'";
+                          else
+                              location.href = "admin.php?ctrl='. $ctrl .'";
+                        </script>';
         }
         else
         {
-            echo '<script>
-                    alert("Failed");
-                  </script>';
+            $output .= '<script>
+                          alert("Failed");
+                        </script>';
         }
+        return $output;
     }
 
     public function showCartModal($products)

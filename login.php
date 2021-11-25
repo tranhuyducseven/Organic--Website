@@ -89,6 +89,27 @@
                 }  
             });
         }
+
+        // function checkRedeemPass(){
+        //     var un = document.getElementsByClassName("form__input")[].value;
+        //     $.ajax({
+        //         type: "POST",
+        //         url: "services/login-service.php",
+        //         data: { 
+        //             act: "forget",
+        //             username: un
+        //         },
+        //         success: function(data) {
+        //             document.getElementsByClassName("msg")[].innerHTML = "";
+        //             if (data == 0){
+        //                 document.getElementsByClassName("msg")[].innerHTML = "Username not existed.";
+        //             }
+        //             else {
+        //                 document.getElementsByClassName("msg")[].innerHTML = "Your password is:  " + data;
+        //             } 
+        //         }  
+        //     });
+        // }
     </script>
     <!--#######HEADER##########-->
     <?php require_once("./views/header.php") ?>

@@ -13,6 +13,7 @@
 
         public function View($ctrl){
             $this->InitAdminController();
+            $output = "";
             switch ($ctrl) {
                 case 'user':
                     $url = $_SERVER['REQUEST_URI'];
@@ -20,8 +21,7 @@
                     $userModel = new UserModel();
 
                     if (isset($_GET['confirm'])) {
-                        if ($_GET['confirm'] == 'true'){
-                            
+                        if ($_GET['confirm'] == 'true'){                          
                             $username = $_GET['username'];
                             $userModel->deleteOneUser($username);
                         }
@@ -36,10 +36,10 @@
                         $userModel->unbanOneUser($username);
                     }
                     else if (isset($_POST['del'])){
-                        $userView->confirmPopUp("Delete this user from database ?");
+                        $output .= $userView->confirmPopUp("Delete this user from database ?");
                     }
                     $users = $userModel->getAllUser();
-                    $userView->showAllUser_adminpage($users); 
+                    $output .= $userView->showAllUser_adminpage($users); 
                     break;
                 case 'product':
                     $productModel = new ProductModel();
@@ -68,7 +68,7 @@
                         $productModel->toggleHot($_POST['toggleHot']);
                     }
                     $products = $productModel->getAllProduct();
-                    $productView->showAllProduct_adminpage($products);
+                    $output = $productView->showAllProduct_adminpage($products);
                     break;
                 case 'blog':
                     $blogModel = new BlogModel();
@@ -96,24 +96,25 @@
                     }
 
                     $blogs = $blogModel->getAllBlog();
-                    $blogView->showAllBlog_adminpage($blogs);
+                    $output = $blogView->showAllBlog_adminpage($blogs);
                     break;
                 case 'historyTransaction':
                     $historyTransactionView = new HistoryTransactionView();       
                     $historyTransactionModel = new HistoryTransactionModel();
     
                     $historyTransactions = $historyTransactionModel->getAllHistoryTransaction();
-                    $historyTransactionView->showAllHistoryTransaction_adminpage($historyTransactions); 
+                    $output = $historyTransactionView->showAllHistoryTransaction_adminpage($historyTransactions); 
                     break;
             }
+            return $output;
         }
 
         public function Edit($ctrl, $action){
             $this->InitAdminController();
-            
+            $output = "";
             if ($ctrl == "product"){
                 $productView = new ProductView();
-                $productView->showFormProduct_adminpage($action);         
+                $output .= $productView->showFormProduct_adminpage($action);         
                 $productModel = new ProductModel();
                 if ($action == "addnew")
                 {
@@ -141,13 +142,13 @@
                 }
                 if (sizeof($arr) != 0) {
                     $result = $productModel->Edit($action, $arr);
-                    $productView->alertResultPopUp($ctrl, $result);
+                    $output .= $productView->alertResultPopUp($ctrl, $result);
                 }
             }
             else if ($ctrl == "blog"){
                 $blogModel = new BlogModel();
                 $blogView = new BlogView();
-                $blogView->showFormBlog_adminpage($action);
+                $output .= $blogView->showFormBlog_adminpage($action);
 
                 if ($action == "addnew")
                 {
@@ -175,9 +176,10 @@
                 if (sizeof($arr) != 0)
                 {
                     $result = $blogModel->Edit($action, $arr);
-                    $blogView->alertResultPopUp($ctrl, $result);
+                    $output .= $blogView->alertResultPopUp($ctrl, $result);
                 }
             }
+            return $output;
         }
     }
 ?> 
