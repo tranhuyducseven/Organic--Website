@@ -1,6 +1,6 @@
 <div class="offcanvas offcanvas-end organic-offcanvas" id="offcanvas">
         <button type="button" class="organic-offcanvas-close" data-bs-dismiss="offcanvas">
-        &#10006;
+        &#10005;
       </button>
         <div class="offcanvas-body organic-shopping">
             <div class="organic-shopping-title">

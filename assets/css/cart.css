@@ -13,7 +13,7 @@ body {
   overflow-x: hidden;
   font-weight: normal;
   letter-spacing: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif !important;
   font-weight: 500;
 }
 
@@ -151,6 +151,7 @@ a {
   font-size: 13px;
   text-align: center;
   cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .cart-btn-group a:hover {

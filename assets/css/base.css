@@ -41,6 +41,7 @@ body {
 .organic ul li,
 footer ul li {
     list-style-position: inside;
+    list-style-type: none;
 }
 
 a {
@@ -358,6 +359,7 @@ a {
 }
 
 .organic-footer-paragraph {
+    font-size: 16px !important;
     margin-top: 50px;
     padding-right: 30px;
     color: #a0a0a0 !important;
@@ -405,18 +407,26 @@ a {
 }
 
 .organic-footer-content .organic-footer-col ul {
-    margin: 20px 0;
+    margin: 20px 0 !important;
 }
 
 .organic-footer-content .organic-footer-col ul li {
-    margin: 20px 0;
+    margin: 20px 0 !important;
 }
 
 .organic-footer-list_quick li a,
 .organic-footer-list_product li a {
+    font-size: 16px !important;
     position: relative;
     left: -5px;
     color: #a0a0a0 !important;
+}
+
+.organic-footer-list_quick li a:hover,
+.organic-footer-list_product li a:hover,
+.organic-footer-list_contact li a:hover,
+.organic-footer-further ul li a:hover {
+    color: #ff7e00 !important;
 }
 
 .organic-footer-list_quick li a::before,
@@ -428,16 +438,18 @@ a {
 }
 
 .organic-footer-list_contact li a {
+    font-size: 16px !important;
     position: relative;
     left: -20px;
     color: #a0a0a0 !important;
 }
 
 .organic-footer-list_contact p {
-    position: relative;
+    font-size: 16px !important;
+    position: relative!important;
     left: -20px;
     color: #ff7e00;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem !important;
 }
 
 .organic-footer-further {
@@ -447,9 +459,11 @@ a {
 }
 
 .organic-footer-further p {
+    font-size: 16px;
     margin-top: auto;
     margin-bottom: auto;
     padding: 10px;
+    color: #a0a0a0 !important;
 }
 
 .organic-footer-further span {
@@ -476,13 +490,14 @@ a {
 
 .organic-footer-further ul li a {
     line-height: 30px;
-    font-size: 15px;
+    font-size: 15px !important;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     color: #a0a0a0 !important;
 }
 
 .organic-footer-further ul li::after {
+    font-size: 15px !important;
     position: absolute;
     content: "/";
     color: #a0a0a0;
@@ -490,9 +505,7 @@ a {
     line-height: 30px;
 }
 
-.organic-footer-further ul li:nth-last-child(1):;
-
-after {
+.organic-footer-further ul li:nth-last-child(1):after {
     content: "";
 }
 
@@ -1781,7 +1794,7 @@ a::after {
     right: 0;
     height: 100%;
     z-index: 9999;
-    width: 350px;
+    width: 350px !important;
     overflow: hidden;
     box-shadow: 0 2px 27px rgb(54 54 54 / 13%);
 }
@@ -1802,8 +1815,13 @@ a::after {
     border: none;
 }
 
+.organic-offcanvas-close:hover {
+    background-color: #111;
+    transition: all 300ms linear 0ms;
+}
+
 .organic-shopping {
-    padding: 30px 30px 0 30px;
+    padding: 30px 30px 0 30px !important;
     height: 100%;
     width: 100%;
     overflow-y: scroll;
@@ -1814,10 +1832,14 @@ a::after {
     border-bottom: 1px solid #e2e2e2;
     margin-bottom: 18px;
     padding-bottom: 14px;
-    font-size: 20px;
+    font-size: 20px !important;
     font-weight: 700;
     color: #111;
     font-family: 'Montserrat', sans-serif;
+}
+
+.organic-shopping-title span {
+    font-size: 20px !important;
 }
 
 .organic-shopping-content_list {
@@ -1907,6 +1929,7 @@ a::after {
 }
 
 .organic-subtotal {
+    font-size: 15px !important;
     border: none;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     padding-top: 15px;
@@ -1929,7 +1952,7 @@ a::after {
 .organic-btn-group a {
     flex-grow: 1;
     background-color: #ff7e00;
-    color: #fff;
+    color: #fff !important;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0;

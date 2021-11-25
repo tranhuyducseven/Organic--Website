@@ -90,7 +90,6 @@ class ProductView{
                         style="width: 100%"
                       />
                     </div>
-
                     <div
                       class="
                         col-lg-6 col-sm-12 col-12
@@ -111,7 +110,7 @@ class ProductView{
                             (1 customer review)
                           </p>
                         </div>
-                        <p class="organic-item-modal_price">$'. $product['Price'] .'Kg</p>
+                        <p class="organic-item-modal_price">$'. $product['Price'] .' Kg</p>
                         <p class="organic-item-modal_descr">'. $product['Description'] .'</p>
                         <form action="" method="post" class="d-flex">
                           <input
@@ -231,7 +230,7 @@ class ProductView{
             $output .= '<h1 class="admin-add-product">Add Product <i class="material-icons">library_add</i></h1>
                           <form method="post" action="" class="add-product-form">
                           <div class="add-product-info row">
-                            <label for="add-product-img" class="col-3">IMAGE</label>
+                            <label for="add-product-img" class="col-3">IMAGE LINK</label>
                             <input id="add-product-img" class="col-9" name="Image" type="url">
                           </div>
                           <div class="add-product-info row">
