@@ -51,6 +51,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />    
     <link type="text/css" rel="stylesheet" href="assets/css/base.css" />
     <link type="text/css" rel="stylesheet" href="assets/css/shop.css" />
+    <link rel="stylesheet" href="./assets/css/scrollbar.css" />    
     <link rel="shortcut icon" type="image/x-icon" href="./assets/img/vegetables.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Organic - Shop</title>
@@ -133,6 +134,7 @@
     </div>
     </div>
     <?php require_once("./views/footer.php") ?>
+    <?php require_once("./views/scrollbar.php") ?>    
     <!------------------------------------------ BEGIN OFFCANVAS CART ------------------------------------------------>
 
     <?php require_once("./views/canvas.php") ?>

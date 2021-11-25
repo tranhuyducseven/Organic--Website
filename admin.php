@@ -15,7 +15,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link type="text/css" rel="stylesheet" href="assets/css/admin.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/img/vegetables.png" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"> </script> 
+    <title>Admin Login</title>
   </head>
 
   <body>
