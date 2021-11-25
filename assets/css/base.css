@@ -506,7 +506,9 @@ after {
     background-repeat: no-repeat;
     background-position: center center;
 }
-
+.page-title-inner{
+    padding-left: 30px;
+}
 .page-title__name {
     font-size: 6rem !important;
     font-weight: 700 !important;
@@ -1950,6 +1952,16 @@ a::after {
 @media (max-width: 350px) {
     .p-cpn-heading h1 {
         font-size: 2.8rem;
+    }
+
+}
+@media (max-width: 576px) {
+    .page-title__name{
+        font-size: 4rem!important;
+    }
+    .page-title__dir-item{
+        font-size: 1.5rem!important;
+
     }
 
 }

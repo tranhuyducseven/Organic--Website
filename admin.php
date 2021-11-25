@@ -17,7 +17,7 @@
     <link type="text/css" rel="stylesheet" href="assets/css/admin.css" />
     <link rel="shortcut icon" type="image/x-icon" href="./assets/img/vegetables.png" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"> </script> 
-    <title>Admin Login</title>
+    <title>Admin</title>
   </head>
 
   <body>
@@ -27,7 +27,7 @@
             <nav class="navbar navbar-expand admin-nav"> 
 
                 <div class="admin-logo">
-                    <a href="#"><img src="./assets/img/logo.png" /></a>
+                    <a href="./index.php"><img src="./assets/img/logo.png" /></a>
                 </div>
 
                 <ul class="navbar-nav admin-manage-list">

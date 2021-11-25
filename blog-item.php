@@ -121,10 +121,7 @@
                                     <a href="./index.php" class="page-title__dir-link">Home</a>
                                 </li>
                                 <span> - </span>
-                                <li class="page-title__dir-item">
-                                    <a href="./blog.php" class="page-title__dir-link">Blog</a>
-                                </li>
-                                <span> - </span>
+                                
                                 <li class="page-title__dir-item">Posts</li>
                             </ul>
                         </div>

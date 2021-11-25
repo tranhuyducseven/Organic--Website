@@ -59,7 +59,26 @@
 
 <body>
     <?php require_once("./views/header.php") ?>
-    <div class="container content-container">
+    <div class="main">
+        <div class="page-title pd-150-0" style="background-image: url('./assets/img/bgr-title-page.jpg');">
+            <div class="grid wide-m">
+                <div class="container-fluid">
+                    <div class="page-title-inner">
+                        <h1 class="page-title__name">Cart</h1>
+                        <div class="page-title__dir">
+                            <ul class="page-title__dir-list">
+                                <li class="page-title__dir-item">
+                                    <a href="./index.php" class="page-title__dir-link">Home</a>
+                                </li>
+                                <span> - </span>
+                                <li class="page-title__dir-item">Shop</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container content-container">
         <div class="row content-row organic">
             <div class="organic-primary col-xl-8 col-lg-8 col-sm-12 col-12">
                 <div class="organic-sort-bar d-flex">
@@ -133,6 +152,7 @@
         </div>
     </div>
     </div>
+    
     <?php require_once("./views/footer.php") ?>
     <?php require_once("./views/scrollbar.php") ?>    
     <!------------------------------------------ BEGIN OFFCANVAS CART ------------------------------------------------>

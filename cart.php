@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />    
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet" />
     <link rel="shortcut icon" type="image/x-icon" href="./assets/img/vegetables.png" />
     <link type="text/css" rel="stylesheet" href="assets/css/base.css" />
     <link type="text/css" rel="stylesheet" href="assets/css/cart.css" />
@@ -130,7 +131,7 @@
     </script>
     <?php require_once("./views/header.php") ?>
     <div class="main">
-        <div class="page-title pd-150-0" style="      background-image: url('./assets/img/bgr-title-page.jpg');">
+        <div class="page-title pd-150-0" style="background-image: url('./assets/img/bgr-title-page.jpg');">
             <div class="grid wide-m">
                 <div class="container-fluid">
                     <div class="page-title-inner">

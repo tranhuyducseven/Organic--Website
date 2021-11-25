@@ -52,6 +52,7 @@ form {
 
 .form__input {
     width: 100%;
+    font-size: 1.6rem!important;
     border: 0px solid transparent;
     border-radius: 0;
     border-bottom: 1px solid #aaa;
@@ -122,12 +123,7 @@ form {
 }
 
 
-@media (max-width: 992px) {
-    .col-md-0 {
-        display: none;
-    }
 
-}
 
 .msg {
     font-size: 1.4rem;
@@ -180,7 +176,7 @@ form {
   text-align: right;
   position: absolute;
   right: 64px;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: var(--primary-text-color);
   font-weight: 600;
 }
@@ -188,4 +184,22 @@ form {
 #back-btn:focus{
   color: #eab121;
   cursor: pointer;
+}
+@media(max-width:450px){
+      
+    .login_form__name{
+        font-size: 2rem!important;
+    }
+    .form__input{
+        font-size: 1.2rem!important;
+    }
+}
+@media (max-width: 992px) {
+    .col-md-0 {
+        display: none;
+    }
+    .modal__body .login_form{
+        border-left: none!important;
+    }
+
 }
