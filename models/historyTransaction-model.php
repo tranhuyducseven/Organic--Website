@@ -2,7 +2,7 @@
 
 class HistoryTransactionModel {
     public function InitConnect(){
-         $con = mysqli_connect('sql201.epizy.com', 'epiz_30355247', '', 'epiz_30355247_db_ltw');
+         $con = mysqli_connect('sql201.epizy.com', 'epiz_30355247', 'AMWU51vKHPKv8', 'epiz_30355247_db_ltw');
 
         if (mysqli_connect_errno()){
             die('Connection failed: '. mysqli_connect_error());
