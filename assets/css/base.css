@@ -1428,8 +1428,9 @@ input[type="text"]:focus {
     z-index: 1;
     overflow: hidden;
     text-transform: capitalize;
-    display: inline-block;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     font-family: inherit;
 }

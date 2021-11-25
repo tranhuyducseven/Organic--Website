@@ -32,10 +32,8 @@
     <!-- #############MAIN######### -->
     <div class="main">
         <!--slogan-->
-        <div class="page-slogan pd-150-0" style="
-          background-color: #f4f4f4;
-          background-image: url('./assets/img/home/background-slogan.jpg');
-        ">
+        <div id="0" class="page-slogan pd-150-0" style="
+          background-color: #f4f4f4;background-image: url('./assets/img/home/background-slogan.jpg');">
             <div class="grid wide-m">
                 <div class="container-fluid row gx-5">
                     <div class="
@@ -62,7 +60,7 @@
             </div>
         </div>
         <!--ABOUT-->
-        <div class="container-fluid about pd-150-0" style="background-color: var(--white-color)">
+        <div id="1" class="container-fluid about pd-150-0" style="background-color: var(--white-color)">
             <div class="grid wide-m row gx-5">
                 <div class="col-ssm-12 col-sm-12 col-xl-5 about__img">
                     <img src="./assets/img/home/about-home.png" alt="" />
@@ -114,7 +112,7 @@
         <!--
         WHAT WE DO
         -->
-        <div class="container-fluid p-cpn pd-150-0" style="background-image: url('./assets/img/home/p-cpn-1.png')">
+        <div id="2" class="container-fluid p-cpn pd-150-0" style="background-image: url('./assets/img/home/p-cpn-1.png')">
             <div class="grid wide-m row gx-5">
                 <div class="col">
                     <div class="p-cpn-subheading">
@@ -221,7 +219,7 @@
             </div>
         </div>
         <!--BREAK-->
-        <div class="page-break pd-150-0 " style="background-image: url('./assets/img/bgr-client-h1.jpg')">
+        <div id="4" class="page-break pd-150-0 " style="background-image: url('./assets/img/bgr-client-h1.jpg')">
             <div class=" page-break-list row">
                 <div class=" col-ssm-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-3 page-break-item-1 ">
                     <div class="page-break-item-1__icon ">
@@ -290,7 +288,7 @@
             </div>
         </div>
         <!-- Expert Farmers-->
-        <div class="container-fluid p-cpn pd-150-0 " style="background-color: var(--white-color); ">
+        <div id="5" class="container-fluid p-cpn pd-150-0 " style="background-color: var(--white-color); ">
             <div class="grid wide-m row gx-5 ">
                 <div class="col ">
                     <div class="p-cpn-subheading ">
@@ -381,7 +379,7 @@
             </div>
         </div>
         <!--Organic Product-->
-        <div class="container-fluid p-cpn pd-150-0 " style="background-color: var(--background-color); ">
+        <div id="6" class="container-fluid p-cpn pd-150-0 " style="background-color: var(--background-color); ">
             <div class="grid wide-m row gx-5 ">
                 <div class="col ">
                     <div class="p-cpn-subheading ">
@@ -425,7 +423,7 @@
         </div>
     </div>
     <!--BREAK-->
-    <div class="page-break pd-150-0 " style="background-image: url( './assets/img/bgr-client-h1.jpg') ">
+    <div id="7" class="page-break pd-150-0 " style="background-image: url( './assets/img/bgr-client-h1.jpg') ">
         <div class="grid wide-l row page-break-list ">
             <div class="col-ssm-12 col-sm-12 col-md-12 col-lg-5 c-20 page-break-item-2 ">
                 <div class="page-break-item-2__icon ">
@@ -475,7 +473,7 @@
         </div>
     </div>
     <!--Update of Organic-->
-    <div class="container-fluid p-cpn pd-150-0 " style="background-color: var(--white-color); ">
+    <div id="8" class="container-fluid p-cpn pd-150-0 " style="background-color: var(--white-color); ">
         <div class="grid wide-m row gx-5 ">
             <div class="col ">
                 <div class="p-cpn-subheading ">

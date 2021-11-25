@@ -52,6 +52,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />    
     <link type="text/css" rel="stylesheet" href="assets/css/base.css" />
     <link type="text/css" rel="stylesheet" href="assets/css/shop.css" />
+
     <link rel="stylesheet" href="./assets/css/scrollbar.css" />    
     <link rel="shortcut icon" type="image/x-icon" href="./assets/img/vegetables.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -146,7 +147,7 @@
                     <form class="organic-filter-search_form d-flex" method="get">
                         <input class="organic-filter-search_input" type="text" placeholder="Search Here" name="search"/>
                         <button class="organic-filter-search_btn" type="submit">
-                <i class="material-icons">search</i>
+                            <i class="fas fa-search"></i>
                     </button>
                     </form>
             </div>

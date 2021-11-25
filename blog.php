@@ -121,7 +121,7 @@
                         <form class="organic-filter-search_form d-flex" method="get">
                             <input class="organic-filter-search_input" type="text" placeholder="Search Here" name="search"/>
                             <button class="organic-filter-search_btn" type="submit">
-                                <i class="material-icons"></i>
+                                <i class="fas fa-search"></i>
                             </button>
                         </form>
                     </div>

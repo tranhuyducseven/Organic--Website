@@ -32,6 +32,8 @@ h6 {
     font-family: Montserrat;
 }
 
+
+
 .admin-nav {
     background-color: #1e271e;
 }
@@ -252,9 +254,7 @@ td {
     font-family: inherit;
   }
 
-  input[type="text"], input[type="url"], input[type="number"] {
-    height: 40px;
-  }
+  
 
   textarea {
     height: 80px;
@@ -285,4 +285,11 @@ td {
   .admin-add-product .edit-icon, .admin-add-blog .edit-icon {
     font-size: 1.1em;
     vertical-align: baseline !important;
+  }
+
+  /* login */
+  .form__input{
+    font-size: 1.2rem!important;
+    border-radius: 4px!important;
+    
   }

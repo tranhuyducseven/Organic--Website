@@ -20,19 +20,19 @@
                     </div>
                     <ul class="organic-footer-list_quick">
                         <li>
-                            <a href="#">Our Projects</a>
+                            <a href="./#2">Our Projects</a>
                         </li>
                         <li>
-                            <a href="#">Orgus Farmers</a>
+                            <a href="./#5">Orgus Farmers</a>
                         </li>
                         <li>
-                            <a href="#">About Us</a>
+                            <a href="./#1">About Us</a>
                         </li>
                         <li>
-                            <a href="#">Upcoming Events</a>
+                            <a href="./#8">Upcoming Events</a>
                         </li>
                         <li>
-                            <a href="#">Our Services</a>
+                            <a href="shop.php">Our Shop</a>
                         </li>
                     </ul>
                 </div>
@@ -65,15 +65,15 @@
                     <ul class="organic-footer-list_contact">
                         <li>
                             <p class="contact_info">Phone:</p>
-                            <a href="#">+ 00 568 945 679</a>
+                            <a target="blank" href="./contact.php">+ 00 568 945 679</a>
                         </li>
                         <li>
                             <p class="contact_info">Email:</p>
-                            <a href="#">orgus@gmail.com</a>
+                            <a target="blank" href="https://mail.google.com/">info247@gmail.com</a>
                         </li>
                         <li>
                             <p class="contact_info">Website:</p>
-                            <a href="#">www.orgusinfo.com</a>
+                            <a target="blank" href="http://www.organic.lovestoblog.com/">www.organic.lovestoblog.com</a>
                         </li>
                     </ul>
                 </div>
