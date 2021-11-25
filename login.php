@@ -65,10 +65,27 @@
                     password: pass
                 },
                 success: function(data) {
-                    if (data == ""){
+                    document.getElementsByClassName("msg")[1].innerHTML = "";
+                    document.getElementsByClassName("msg")[2].innerHTML = "";
+                    document.getElementsByClassName("msg")[3].innerHTML = "";
+                    document.getElementsByClassName("msg")[4].innerHTML = "";
+                    if (data == "1"){
                         window.location.href = "index.php";
                     }
-                    document.getElementsByClassName("msg")[1].innerHTML = data;
+
+                    if (data == "-1"){
+                        document.getElementsByClassName("msg")[4].innerHTML = "Something unexpected happend.";
+                    } else if (data == "0"){
+                        document.getElementsByClassName("msg")[1].innerHTML = "Username already existed.";
+                    } else if (data == "2"){
+                        document.getElementsByClassName("msg")[1].innerHTML = "Invalid username. Username must be 5 - 20 characters, contains [a-z A-Z 0-9 _ .].";
+                    } else if (data == "3"){
+                        document.getElementsByClassName("msg")[4].innerHTML = "Invalid password. Password must be 8 - 20 characters, contains at least 1 number, 1 upper, 1 lower, 1 special character.";
+                    } else if (data == "4"){
+                        document.getElementsByClassName("msg")[2].innerHTML = "Invalid email. Check your email again.";
+                    } else if (data == "5"){
+                        document.getElementsByClassName("msg")[3].innerHTML = "Invalid phone number. Phone number must be 9 - 13 numbers.";
+                    }
                 }  
             });
         }
@@ -138,12 +155,15 @@
 
                                         <div class="row">
                                             <input type="text" name="username" id="username" class="form__input" placeholder="Username (5 - 20 characters)." required>
+                                            <span class="msg"></span>
                                         </div>
                                         <div class="row">
                                             <input type="email" name="email" id="email" class="form__input" placeholder="Email address." required>
+                                            <span class="msg"></span>
                                         </div>
                                         <div class="row">
                                             <input type="number" name="phone" id="phone" class="form__input" placeholder="Phone number (9 - 13 numbers)." required>
+                                            <span class="msg"></span>
                                         </div>
                                         <div class="row">
                                             <input type="password" name="password" id="password" class="form__input" placeholder="Password (8 - 20 characters, contains at least 1 number, 1 upper case letter, 1 lower case letter and 1 special character)." required>
