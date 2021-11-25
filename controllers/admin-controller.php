@@ -44,6 +44,16 @@
                 case 'product':
                     $productModel = new ProductModel();
                     $productView = new ProductView();
+
+                    if (isset($_GET['confirm'])) {
+                        if ($_GET['confirm'] == 'true'){                      
+                            $action = "delete";
+                            $arr = array();
+                            $arr['ID'] = $_GET['deleteInfo'];
+                            $result = $productModel->Edit($action, $arr);
+                        }
+                    }
+
                     if (isset($_POST['editInfo']))
                     {
                         $_SESSION['ID'] = $_POST['editInfo'];
@@ -58,11 +68,8 @@
                         header("Location: " . $link);
                     }
                     if (isset($_POST['deleteInfo']))
-                    {
-                        $action = "delete";
-                        $arr = array();
-                        $arr['ID'] = $_POST['deleteInfo'];
-                        $result = $productModel->Edit($action, $arr);
+                    {   
+                        $productView->confirmPopUp("Delete this product from database ?", $_POST['deleteInfo']);
                     }
                     if (isset($_POST['toggleHot'])){
                         $productModel->toggleHot($_POST['toggleHot']);
@@ -73,6 +80,15 @@
                 case 'blog':
                     $blogModel = new BlogModel();
                     $blogView = new BlogView();
+
+                    if (isset($_GET['confirm'])) {
+                        if ($_GET['confirm'] == 'true'){                      
+                            $action = "delete";
+                            $arr = array();
+                            $arr['ID'] = $_GET['deleteInfo'];
+                            $result = $blogModel->Edit($action, $arr);
+                        }
+                    }
 
                     if (isset($_POST['editInfo']))
                     {
@@ -89,10 +105,7 @@
                     }
                     if (isset($_POST['deleteInfo']))
                     {
-                        $action = "delete";
-                        $arr = array();
-                        $arr['ID'] = $_POST['deleteInfo'];
-                        $result = $blogModel->Edit($action, $arr);
+                        $blogView->confirmPopUp("Delete this blog from database ?", $_POST['deleteInfo']);
                     }
 
                     $blogs = $blogModel->getAllBlog();

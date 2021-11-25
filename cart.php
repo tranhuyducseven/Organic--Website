@@ -85,16 +85,19 @@
 
       function removetoCart_cartpage(id)
       {
-        $.ajax({
-            type: "POST",
-            url: "services/product-service.php",
-            data: { 
-              idDel: id 
-            },
-            success: function(data) {
-                showCart_cartpage();
-            }  
-        });
+        var tmp = confirm("Do you want to remove this item?");
+        if (tmp){
+            $.ajax({
+                type: "POST",
+                url: "services/product-service.php",
+                data: { 
+                idDel: id 
+                },
+                success: function(data) {
+                    showCart_cartpage();
+                }  
+            });
+        }
       }
       
       function payment(){

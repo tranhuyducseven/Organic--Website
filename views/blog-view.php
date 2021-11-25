@@ -201,7 +201,22 @@ class BlogView{
         foreach ($tags as $tag):
           echo '<a class="tag-cloud" href="blog.php?tag='. $tag .'">'. $tag .'</a>';
         endforeach;
-      }
+    }
+
+    public function confirmPopUp($mess, $id){
+      echo '<script>
+          var result = confirm("' . $mess . '");
+          var url = window.location.href;  
+          if (result){
+              url = "admin.php?ctrl=blog&confirm=true&deleteInfo='.$id.'";
+              location.href = url;
+          }
+          else{
+              url = "admin.php?ctrl=blog&confirm=false&deleteInfo='.$id.'";
+              location.href = url;
+          }
+          </script>';
+    }
 }
 
 ?>

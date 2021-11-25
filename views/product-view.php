@@ -340,6 +340,21 @@ class ProductView{
             </li>';
       endforeach;
     }
+
+    public function confirmPopUp($mess, $id){
+      echo '<script>
+          var result = confirm("' . $mess . '");
+          var url = window.location.href;  
+          if (result){
+              url = "admin.php?ctrl=product&confirm=true&deleteInfo='.$id.'";
+              location.href = url;
+          }
+          else{
+              url = "admin.php?ctrl=product&confirm=false&deleteInfo='.$id.'";
+              location.href = url;
+          }
+          </script>';
+  }
 }
 
 ?>
