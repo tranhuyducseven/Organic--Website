@@ -31,7 +31,7 @@ class BlogView{
 
     public function getAllBlog_homepage($blogs){
         foreach ($blogs as $blog):
-           echo '<div class="col ">
+           echo '<div class="col" onclick="window.location=\'blog-item.php?id='. $blog['ID'] .'\'">
            <div class="p-cpn-item-4th ">
                <img class="p-cpn-item-4th__img " src="'. $blog['Image'] .'" alt=" " />
                <div class="p-cpn-item-4th__wrapper ">

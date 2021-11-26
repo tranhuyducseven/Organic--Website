@@ -165,7 +165,7 @@ class ProductView{
                       <h3 class="p-cpn-item-3rd-back__price ">
                           $'. $product['Price'] .'
                       </h3>
-                      <a class="add-to-cart-btn " href="# ">Add To Cart</a>
+                      <a class="add-to-cart-btn " onclick="addToCart('. $product['ID'] .', 1);">Add To Cart</a>
                   </div>
               </div>
           </div>';
