@@ -70,10 +70,9 @@
                     document.getElementsByClassName("msg")[3].innerHTML = "";
                     document.getElementsByClassName("msg")[4].innerHTML = "";
                     if (data == "1"){
-                        window.location.href = "index.php";
-                    }
-
-                    if (data == "-1"){
+                        alert("Register successfully!");
+                        window.location.href="login.php";
+                    } else if (data == "-1"){
                         document.getElementsByClassName("msg")[4].innerHTML = "Something unexpected happend.";
                     } else if (data == "0"){
                         document.getElementsByClassName("msg")[1].innerHTML = "Username already existed.";
