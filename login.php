@@ -70,7 +70,8 @@
                     document.getElementsByClassName("msg")[3].innerHTML = "";
                     document.getElementsByClassName("msg")[4].innerHTML = "";
                     if (data == "1"){
-                        window.location.href = "index.php";
+                        alert("Register successfully!");
+                        window.location.href="login.php";
                     }
 
                     if (data == "-1"){

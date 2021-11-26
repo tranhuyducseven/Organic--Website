@@ -21,7 +21,6 @@
 
             $res = $userModel->checkSignUp($username, $password, $email, $phone);
             if ($res == 1) {
-                $_SESSION['username'] = $username;
                 return 1;
             }
             else return $res;
