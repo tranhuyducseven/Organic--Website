@@ -419,6 +419,40 @@
                         $productController->getAllProduct_homepage();
                     ?>
                 </div>
+                <div class="modal" id="modal">
+    <div class="modal__body">
+        <!-- Modal -->
+        <span class="modal__close">
+            <i class="fas fa-times-circle"></i>
+        </span>
+        <div class="row grid wide-m">
+            <div class="col-lg-6 col-sm-12 col-12 organic-item-modal-col_1">
+                <img class="organic-item-modal_img" src="./assets/img/cucumber.png" alt="Product image" style="width: 100%" />
+            </div>
+            <div class="col-lg-6 col-sm-12 col-12 organic-item-modal-col_2">
+                <div class="organic-item-modal_right">
+                    <h2>'. $product['Name'] .'</h2>
+                    <div class="organic-item-modal_rating">
+                        <p class="organic-rating-stars">
+                            <i class="material-icons">star_rate</i><i class="material-icons">star_rate</i><i class="material-icons">star_rate</i><i class="material-icons">star_rate</i><i class="material-icons">star_rate</i>
+                        </p>
+                        <p class="organic-rating-count">
+                            (1 customer review)
+                        </p>
+                    </div>
+                    <p class="organic-item-modal_price">$'. $product['Price'] .' Kg</p>
+                    <p class="organic-item-modal_descr">'. $product['Description'] .'</p>
+                    <form action="" method="post" class="d-flex">
+                        <input type="number" class="organic-item-modal_qty" name="qty" value="1" inputmode="numeric" />
+                        <button class="organic-item-modal_cart" onclick="addToCart();">
+                            ADD TO CART
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
             </div>
         </div>
     </div>
@@ -522,11 +556,72 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js "></script>
     <script>
+    
     $(document).ready(function() {
-        $('#rightnav__user').on("click", function() {
+         $('#rightnav__user').on("click", function() {
             $('#rightnav__user-menu').toggle();
         })
-    })
+          $(".p-cpn-item-3rd__button").on("click",function(){
+            $.ajax({
+          url: ".php",
+          type: "GET",          
+          contentType: "application/json",
+          success: function (data) {
+            if (status == "success") {              
+              $("#modal").html(render(data));
+              $("#modal").show();
+            }            
+          },          
+        }); 
+
+
+
+          })
+          $('.modal__close').on("click",function(){
+            $("#modal").hide();
+        })
+          function render(product) {
+            return `<div class="modal" id="modal">
+    <div class="modal__body">
+        <!-- Modal -->
+        <span class="modal__close">
+            <i class="fas fa-times-circle"></i>
+        </span>
+        <div class="row grid wide-m">
+            <div class="col-lg-6 col-sm-12 col-12 organic-item-modal-col_1">
+                <img class="organic-item-modal_img" src="${product.img}" alt="Product image" style="width: 100%" />
+            </div>
+            <div class="col-lg-6 col-sm-12 col-12 organic-item-modal-col_2">
+                <div class="organic-item-modal_right">
+                    <h2>'${product.name}</h2>
+                    <div class="organic-item-modal_rating">
+                        <p class="organic-rating-stars">
+                            <i class="material-icons">star_rate</i><i class="material-icons">star_rate</i><i class="material-icons">star_rate</i><i class="material-icons">star_rate</i><i class="material-icons">star_rate</i>
+                        </p>
+                        <p class="organic-rating-count">
+                            (1 customer review)
+                        </p>
+                    </div>
+                    <p class="organic-item-modal_price">${product.weight}Kg</p>
+                    <p class="organic-item-modal_descr">${product.img}</p>
+                    <form action="" method="post" class="d-flex">
+                        <input type="number" class="organic-item-modal_qty" name="qty" value="1" inputmode="numeric" />
+                        <button class="organic-item-modal_cart" onclick="addToCart();">
+                            ADD TO CART
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>`
+  
+        }
+
+
+
+            
+        })    
     $(".carousel ").owlCarousel({
         margin: 20,
         loop: true,
@@ -547,12 +642,14 @@
                 nav: false
             }
         }
+
+
     });
+    function render(product) {
+    return 
+  
+    }
+
     </script>
 </body>
-
-</html>
-</script>
-</body>
-
 </html>
