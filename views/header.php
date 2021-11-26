@@ -5,7 +5,7 @@
             <div class="grid wide-m">
                 <div class="header container-fluid">
                     <div class="site-branch">
-                        <a href="./index.php">
+                        <a href="./">
                             <img src="./assets/img/header-logo.png" />
                         </a>
                     </div>
@@ -20,7 +20,7 @@
                                 <div class="collapse navbar-collapse row gx-5" id="navbarResponsive">
                                     <ul class="navbar-nav ml-auto">
                                         <li class="nav-item col-3">
-                                            <a class="nav-link" href="./index.php">Home</a>
+                                            <a class="nav-link" href="./">Home</a>
                                         </li>
                                         <li class="nav-item col-3">
                                             <a class="nav-link" href="./shop.php">Shop</a>

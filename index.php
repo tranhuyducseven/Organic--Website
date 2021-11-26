@@ -49,7 +49,7 @@
                             Nor again is there anyone who loves pursues desires obtain because occasionally circumstances.
                         </p>
                         <div class="page-slogan__btn">
-                            <a class="page-slogan__btn-link " href="">Contact me
+                            <a class="page-slogan__btn-link " href="./contact.php">Contact me
                                 <i class="fas fa-angle-double-right page-slogan__btn-link-icon"></i></a>
                         </div>
                     </div>

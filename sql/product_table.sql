@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
--- https://www.phpmyadmin.net/
+-- version 4.5.2
+-- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 25, 2021 at 03:00 PM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.12
+-- Host: localhost
+-- Generation Time: Nov 26, 2021 at 04:43 AM
+-- Server version: 10.1.13-MariaDB
+-- PHP Version: 5.6.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -46,7 +45,7 @@ INSERT INTO `product_table` (`ID`, `Image`, `Name`, `Price`, `Description`, `Hot
 (27, 'https://demo.cmssuperheroes.com/themeforest/orgus/wp-content/uploads/2021/07/chuoi-removebg-preview-460x460.png', 'Banana', 3.99, 'This is Banana.', 1, 'FRUIT'),
 (28, 'https://demo.cmssuperheroes.com/themeforest/orgus/wp-content/uploads/2021/07/suplo-removebg-preview-460x460.png', 'Brocoli', 5.99, 'This is Brocoli.', 1, 'VEGETABLE'),
 (29, 'https://demo.cmssuperheroes.com/themeforest/orgus/wp-content/uploads/2021/07/carot-removebg-preview-460x460.png', 'Carrot', 6.99, 'This is Carrot.', 1, 'VEGETABLE'),
-(30, 'https://assets.stickpng.com/images/580b57fcd9996e24bc43c175.png', 'Peache', 5.99, 'This is Peache.', 1, 'FRUIT'),
+(30, 'https://tse3.mm.bing.net/th?id=OIP.jlGvjGlydyENctQNs11_LgAAAA&pid=Api&P=0&w=300&h=300', 'Peache', 5.99, 'This is Peache.', 1, 'FRUIT'),
 (31, 'https://demo.cmssuperheroes.com/themeforest/orgus/wp-content/uploads/2021/07/luu-removebg-preview-460x460.png', 'Pomegranate', 1.99, 'This is Pomegranate.', 1, 'FRUIT'),
 (32, 'https://demo.cmssuperheroes.com/themeforest/orgus/wp-content/uploads/2021/07/duahau-removebg-preview-460x460.png', 'Watter Melon', 6.99, 'This is Watter Melon.', 1, 'FRUIT'),
 (33, 'https://demo.cmssuperheroes.com/themeforest/orgus/wp-content/uploads/2021/07/cam-removebg-preview-460x460.png', 'Orange', 4.99, 'This is Orange.', 1, 'FRUIT'),
@@ -78,8 +77,6 @@ ALTER TABLE `product_table`
 --
 ALTER TABLE `product_table`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
-COMMIT;
-
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
