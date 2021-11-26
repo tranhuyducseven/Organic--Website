@@ -139,6 +139,7 @@ class ProductView{
   }
 
     public function showAllProduct_homepage($products){
+      $item = 1;
       foreach ($products as $product):
         echo '<div class="col m-3 p-cpn-item-3rd ">
               <div class="p-cpn-item-3rd-front ">
@@ -156,8 +157,26 @@ class ProductView{
               <div class="p-cpn-item-3rd-back " style="background-image: url('. $product["Image"] .');">
                   <div class="p-cpn-item-3rd-back__overlay ">
                       <div class="p-cpn-item-3rd__buttons-group">
-                          <a class="p-cpn-item-3rd__button "><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></a>
-                          <a class="p-cpn-item-3rd__button "><i class="far fa-heart p-cpn-item-3rd__button-icon "></i></a>
+                        <div
+                        class="
+                          organic-item-buttons
+                          d-flex
+                          justify-content-center
+                        "
+                        >
+                          <div class="organic-item-button">
+                            <button
+                              type="button"
+                              data-bs-toggle="modal"
+                              data-bs-target="#QuickView'. $product['ID'] .'"
+                            >
+                              <i class="far fa-eye"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="organic-item-button">
+                          <button><i class="far fa-heart"></i></button>
+                        </div>
                       </div>
                       <h1 class="p-cpn-item-3rd-back__name ">
                       '. $product['Name'] .'
@@ -168,7 +187,77 @@ class ProductView{
                       <a class="add-to-cart-btn " onclick="addToCart('. $product['ID'] .', 1);">Add To Cart</a>
                   </div>
               </div>
+              <div class="modal fade" id="QuickView'. $product['ID'] .'">
+                <div
+                  class="
+                    organic-item-modal
+                    modal-dialog
+                    modal-dialog-centered
+                    modal-dialog-scrollable
+                    modal-lg
+                  "
+                >
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <div class="row">
+                        <div
+                          class="
+                            col-lg-6 col-sm-12 col-12
+                            organic-item-modal-col_1
+                          "
+                        >
+                          <img
+                            class="organic-item-modal_img"
+                            src="'. $product['Image'] .'"
+                            alt="Product image"
+                            style="width: 100%"
+                          />
+                        </div>
+                        <div
+                          class="
+                            col-lg-6 col-sm-12 col-12
+                            organic-item-modal-col_2
+                          "
+                        >
+                          <div class="organic-item-modal_right">
+                            <h2>'. $product['Name'] .'</h2>
+                            <div class="organic-item-modal_rating">
+                              <p class="organic-rating-stars">
+                                <i class="material-icons">star_rate</i
+                                ><i class="material-icons">star_rate</i
+                                ><i class="material-icons">star_rate</i
+                                ><i class="material-icons">star_rate</i
+                                ><i class="material-icons">star_rate</i>
+                              </p>
+                              <p class="organic-rating-count">
+                                (1 customer review)
+                              </p>
+                            </div>
+                            <p class="organic-item-modal_price">$'. $product['Price'] .' Kg</p>
+                            <p class="organic-item-modal_descr">'. $product['Description'] .'</p>
+                            <form action="" method="post" class="d-flex">
+                              <input
+                                type="number"
+                                class="organic-item-modal_qty"
+                                name="qty"
+                                value="1"
+                                inputmode="numeric"
+                              />
+                              <button class="organic-item-modal_cart"
+                              onclick="addToCart('. $product['ID'] .', '. -1 * $item .');"
+                              >
+                                ADD TO CART
+                              </button>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
           </div>';
+          $item++;
       endforeach;
     }
 
