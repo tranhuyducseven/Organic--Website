@@ -155,29 +155,12 @@ class ProductView{
                   </h3>
               </div>
               <div class="p-cpn-item-3rd-back " style="background-image: url('. $product["Image"] .');">
-                  <div class="p-cpn-item-3rd-back__overlay ">
+                   <div class="p-cpn-item-3rd-back__overlay ">
                       <div class="p-cpn-item-3rd__buttons-group">
-                        <div
-                        class="
-                          organic-item-buttons
-                          d-flex
-                          justify-content-center
-                        "
-                        >
-                          <div class="organic-item-button">
-                            <button
-                              type="button"
+                          <button class="p-cpn-item-3rd__button" type="button"
                               data-bs-toggle="modal"
-                              data-bs-target="#QuickView'. $product['ID'] .'"
-                            >
-                              <i class="far fa-eye"></i>
-                            </button>
+                              data-bs-target="#QuickView'. $product['ID'] .'"><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></button>
                           </div>
-                        </div>
-                        <div class="organic-item-button">
-                          <button><i class="far fa-heart"></i></button>
-                        </div>
-                      </div>
                       <h1 class="p-cpn-item-3rd-back__name ">
                       '. $product['Name'] .'
                       </h1>
@@ -256,7 +239,7 @@ class ProductView{
                   </div>
                 </div>
               </div>
-          </div>';
+              </div>';
           $item++;
       endforeach;
     }
