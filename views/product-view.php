@@ -42,9 +42,7 @@ class ProductView{
                         <i class="far fa-eye"></i>
                       </button>
                     </div>
-                    <div class="organic-item-button">
-                      <button><i class="far fa-heart"></i></button>
-                    </div>
+                    
                   </div>
                   <div
                     class="organic-item-add_to_cart justify-content-center"

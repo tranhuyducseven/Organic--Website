@@ -115,11 +115,11 @@
                 <div class="container-fluid">
                     <div class="page-title-inner">
                         <h1 class="page-title__name">Posts</h1>
-                        <div class="page-title__dir">
+                        <div class="page-title__dir">         
                             <ul class="page-title__dir-list">
                                 <li class="page-title__dir-item">
-                                    <a href="./i class="page-title__dir-link">Home</a>
-                                </li>
+                                    <a href="./"  class="page-title__dir-link">Home</a>
+                                </li>      
                                 <span> - </span>
                                 
                                 <li class="page-title__dir-item">Posts</li>

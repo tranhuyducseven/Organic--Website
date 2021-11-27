@@ -185,15 +185,8 @@ form {
   color: #eab121;
   cursor: pointer;
 }
-@media(max-width:450px){
-      
-    .login_form__name{
-        font-size: 2rem!important;
-    }
-    .form__input{
-        font-size: 1.2rem!important;
-    }
-}
+
+
 @media (max-width: 992px) {
     .col-md-0 {
         display: none;
@@ -202,4 +195,31 @@ form {
         border-left: none!important;
     }
 
+}
+@media(max-width:450px){
+    #modal{
+        z-index: 9999;
+        top: -200px;
+    }
+    .login_form__name{
+        font-size: 2rem!important;
+    }
+    .form__input{
+        font-size: 1.2rem!important;
+    }
+    .modal__body .login_form{
+        padding: 0;
+    }
+    .query span{
+        font-size: 1.2rem;
+    }
+    .btn, #back-btn{
+        font-size: 1.2rem!important;
+    }
+
+}
+@media(max-width: 350px){
+    .form__input{
+         font-size: 0.8rem!important;
+    }
 }

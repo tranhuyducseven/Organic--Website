@@ -80,14 +80,18 @@ p.organic-sort-bar_note {
         max-width: 330px;
         height: 420px;
     }
+
     .organic-item-buttons {
         margin-top: 50px !important;
         margin-bottom: 60px !important;
+
     }
+
     .organic-item-back_text {
         margin-top: 70px !important;
         font-size: 1.2em;
     }
+
     .organic-item-front_text {
         font-size: 1.2em;
     }
@@ -99,9 +103,11 @@ p.organic-sort-bar_note {
         max-width: 270px;
         height: 360px;
     }
+
     .organic-item-back_text {
         margin-top: 50px !important;
     }
+
     .organic-item-buttons {
         margin-top: 40px !important;
         margin-bottom: 50px !important;
@@ -112,9 +118,11 @@ p.organic-sort-bar_note {
     .organic-sort-bar_select {
         min-width: 250px;
     }
+
     .organic-footer-further p {
         text-align: center;
     }
+
     .organic-footer-col_bottom {
         text-align: center;
     }
@@ -125,17 +133,21 @@ p.organic-sort-bar_note {
         max-width: 450px;
         height: 560px;
     }
+
     .organic-item-buttons {
         margin-top: 70px !important;
         margin-bottom: 80px !important;
     }
+
     .organic-item-back_text {
         margin-top: 100px !important;
         font-size: 1.4em;
     }
+
     .organic-item-front_text {
         font-size: 1.4em;
     }
+
     .organic-sort-bar_select {
         min-width: 250px;
     }
@@ -146,14 +158,17 @@ p.organic-sort-bar_note {
         max-width: 450px;
         height: 500px;
     }
+
     .organic-item-buttons {
         margin-top: 70px !important;
         margin-bottom: 80px !important;
     }
+
     .organic-item-back_text {
         margin-top: 100px !important;
         font-size: 1.4em;
     }
+
     .organic-item-front_text {
         font-size: 1.4em;
     }
@@ -260,7 +275,9 @@ p.organic-sort-bar_note {
 }
 
 .organic-item-button button {
-
+    display: flex!important;
+    align-items: center;
+    justify-content: center;
     width: 50px;
     height: 50px;
     position: relative;
