@@ -133,13 +133,13 @@ class ProductModel {
         $resNotHot = $con->query("SELECT ID, Image, Name, Price, Description FROM product_table WHERE Hot = 0");
         $products = array();
         $cnt = 0;
-        if (mysqli_num_rows($resHot) < 9){
+        if (mysqli_num_rows($resHot) < 5){
             while ($product = mysqli_fetch_assoc($resHot)){
                 $products[] = $product;
                 $cnt++;
             }
             while ($product = mysqli_fetch_assoc($resNotHot)){
-                if ($cnt == 9)
+                if ($cnt == 5)
                     break;
                 $products[] = $product;
                 $cnt++;
@@ -147,7 +147,7 @@ class ProductModel {
         }
         else {
             while ($product = mysqli_fetch_assoc($resHot)){
-                if ($cnt == 9)
+                if ($cnt == 5)
                     break;
                 $products[] = $product;
                 $cnt++;

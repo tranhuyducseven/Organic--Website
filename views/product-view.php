@@ -1,5 +1,3 @@
-<!-- product-view.php sẽ render ra phần lõi nội dung, frontend sẽ sửa thêm phần này -->
-
 <?php
 
 class ProductView{
@@ -142,34 +140,30 @@ class ProductView{
       $item = 1;
       foreach ($products as $product):
         echo '<div class="col m-3 p-cpn-item-3rd ">
-              <div class="p-cpn-item-3rd-front ">
-                  <img class="p-cpn-item-3rd-front__img " src="'. $product['Image'] .'" alt=" " />
-                  <span class="p-cpn-item__break ">
-                      <span></span>
-                  </span>
-                  <h1 class="p-cpn-item-3rd-front__name ">
-                  '. $product['Name'] .'
-                  </h1>
-                  <h3 class="p-cpn-item-3rd-front__price ">
-                      $'. $product['Price'] .'
-                  </h3>
-              </div>
-              <div class="p-cpn-item-3rd-back " style="background-image: url('. $product["Image"] .');">
-                   <div class="p-cpn-item-3rd-back__overlay ">
-                      <div class="p-cpn-item-3rd__buttons-group">
-                          <button class="p-cpn-item-3rd__button"><i class="far fa-eye p-cpn-item-3rd__button-icon "></i></button>
-                          </div>
-                      <h1 class="p-cpn-item-3rd-back__name ">
-                      '. $product['Name'] .'
-                      </h1>
-                      <h3 class="p-cpn-item-3rd-back__price ">
-                          $'. $product['Price'] .'
-                      </h3>
-                      <a class="add-to-cart-btn " onclick="addToCart('. $product['ID'] .', 1);">Add To Cart</a>
-                  </div>
-              </div>              
-              </div>
-              ';
+                <div class="p-cpn-item-3rd-front ">
+                    <img class="p-cpn-item-3rd-front__img " src="'. $product['Image'] .'" alt=" " />
+                    <span class="p-cpn-item__break ">
+                        <span></span>
+                    </span>
+                    <h1 class="p-cpn-item-3rd-front__name ">
+                    '. $product['Name'] .'
+                    </h1>
+                    <h3 class="p-cpn-item-3rd-front__price ">
+                        $'. $product['Price'] .'
+                    </h3>
+                </div>
+                <div class="p-cpn-item-3rd-back " style="background-image: url('. $product["Image"] .');">
+                     <div class="p-cpn-item-3rd-back__overlay ">
+                        <h1 class="p-cpn-item-3rd-back__name ">
+                        '. $product['Name'] .'
+                        </h1>
+                        <h3 class="p-cpn-item-3rd-back__price ">
+                            $'. $product['Price'] .'
+                        </h3>
+                        <a class="add-to-cart-btn " href="shop.php?search='. $product['Name'] .'">Buy it!</a>
+                    </div>
+                </div>             
+              </div>';
           $item++;
       endforeach;
     }
