@@ -43,7 +43,7 @@
                     }
                     if (isset($_POST['deleteInfo']))
                     {   
-                        $contactView->confirmPopUp("Delete this product from database ?", $_POST['deleteInfo']);
+                        $contactView->confirmPopUp("Delete this contact from database ?", $_POST['deleteInfo']);
                     }
                     $contacts = $contactModel->getAllContactInfo();
                     $output = $contactView->showAllContact_adminpage($contacts);
