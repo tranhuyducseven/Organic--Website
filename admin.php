@@ -57,7 +57,7 @@
             <nav class="navbar navbar-expand admin-nav"> 
 
                 <div class="admin-logo">
-                    <a href="./index.php"><img src="./assets/img/logo.png" /></a>
+                    <a href="./"><img src="./assets/img/logo.png" /></a>
                 </div>
 
                 <ul class="navbar-nav admin-manage-list">
