@@ -1,3 +1,4 @@
+<div id="#toast" class="container-fluid -toast"></div>
 <footer class="container-fluid">
         <div class="organic-footer-content row">
             <div class="col-xl-4 col-md-6 col-12">

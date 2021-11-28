@@ -123,33 +123,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js "></script>
-    <script>
-        $(document).ready(function() {
-            $('#rightnav__user').on("click", function() {
-                $('#rightnav__user-menu').toggle();
-            })
-        })
-        $(".carousel ").owlCarousel({
-            margin: 20,
-            loop: true,
-            autoplay: true,
-            autoplayTimeout: 2000,
-            autoplayHoverPause: true,
-            responsive: {
-                0: {
-                    items: 1,
-                    nav: false
-                },
-                600: {
-                    items: 2,
-                    nav: false
-                },
-                1000: {
-                    items: 3,
-                    nav: false
-                }
-            }
-        });
-    </script>
+    <script src="./assets/js/rightnav.js" ></script>
+    <script src="./assets/js/toast.js" ></script>
 </body>
 </html>
