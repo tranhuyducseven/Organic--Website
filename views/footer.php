@@ -7,7 +7,7 @@
                         <a href="#"><img src="./assets/img/logo.png" /></a>
                     </div>
                     <p class="organic-footer-paragraph">
-                        Take a moment to enjoy in our all time favorite and the bestseller in its inche Craft Beer, a WordPress theme for you<br /><br /> Orgus is a clean and modern WordPress theme designed specifically for industry
+                        Orgus is a project made by HCMUT students.
                     </p>
                 </div>
             </div>
@@ -64,14 +64,11 @@
                         </span>
                     </div>
                     <ul class="organic-footer-list_contact">
-                        <li>
-                            <p class="contact_info">Phone:</p>
-                            <a target="blank" href="./contact.php">+ 00 568 945 679</a>
-                        </li>
-                        <li>
-                            <p class="contact_info">Email:</p>
-                            <a target="blank" href="https://mail.google.com/">info247@gmail.com</a>
-                        </li>
+                        <?php 
+                            require_once("controllers/contact-controller.php");
+                            $contactController = new ContactController;
+                            $contactController->showTopContact_footer();
+                        ?>
                         <li>
                             <p class="contact_info">Website:</p>
                             <a target="blank" href="http://www.organic.lovestoblog.com/">www.organic.lovestoblog.com</a>
@@ -85,7 +82,7 @@
                 <div class="organic-footer-col_bottom">
                     <p>
                         <span>Orgus</span> - Copyright 2021. With love by
-                        <span>CMSSuperHeros</span>
+                        <span>Dejavu</span>
                     </p>
                 </div>
             </div>

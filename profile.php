@@ -28,6 +28,7 @@
 
 <body>
     <script>
+        
         function editProfile(){
             var em = document.getElementsByClassName("form-control")[0].value;
             var pass = document.getElementsByClassName("form-control")[1].value;
@@ -44,9 +45,11 @@
                 },
                 success: function(data) {
                     if (data == "true"){
-                        document.getElementById("msg").innerHTML = "Update successfully!";
+                        $(".-toast").removeClass("fail");
+                        $(".-toast").html("Update successfully!").addClass("success").fadeIn(500).fadeOut(1000);
                     } else {
-                        document.getElementById("msg").innerHTML = "Update failed!";
+                        $(".-toast").removeClass("success");
+                        $(".-toast").html("Update failed!").addClass("fail").fadeIn(500).fadeOut(1000);
                     }
                     showProfile();
                 }  
@@ -64,7 +67,6 @@
                             var userInfo = JSON.parse(data);
                             document.getElementsByClassName("user-name")[0].innerHTML = userInfo.Username;
                             document.getElementsByClassName("user-email")[0].innerHTML = userInfo.Email;
-                            console.log(userInfo.Avatar);
                             if (userInfo.Avatar != "")
                                 document.getElementById("output").src = userInfo.Avatar;
                             else document.getElementById("output").src = "./assets/img/vegetables.png";
@@ -94,7 +96,7 @@
                             </label>
                             <img src="./assets/img/vegetables.png" id="output" width="200" />
                         </div>
-                        <p id="msg"></p> <span class="font-weight-bold user-name">UserName</span><span class="text-black-50 user-email">something@something.something</span>
+                        <p></p> <span class="font-weight-bold user-name">UserName</span><span class="text-black-50 user-email">something@something.something</span>
                     </div>
                 </div>
                 <div class="col-md-8 border-right">
@@ -117,6 +119,7 @@
     </div>
     </div>
     </div>
+    <div id="#toast" class="-toast"></div>
     <?php require_once("./views/canvas.php") ?>
     <script src="./assets/js/cart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script>

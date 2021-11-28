@@ -1105,7 +1105,6 @@ a {
     border-radius: 4px;
     box-sizing: border-box;
     transition: all linear 0.5s;
-    max-height: 600px;
 }
 
 .p-cpn-item-4th:hover {
@@ -1134,7 +1133,6 @@ a {
 
 .p-cpn-item-4th__wrapper .overlay {
     width: 100%;
-    padding-top: 100%;
     position: absolute;
     left: 0;
     top: 0;
@@ -1181,6 +1179,7 @@ a {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+    height: 60px;
 }
 
 .p-cpn-item-4th__paragraph {
@@ -1311,6 +1310,8 @@ a {
     justify-content: center;
     margin: 0 10px;
     padding-left: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 .page-break-item-2__icon {
@@ -2195,13 +2196,15 @@ a::after {
     background-color: #262626;
     color: white;
     display: none;
-    align-items: center;
-    font-size: 1.7rem;
     position: fixed;
     bottom: 0;
-    left: 0;
+    left: auto;
     right: 0;
     font-weight: 500;
+    font-size: 2rem;
+    line-height: 60px;
+    text-align: center;
+    width: 400px;
 }
 
 .-toast.success {

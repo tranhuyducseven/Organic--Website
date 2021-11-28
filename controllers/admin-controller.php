@@ -9,12 +9,45 @@
             require_once('views/blog-view.php');
             require_once('models/historyTransaction-model.php');           
             require_once('views/historyTransaction-view.php');
+            require_once('models/contact-model.php');           
+            require_once('views/contact-view.php');
         }
 
         public function View($ctrl){
             $this->InitAdminController();
             $output = "";
             switch ($ctrl) {
+                case 'contact':
+                    $contactView = new ContactView;
+                    $contactModel = new ContactModel;
+
+                    if (isset($_GET['confirm'])) {
+                        if ($_GET['confirm'] == 'true'){                      
+                            $action = "delete";
+                            $arr = array();
+                            $arr['id'] = $_GET['deleteInfo'];
+                            $result = $contactModel->Edit($action, $arr);
+                        }
+                    }
+
+                    if (isset($_POST['editInfo']))
+                    {
+                        $_SESSION['id'] = $_POST['editInfo'];
+                        $contacts = $contactModel->getOneContactInfo($_SESSION['id']);
+                        $_SESSION['phone'] = $contacts['phone'];
+                        $_SESSION['address'] = $contacts['address'];
+                        $_SESSION['email'] = $contacts['email'];
+
+                        $link = "admin.php?ctrl=contact&act=edit";
+                        header("Location: " . $link);
+                    }
+                    if (isset($_POST['deleteInfo']))
+                    {   
+                        $contactView->confirmPopUp("Delete this product from database ?", $_POST['deleteInfo']);
+                    }
+                    $contacts = $contactModel->getAllContactInfo();
+                    $output = $contactView->showAllContact_adminpage($contacts);
+                    break;
                 case 'user':
                     $url = $_SERVER['REQUEST_URI'];
                     $userView = new UserView();
@@ -44,6 +77,16 @@
                 case 'product':
                     $productModel = new ProductModel();
                     $productView = new ProductView();
+
+                    if (isset($_GET['confirm'])) {
+                        if ($_GET['confirm'] == 'true'){                      
+                            $action = "delete";
+                            $arr = array();
+                            $arr['ID'] = $_GET['deleteInfo'];
+                            $result = $productModel->Edit($action, $arr);
+                        }
+                    }
+
                     if (isset($_POST['editInfo']))
                     {
                         $_SESSION['ID'] = $_POST['editInfo'];
@@ -58,11 +101,8 @@
                         header("Location: " . $link);
                     }
                     if (isset($_POST['deleteInfo']))
-                    {
-                        $action = "delete";
-                        $arr = array();
-                        $arr['ID'] = $_POST['deleteInfo'];
-                        $result = $productModel->Edit($action, $arr);
+                    {   
+                        $productView->confirmPopUp("Delete this product from database ?", $_POST['deleteInfo']);
                     }
                     if (isset($_POST['toggleHot'])){
                         $productModel->toggleHot($_POST['toggleHot']);
@@ -73,6 +113,15 @@
                 case 'blog':
                     $blogModel = new BlogModel();
                     $blogView = new BlogView();
+
+                    if (isset($_GET['confirm'])) {
+                        if ($_GET['confirm'] == 'true'){                      
+                            $action = "delete";
+                            $arr = array();
+                            $arr['ID'] = $_GET['deleteInfo'];
+                            $result = $blogModel->Edit($action, $arr);
+                        }
+                    }
 
                     if (isset($_POST['editInfo']))
                     {
@@ -89,10 +138,7 @@
                     }
                     if (isset($_POST['deleteInfo']))
                     {
-                        $action = "delete";
-                        $arr = array();
-                        $arr['ID'] = $_POST['deleteInfo'];
-                        $result = $blogModel->Edit($action, $arr);
+                        $blogView->confirmPopUp("Delete this blog from database ?", $_POST['deleteInfo']);
                     }
 
                     $blogs = $blogModel->getAllBlog();
@@ -112,7 +158,36 @@
         public function Edit($ctrl, $action){
             $this->InitAdminController();
             $output = "";
-            if ($ctrl == "product"){
+            if ($ctrl == "contact"){
+                $contactView = new ContactView();
+                $output .= $contactView->showFormContact_adminpage($action);         
+                $contactModel = new ContactModel();
+                if ($action == "addnew")
+                {
+                    $arr = array();
+                    if (isset($_POST['submit'])){
+                        $arr['phone'] = $_POST['phone'];
+                        $arr['address'] = $_POST['address'];
+                        $arr['email'] = $_POST['email'];
+                    }
+                }
+                else if ($action == "edit")
+                {        
+                    $arr = array();
+                    if (isset($_POST['submit'])){
+                        $arr['id'] = $_SESSION['id'];
+                        $arr['phone'] = $_POST['phone'];
+                        $arr['address'] = $_POST['address'];
+                        $arr['email'] = $_POST['email'];
+                    }
+                    $result = false;
+                }
+                if (sizeof($arr) != 0) {
+                    $result = $contactModel->Edit($action, $arr);
+                    $output .= $contactView->alertResultPopUp($ctrl, $result);
+                }
+            }
+            else if ($ctrl == "product"){
                 $productView = new ProductView();
                 $output .= $productView->showFormProduct_adminpage($action);         
                 $productModel = new ProductModel();

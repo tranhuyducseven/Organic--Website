@@ -1,3 +1,14 @@
+function toastMessage(msg, check) {
+  if (check){
+      $(".-toast").removeClass("fail");
+      $(".-toast").html(msg).addClass("success").fadeIn(500).fadeOut(1000);
+  }
+  else {
+      $(".-toast").removeClass("success");
+      $(".-toast").html(msg).addClass("fail").fadeIn(500).fadeOut(1000);
+  }
+}
+
 function addToCart(id, quantity){
   if (quantity < 0)
     quantity = document.getElementsByClassName("organic-item-modal_qty")[-1 * quantity - 1].value;
@@ -14,7 +25,7 @@ function addToCart(id, quantity){
         },
         success: function(data) {
             showCart();
-            alert("Add successfully!");
+            toastMessage("Added successfully!", true);
         }  
     });
   }
@@ -56,17 +67,20 @@ function showCart()
 }
 
 function removetoCart(id)
-{
-  $.ajax({
-      type: "POST",
-      url: "services/product-service.php",
-      data: { 
-        idDel: id 
-      },
-      success: function(data) {
-          showCart();
-      }  
-  });
-}
+      {
+        var tmp = confirm("Do you want to remove this item?");
+        if (tmp){
+          $.ajax({
+              type: "POST",
+              url: "services/product-service.php",
+              data: { 
+                idDel: id 
+              },
+              success: function(data) {
+                  showCart();
+              }  
+          });
+        }
+      }
 
 showCart();

@@ -28,6 +28,12 @@
             case 'historyTransaction':
                 $output = $adminController->View($ctrl);
                 break;
+            case 'contact':
+                if (strpos($url,'act=') == true)
+                    $output = $adminController->Edit($ctrl, $_GET['act']);
+                else 
+                    $output = $adminController->View($ctrl);
+                break;
             case 'home':
                 break;
         }
@@ -61,6 +67,14 @@
                 </div>
 
                 <ul class="navbar-nav admin-manage-list">
+
+                    <li class="admin-manage-item nav-item dropdown">
+                        <a class="admin-manage-item_btn nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Manage Contacts</a>
+                        <ul class="admin-manage-item_list dropdown-menu">
+                            <li><a href="admin.php?ctrl=contact">View Contact</a></li>
+                            <li><a href="admin.php?ctrl=contact&act=addnew">Add Product</a></li>
+                        </ul>
+                    </li>
 
                     <li class="admin-manage-item nav-item dropdown">
                         <a class="admin-manage-item_btn nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Manage Customers</a>

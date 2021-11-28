@@ -23,6 +23,31 @@
     <title>Organic - Contact</title>
 
 <body>
+    <script>
+        function showContact(){
+            $.ajax({
+                url: "services/contact-service.php",
+                success: function(data) {
+                    var contactInfo;
+                    if (data){
+                        contactInfo = JSON.parse(data);
+                        var phone = "<h1>Phone:</h1>";
+                        var address = "<h1>Address:</h1>";
+                        var email = "<h1>Email:</h1>";
+                        for (var key in contactInfo) {
+                            phone += '<p>' + contactInfo[key].phone + '</p>';
+                            address += '<p>' + contactInfo[key].address + '</p>';
+                            email += '<p>' + contactInfo[key].email + '</p>';
+                        }
+                        document.getElementsByClassName("contact-content")[0].innerHTML = phone;
+                        document.getElementsByClassName("contact-content")[1].innerHTML = address;
+                        document.getElementsByClassName("contact-content")[2].innerHTML = email;
+                    }
+                }  
+            });
+        }
+        showContact();
+    </script>
     <!-- #############HEADER######### -->
     <?php require_once("./views/header.php") ?>
     <!-- #############MAIN######### -->

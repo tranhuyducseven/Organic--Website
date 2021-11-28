@@ -22,7 +22,7 @@ class BlogView{
                     '. $blog['Title'] .'
                 </h2>
                 <div class="organic-blog__btn">
-                    <a class="organic-blog__btn-link " href="./blog-item.php?id='. $blog['ID'] .'">Read more
+                    <a target="blank" class="organic-blog__btn-link " href="./blog-item.php?id='. $blog['ID'] .'">Read more
                         <i class="fas fa-angle-double-right organic-blog__btn-link-icon"></i></a>
                 </div>
             </div>';
@@ -31,7 +31,7 @@ class BlogView{
 
     public function getAllBlog_homepage($blogs){
         foreach ($blogs as $blog):
-           echo '<div class="col" onclick="window.location=\'blog-item.php?id='. $blog['ID'] .'\'">
+           echo '<div class="col" target="blank" onclick="window.location=\'blog-item.php?id='. $blog['ID'] .'\'">
            <div class="p-cpn-item-4th ">
                <img class="p-cpn-item-4th__img " src="'. $blog['Image'] .'" alt=" " />
                <div class="p-cpn-item-4th__wrapper ">
@@ -202,6 +202,23 @@ class BlogView{
           echo '<a class="tag-cloud" href="blog.php?tag='. $tag .'">'. $tag .'</a>';
         endforeach;
       }
+
+      public function confirmPopUp($mess, $id){
+        echo '<script>
+            var result = confirm("' . $mess . '");
+            var url = window.location.href;  
+            if (result){
+                url = "admin.php?ctrl=blog&confirm=true&deleteInfo='.$id.'";
+                location.href = url;
+            }
+            else{
+                url = "admin.php?ctrl=blog&confirm=false&deleteInfo='.$id.'";
+                location.href = url;
+            }
+            </script>';
+      }
 }
+
+
 
 ?>

@@ -164,13 +164,18 @@
     <?php require_once("./views/canvas.php") ?>
 
     <!------------------------------------------ END OFFCANVAS CART ------------------------------------------------>
+    <script>
+      $(document).ready(function() {
+          $(".-toast").hide();
+      });
+    </script>
+    <script src="./assets/js/toast.js" ></script>
     <script src="./assets/js/cart.js"></script>
     <script src="assets/js/select.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script>    
     <script src="./assets/js/rightnav.js" ></script>
-    <script src="./assets/js/toast.js" ></script>
 </body>
 
 </html>

@@ -24,7 +24,17 @@
 
 <body>
     <script>
-    
+      function toastMessage(msg, check) {
+        if (check) {
+            $(".-toast").removeClass("fail");
+            $(".-toast").html(msg).addClass("success").fadeIn(500).fadeOut(1000);
+        }
+        else {
+            $(".-toast").removeClass("success");
+            $(".-toast").html(msg).addClass("fail").fadeIn(500).fadeOut(1000);
+        }
+      }
+
       function showCart_cartpage()
       {
         $.ajax({
@@ -44,6 +54,7 @@
                                     '</td>'+
                                 '</tr>';
                     document.getElementsByClassName("cart-table")[0].innerHTML = output;
+                    document.getElementsByClassName("cart-total-price")[0].innerHTML = "Total: $0.00";
                     return;
                 }
                 var cartInfo = JSON.parse(data);
@@ -85,23 +96,26 @@
 
       function removetoCart_cartpage(id)
       {
-        $.ajax({
-            type: "POST",
-            url: "services/product-service.php",
-            data: { 
-              idDel: id 
-            },
-            success: function(data) {
-                showCart_cartpage();
-            }  
-        });
+        var tmp = confirm("Do you want to remove this item?");
+        if (tmp){
+            $.ajax({
+                type: "POST",
+                url: "services/product-service.php",
+                data: { 
+                idDel: id 
+                },
+                success: function(data) {
+                    toastMessage("Item deleted!", false);
+                    showCart_cartpage();
+                }  
+            });
+        }
       }
       
       function payment(){
         var tmp = document.getElementsByClassName("cart-col-No");
         var userpanel = document.getElementsByClassName("rightnav__item-login-logout");
         if (userpanel.length != 0){
-            alert("Please login before checkout!");
             location.href = "login.php";
         }
         else {
@@ -115,14 +129,13 @@
                             idPay: 1
                         },
                         success: function(data) {
-                            alert("Payment successfully!");
-                            location.href = "index.php";
+                            toastMessage("Payment successfully!", true);
                             showCart_cartpage();
                         }  
                     });
                 }
             }
-            else alert("Your cart is empty!");
+            else toastMessage("Your cart is empty!", false);
         }
       }
 
