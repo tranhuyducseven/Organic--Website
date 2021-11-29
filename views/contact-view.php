@@ -17,7 +17,7 @@ class ContactView{
 
     public function showAllContact_adminpage($contacts){
         $output = "";
-        $output .= '<h1 class="admin-view-contact">View Contact <i class="far fa-eye"></i></h1>';
+        $output .= '<h1 class="admin-view-product">View Contact <i class="far fa-eye"></i></h1>';
         $output .= '<table class=&quottable&quot>
                         <thead>
                             <tr>
@@ -50,7 +50,7 @@ class ContactView{
         $output = "";
         if ($action == "addnew")
         {
-            $output .= '<h1 class="admin-add-product">Add Product <i class="material-icons">library_add</i></h1>
+            $output .= '<h1 class="admin-add-product">Add Contact <i class="material-icons">library_add</i></h1>
                           <form method="post" action="" class="add-product-form">
                           <div class="add-product-info row">
                             <label for="add-product-img" class="col-3">PHONE NUMBER</label>
@@ -71,7 +71,7 @@ class ContactView{
         }
         else if ($action == "edit")
         {
-            $output .= '<h1 class="admin-add-product">Edit Product <i class="fas fa-edit edit-icon"></i></h1>
+            $output .= '<h1 class="admin-add-product">Edit Contact <i class="fas fa-edit edit-icon"></i></h1>
                         <form method="post" action="" class="add-product-form">
                           <div class="add-product-info row">
                             <label for="add-product-img" class="col-3">PHONE NUMBER</label>

@@ -72,7 +72,7 @@
                         <a class="admin-manage-item_btn nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Manage Contacts</a>
                         <ul class="admin-manage-item_list dropdown-menu">
                             <li><a href="admin.php?ctrl=contact">View Contact</a></li>
-                            <li><a href="admin.php?ctrl=contact&act=addnew">Add Product</a></li>
+                            <li><a href="admin.php?ctrl=contact&act=addnew">Add Contact</a></li>
                         </ul>
                     </li>
 

@@ -38,7 +38,6 @@
             },
             success: function(data) {
                 showComment();
-                alert("Added successfully!");
             }  
         });
       }
