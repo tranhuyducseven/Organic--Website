@@ -94,18 +94,7 @@ class ProductView{
                     >
                       <div class="organic-item-modal_right">
                         <h2>'. $product['Name'] .'</h2>
-                        <div class="organic-item-modal_rating">
-                          <p class="organic-rating-stars">
-                            <i class="material-icons">star_rate</i
-                            ><i class="material-icons">star_rate</i
-                            ><i class="material-icons">star_rate</i
-                            ><i class="material-icons">star_rate</i
-                            ><i class="material-icons">star_rate</i>
-                          </p>
-                          <p class="organic-rating-count">
-                            (1 customer review)
-                          </p>
-                        </div>
+                        
                         <p class="organic-item-modal_price">$'. $product['Price'] .' Kg</p>
                         <p class="organic-item-modal_descr">'. $product['Description'] .'</p>
                         <form action="" method="post" class="d-flex">
